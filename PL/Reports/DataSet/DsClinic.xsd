@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DsClinic" targetNamespace="http://tempuri.org/DsClinic.xsd" xmlns:mstns="http://tempuri.org/DsClinic.xsd" xmlns="http://tempuri.org/DsClinic.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="BeninaClinicConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="BeninaClinicConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.BeninaClinic.Properties.Settings.GlobalReference.Default.BeninaClinicConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DsClinic" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DsClinic" msprop:Generator_UserDSName="DsClinic">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="tblClinics" msprop:Generator_TableClassName="tblClinicsDataTable" msprop:Generator_TableVarName="tabletblClinics" msprop:Generator_TablePropName="tblClinics" msprop:Generator_RowDeletingName="tblClinicsRowDeleting" msprop:Generator_RowChangingName="tblClinicsRowChanging" msprop:Generator_RowEvHandlerName="tblClinicsRowChangeEventHandler" msprop:Generator_RowDeletedName="tblClinicsRowDeleted" msprop:Generator_UserTableName="tblClinics" msprop:Generator_RowChangedName="tblClinicsRowChanged" msprop:Generator_RowEvArgName="tblClinicsRowChangeEvent" msprop:Generator_RowClassName="tblClinicsRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Clinic_Id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnClinic_Id" msprop:Generator_ColumnPropNameInRow="Clinic_Id" msprop:Generator_ColumnPropNameInTable="Clinic_IdColumn" msprop:Generator_UserColumnName="Clinic_Id" type="xs:int" />
+              <xs:element name="ClinicName" msprop:Generator_ColumnVarNameInTable="columnClinicName" msprop:Generator_ColumnPropNameInRow="ClinicName" msprop:Generator_ColumnPropNameInTable="ClinicNameColumn" msprop:Generator_UserColumnName="ClinicName">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ClincManager" msprop:Generator_ColumnVarNameInTable="columnClincManager" msprop:Generator_ColumnPropNameInRow="ClincManager" msprop:Generator_ColumnPropNameInTable="ClincManagerColumn" msprop:Generator_UserColumnName="ClincManager">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ClinicPhone" msprop:Generator_ColumnVarNameInTable="columnClinicPhone" msprop:Generator_ColumnPropNameInRow="ClinicPhone" msprop:Generator_ColumnPropNameInTable="ClinicPhoneColumn" msprop:Generator_UserColumnName="ClinicPhone" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:tblClinics" />
+      <xs:field xpath="mstns:Clinic_Id" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

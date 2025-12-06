@@ -1,0 +1,35 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace BeninaClinic.PL.Forms
+{
+    public partial class FrmSuccesMessageBox : Form
+    {
+        public FrmSuccesMessageBox()
+        {
+            InitializeComponent();
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FrmMessageBox_Load(object sender, EventArgs e)
+        {
+
+        }
+    }
+}
