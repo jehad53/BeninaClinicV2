@@ -30,15 +30,13 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMainClinic));
             this.pnlTltle = new System.Windows.Forms.Panel();
-            this.btnLogout = new System.Windows.Forms.PictureBox();
-            this.btnLogin = new System.Windows.Forms.PictureBox();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.btnCloseSystem = new Guna.UI2.WinForms.Guna2Button();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.lblUserName = new System.Windows.Forms.Label();
             this.guna2Separator1 = new Guna.UI2.WinForms.Guna2Separator();
             this.label1 = new System.Windows.Forms.Label();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.pnlContainer = new System.Windows.Forms.Panel();
             this.btnHome = new Guna.UI2.WinForms.Guna2Button();
             this.btnClinics = new Guna.UI2.WinForms.Guna2Button();
             this.btnDoctors = new Guna.UI2.WinForms.Guna2Button();
@@ -57,13 +55,15 @@
             this.btnUsers = new Guna.UI2.WinForms.Guna2Button();
             this.btnMedicine = new Guna.UI2.WinForms.Guna2Button();
             this.btnRecordPatient = new Guna.UI2.WinForms.Guna2Button();
-            this.btnPharmacy = new Guna.UI2.WinForms.Guna2Button();
-            this.pnlContainer = new System.Windows.Forms.Panel();
+            this.btnPahrmacy = new Guna.UI2.WinForms.Guna2Button();
+            this.btnLogout = new System.Windows.Forms.PictureBox();
+            this.btnLogin = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pnlTltle.SuspendLayout();
+            this.flowLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnLogout)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnLogin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlTltle
@@ -82,33 +82,6 @@
             this.pnlTltle.Name = "pnlTltle";
             this.pnlTltle.Size = new System.Drawing.Size(1080, 64);
             this.pnlTltle.TabIndex = 5;
-            // 
-            // btnLogout
-            // 
-            this.btnLogout.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btnLogout.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnLogout.Enabled = false;
-            this.btnLogout.Image = ((System.Drawing.Image)(resources.GetObject("btnLogout.Image")));
-            this.btnLogout.Location = new System.Drawing.Point(974, 6);
-            this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Size = new System.Drawing.Size(48, 45);
-            this.btnLogout.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnLogout.TabIndex = 7;
-            this.btnLogout.TabStop = false;
-            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
-            // 
-            // btnLogin
-            // 
-            this.btnLogin.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btnLogin.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnLogin.Image = ((System.Drawing.Image)(resources.GetObject("btnLogin.Image")));
-            this.btnLogin.Location = new System.Drawing.Point(1029, 6);
-            this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(48, 45);
-            this.btnLogin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnLogin.TabIndex = 6;
-            this.btnLogin.TabStop = false;
-            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // guna2Button1
             // 
@@ -161,19 +134,6 @@
             this.btnCloseSystem.TabIndex = 1;
             this.btnCloseSystem.Text = "X";
             this.btnCloseSystem.Click += new System.EventHandler(this.btnCloseSystem_Click);
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(918, 3);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(48, 51);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 4;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // lblUserName
             // 
@@ -231,7 +191,7 @@
             this.flowLayoutPanel1.Controls.Add(this.btnUsers);
             this.flowLayoutPanel1.Controls.Add(this.btnMedicine);
             this.flowLayoutPanel1.Controls.Add(this.btnRecordPatient);
-            this.flowLayoutPanel1.Controls.Add(this.btnPharmacy);
+            this.flowLayoutPanel1.Controls.Add(this.btnPahrmacy);
             this.flowLayoutPanel1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 64);
@@ -239,6 +199,14 @@
             this.flowLayoutPanel1.Size = new System.Drawing.Size(268, 901);
             this.flowLayoutPanel1.TabIndex = 7;
             this.flowLayoutPanel1.Visible = false;
+            // 
+            // pnlContainer
+            // 
+            this.pnlContainer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlContainer.Location = new System.Drawing.Point(268, 64);
+            this.pnlContainer.Name = "pnlContainer";
+            this.pnlContainer.Size = new System.Drawing.Size(812, 901);
+            this.pnlContainer.TabIndex = 9;
             // 
             // btnHome
             // 
@@ -744,40 +712,73 @@
             this.btnRecordPatient.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnRecordPatient.Click += new System.EventHandler(this.btnRecordPatient_Click);
             // 
-            // btnPharmacy
+            // btnPahrmacy
             // 
-            this.btnPharmacy.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnPharmacy.Animated = true;
-            this.btnPharmacy.AnimatedGIF = true;
-            this.btnPharmacy.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(121)))), ((int)(((byte)(214)))));
-            this.btnPharmacy.BorderRadius = 6;
-            this.btnPharmacy.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnPharmacy.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnPharmacy.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnPharmacy.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnPharmacy.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnPharmacy.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(121)))), ((int)(((byte)(214)))));
-            this.btnPharmacy.Font = new System.Drawing.Font("Cairo", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPharmacy.ForeColor = System.Drawing.Color.White;
-            this.btnPharmacy.HoverState.FillColor = System.Drawing.Color.White;
-            this.btnPharmacy.HoverState.Font = new System.Drawing.Font("Cairo", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPharmacy.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(121)))), ((int)(((byte)(214)))));
-            this.btnPharmacy.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnPharmacy.Location = new System.Drawing.Point(31, 1047);
-            this.btnPharmacy.Name = "btnPharmacy";
-            this.btnPharmacy.Size = new System.Drawing.Size(213, 52);
-            this.btnPharmacy.TabIndex = 19;
-            this.btnPharmacy.Text = "الصيدلية";
-            this.btnPharmacy.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnPharmacy.Click += new System.EventHandler(this.btnPharmacy_Click);
+            this.btnPahrmacy.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnPahrmacy.Animated = true;
+            this.btnPahrmacy.AnimatedGIF = true;
+            this.btnPahrmacy.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(121)))), ((int)(((byte)(214)))));
+            this.btnPahrmacy.BorderRadius = 6;
+            this.btnPahrmacy.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnPahrmacy.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnPahrmacy.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnPahrmacy.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnPahrmacy.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnPahrmacy.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(121)))), ((int)(((byte)(214)))));
+            this.btnPahrmacy.Font = new System.Drawing.Font("Cairo", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPahrmacy.ForeColor = System.Drawing.Color.White;
+            this.btnPahrmacy.HoverState.FillColor = System.Drawing.Color.White;
+            this.btnPahrmacy.HoverState.Font = new System.Drawing.Font("Cairo", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPahrmacy.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(121)))), ((int)(((byte)(214)))));
+            this.btnPahrmacy.Image = ((System.Drawing.Image)(resources.GetObject("btnPahrmacy.Image")));
+            this.btnPahrmacy.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnPahrmacy.Location = new System.Drawing.Point(74, 1047);
+            this.btnPahrmacy.Name = "btnPahrmacy";
+            this.btnPahrmacy.Size = new System.Drawing.Size(170, 52);
+            this.btnPahrmacy.TabIndex = 20;
+            this.btnPahrmacy.Text = "الصيدلية";
+            this.btnPahrmacy.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnPahrmacy.Click += new System.EventHandler(this.btnPahrmacy_Click);
             // 
-            // pnlContainer
+            // btnLogout
             // 
-            this.pnlContainer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlContainer.Location = new System.Drawing.Point(268, 64);
-            this.pnlContainer.Name = "pnlContainer";
-            this.pnlContainer.Size = new System.Drawing.Size(812, 901);
-            this.pnlContainer.TabIndex = 9;
+            this.btnLogout.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.btnLogout.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLogout.Enabled = false;
+            this.btnLogout.Image = ((System.Drawing.Image)(resources.GetObject("btnLogout.Image")));
+            this.btnLogout.Location = new System.Drawing.Point(974, 6);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.Size = new System.Drawing.Size(48, 45);
+            this.btnLogout.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnLogout.TabIndex = 7;
+            this.btnLogout.TabStop = false;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
+            // 
+            // btnLogin
+            // 
+            this.btnLogin.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.btnLogin.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLogin.Image = ((System.Drawing.Image)(resources.GetObject("btnLogin.Image")));
+            this.btnLogin.Location = new System.Drawing.Point(1029, 6);
+            this.btnLogin.Name = "btnLogin";
+            this.btnLogin.Size = new System.Drawing.Size(48, 45);
+            this.btnLogin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnLogin.TabIndex = 6;
+            this.btnLogin.TabStop = false;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(918, 3);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(48, 51);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 4;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // FrmMainClinic
             // 
@@ -800,10 +801,10 @@
             this.Load += new System.EventHandler(this.FrmMainClinic_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FrmMainClinic_KeyDown);
             this.pnlTltle.ResumeLayout(false);
+            this.flowLayoutPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btnLogout)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnLogin)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            this.flowLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -827,7 +828,6 @@
         public Guna.UI2.WinForms.Guna2Button btnSettings;
         public Guna.UI2.WinForms.Guna2Button btnVisits;
         public Guna.UI2.WinForms.Guna2Button btnDiagnoses;
-        public Guna.UI2.WinForms.Guna2Button btnPharmacy;
         public Guna.UI2.WinForms.Guna2Button btnTests;
         public Guna.UI2.WinForms.Guna2Button btnChronicDiseases;
         public Guna.UI2.WinForms.Guna2Button btnDoctors;
@@ -840,6 +840,7 @@
         public System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         public System.Windows.Forms.PictureBox btnLogin;
         public System.Windows.Forms.PictureBox btnLogout;
+        public Guna.UI2.WinForms.Guna2Button btnPahrmacy;
     }
 }
 

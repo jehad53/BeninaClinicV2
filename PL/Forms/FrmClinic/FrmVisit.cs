@@ -279,32 +279,36 @@ namespace BeninaClinic.PL.Forms.FrmClinic
                 frm.lblMessage.Text = "يرجى اختيار الحالة";
                 frm.ShowDialog();
             }
-            else
+            else 
             {
                 vm.InsertVisit(Convert.ToInt32(txtPatientID.Text), Convert.ToInt32(txtDoctorID.Text), dtpVisitDate.Value , txtVisitNote.Text);
-               // MessageBox.Show("تم إدخال الزيارة","تنبيه",MessageBoxButtons.OK);
-            }
-            if (dgvDignoses.Rows.Count > 0)
-            {
-                for (int i = 0; i <= dgvDignoses.Rows.Count - 1; i++)
-                    vm.InsertVisitDiagnosis(Convert.ToInt32(txtVisitID.Text),Convert.ToInt32(dgvDignoses.Rows[i].Cells[0].Value) , dgvDignoses.Rows[i].Cells[1].Value.ToString(), dgvDignoses.Rows[i].Cells[2].Value.ToString(),"Note --> Put Another Time");
-            }
-            if (dgvTests.Rows.Count > 0)
-            {
-                for (int i = 0; i <= dgvTests.Rows.Count - 1; i++)
-                    vm.InsertVisitTests(Convert.ToInt32(txtVisitID.Text), Convert.ToInt32(dgvTests.Rows[i].Cells[0].Value), dgvTests.Rows[i].Cells[1].Value.ToString(), dgvTests.Rows[i].Cells[2].Value.ToString(), "Note --> Put Another Time");
-            }
+                // MessageBox.Show("تم إدخال الزيارة","تنبيه",MessageBoxButtons.OK);
 
-            // مازال موضوع إدخال الجرعة
-            if (dgvMedicen.Rows.Count > 0)
-            {
-                for (int i = 0; i <= dgvMedicen.Rows.Count - 1; i++)
-                    vm.InsertVisitMedications(Convert.ToInt32(txtVisitID.Text), Convert.ToInt32(dgvMedicen.Rows[i].Cells[0].Value), dgvMedicen.Rows[i].Cells[2].Value.ToString(), dgvMedicen.Rows[i].Cells[1].Value.ToString(), "Note --> Put Another Time");
-            }
-            //  ممكن نضيف الأمراض المزمنة
+                if (dgvDignoses.Rows.Count > 0)
+                {
+                    for (int i = 0; i <= dgvDignoses.Rows.Count - 1; i++)
+                        vm.InsertVisitDiagnosis(Convert.ToInt32(txtVisitID.Text), Convert.ToInt32(dgvDignoses.Rows[i].Cells[0].Value), dgvDignoses.Rows[i].Cells[1].Value.ToString(), dgvDignoses.Rows[i].Cells[2].Value.ToString(), "Note --> Put Another Time");
+                }
+                if (dgvTests.Rows.Count > 0)
+                {
+                    for (int i = 0; i <= dgvTests.Rows.Count - 1; i++)
+                        vm.InsertVisitTests(Convert.ToInt32(txtVisitID.Text), Convert.ToInt32(dgvTests.Rows[i].Cells[0].Value), dgvTests.Rows[i].Cells[1].Value.ToString(), dgvTests.Rows[i].Cells[2].Value.ToString(), "Note --> Put Another Time");
+                }
 
-            FrmSuccesMessageBox frmsucces = new FrmSuccesMessageBox();
-            frmsucces.ShowDialog();
+                // مازال موضوع إدخال الجرعة
+                if (dgvMedicen.Rows.Count > 0)
+                {
+                    for (int i = 0; i <= dgvMedicen.Rows.Count - 1; i++)
+                        vm.InsertVisitMedications(Convert.ToInt32(txtVisitID.Text), Convert.ToInt32(dgvMedicen.Rows[i].Cells[0].Value), dgvMedicen.Rows[i].Cells[2].Value.ToString(), dgvMedicen.Rows[i].Cells[1].Value.ToString(), "Note --> Put Another Time");
+                }
+                //  ممكن نضيف الأمراض المزمنة
+
+                FrmSuccesMessageBox frmsucces = new FrmSuccesMessageBox();
+                frmsucces.ShowDialog();
+                ClearTools();
+
+            }
+          
         }
 
         private void btnNew_Click(object sender, EventArgs e)
@@ -416,6 +420,25 @@ namespace BeninaClinic.PL.Forms.FrmClinic
             ucrecordpatient.lbBloodType.Text = "سيتم إضافة فصيلة الدم";
 
             frmselection.ShowDialog();
+        }
+
+
+        public void ClearTools()
+        {
+            txtVisitID.Clear();
+            txtPatientName.Clear();
+            txtPatientNatNum.Clear();
+            txtPatientPhone.Clear();
+            txtPatientAddress.Clear();
+            txtDoctorID.Clear();
+            txtDoctorName.Clear();
+            txtClinicName.Clear();
+            txtVisitNote.Clear();
+
+            dgvDignoses.Rows.Clear();
+            dgvTests.Rows.Clear();
+            dgvChronics.Rows.Clear();
+            dgvMedicen.Rows.Clear();
         }
     }
 }

@@ -422,6 +422,9 @@
     <EmbeddedResource Include="PL\Forms\FrmPharmacy\FrmAddMedication.resx">
       <DependentUpon>FrmAddMedication.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PL\Forms\FrmPharmacy\FrmDispense.resx">
+      <DependentUpon>FrmDispense.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PL\Forms\FrmPharmacy\FrmMedicationList.resx">
       <DependentUpon>FrmMedicationList.cs</DependentUpon>
     </EmbeddedResource>

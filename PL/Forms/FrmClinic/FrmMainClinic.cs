@@ -260,6 +260,12 @@ namespace BeninaClinic
             FrmPharmacyMain frm = new FrmPharmacyMain();
             frm.ShowDialog();
         }
+
+        private void btnPahrmacy_Click(object sender, EventArgs e)
+        {
+            FrmPharmacyMain frm = new FrmPharmacyMain();
+            frm.ShowDialog();
+        }
     }
     }
    

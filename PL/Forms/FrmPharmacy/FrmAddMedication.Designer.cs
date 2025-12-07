@@ -62,7 +62,7 @@ namespace BeninaClinic.PL.Forms.FrmPharmacy
             // 
             this.lblHeaders.AutoSize = true;
             this.lblHeaders.Font = new System.Drawing.Font("Cairo", 14F, System.Drawing.FontStyle.Bold);
-            this.lblHeaders.Location = new System.Drawing.Point(220, 20);
+            this.lblHeaders.Location = new System.Drawing.Point(220, 15);
             this.lblHeaders.Name = "lblHeaders";
             this.lblHeaders.Size = new System.Drawing.Size(150, 45);
             this.lblHeaders.TabIndex = 0;
@@ -243,6 +243,8 @@ namespace BeninaClinic.PL.Forms.FrmPharmacy
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.RightToLeftLayout = true;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.Load += new System.EventHandler(this.FrmAddMedication_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FrmAddMedication_KeyDown);
             this.pnlMain.ResumeLayout(false);
             this.pnlMain.PerformLayout();
             this.ResumeLayout(false);

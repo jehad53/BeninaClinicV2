@@ -71,7 +71,7 @@ namespace BeninaClinic.PL.Forms.FrmPharmacy
         {
             try
             {
-                if (string.IsNullOrWhiteSpace(txtName.Text))
+                if (string.IsNullOrWhiteSpace(txtName.Text) || string.IsNullOrWhiteSpace(txtScientificName.Text) || string.IsNullOrWhiteSpace(txtCode.Text) || string.IsNullOrWhiteSpace(txtType.Text) || string.IsNullOrWhiteSpace(txtQuantity.Text))
                 {
                     MessageBox.Show("يرجى إدخال اسم الدواء");
                     return;
@@ -98,6 +98,23 @@ namespace BeninaClinic.PL.Forms.FrmPharmacy
             catch (Exception ex)
             {
                 MessageBox.Show("خطأ: " + ex.Message);
+            }
+        }
+
+        private void FrmAddMedication_Load(object sender, EventArgs e)
+        {
+            this.KeyPreview = true;
+        }
+
+        private void FrmAddMedication_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                btnSave_Click(null, null);
+            }
+            else if (e.KeyCode == Keys.Escape)
+            {
+                this.Close();
             }
         }
     }
