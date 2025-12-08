@@ -117,7 +117,7 @@ namespace BeninaClinic.PL.Forms.FrmClinic
         {
             Frm_List_Viewer frmlist = new Frm_List_Viewer(this);
             frmlist.lbListName.Text = "قائمة المرضـى";
-            frmlist.dgvList.ColumnCount = 8;
+            frmlist.dgvList.ColumnCount = 3;
             frmlist.dgvList.Columns[0].HeaderText = "رقم المريض";
             frmlist.dgvList.Columns[1].HeaderText = "اسم المريض";
             frmlist.dgvList.Columns[2].HeaderText = " الرقم الوطني";

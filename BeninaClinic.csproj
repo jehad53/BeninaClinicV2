@@ -225,6 +225,12 @@
       <DependentUpon>RptListDepartments.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="PL\Reports\RptClinic\RptListDoctorByContractType.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RptListDoctorByContractType.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="PL\Reports\RptClinic\RptListDoctors.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -453,6 +459,10 @@
     <EmbeddedResource Include="PL\Reports\RptClinic\RptListDepartments.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>RptListDepartments.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\Reports\RptClinic\RptListDoctorByContractType.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RptListDoctorByContractType.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="PL\Reports\RptClinic\RptListDoctors.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>

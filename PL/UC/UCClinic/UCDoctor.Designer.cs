@@ -30,11 +30,11 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UCDoctor));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle26 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle27 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle28 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle29 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle30 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblUserName = new System.Windows.Forms.Label();
             this.pnlLine = new System.Windows.Forms.Panel();
             this.guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
@@ -84,6 +84,11 @@
             this.txtSearchDoctors = new Guna.UI2.WinForms.Guna2TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.btnPrintEmpContractType = new Guna.UI2.WinForms.Guna2Button();
+            this.rdbAsassi = new Guna.UI2.WinForms.Guna2CustomRadioButton();
+            this.label10 = new System.Windows.Forms.Label();
+            this.rdbMotaon = new Guna.UI2.WinForms.Guna2CustomRadioButton();
+            this.label14 = new System.Windows.Forms.Label();
             this.guna2GroupBox1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.guna2GroupBox2.SuspendLayout();
@@ -124,7 +129,7 @@
             this.guna2GroupBox1.Name = "guna2GroupBox1";
             this.guna2GroupBox1.Padding = new System.Windows.Forms.Padding(3);
             this.guna2GroupBox1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.guna2GroupBox1.Size = new System.Drawing.Size(830, 118);
+            this.guna2GroupBox1.Size = new System.Drawing.Size(830, 183);
             this.guna2GroupBox1.TabIndex = 7;
             this.guna2GroupBox1.Text = "العمليات";
             this.guna2GroupBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -140,11 +145,16 @@
             this.flowLayoutPanel1.Controls.Add(this.btnRefreshDoctor);
             this.flowLayoutPanel1.Controls.Add(this.btnPrintOne);
             this.flowLayoutPanel1.Controls.Add(this.btnPrintDoctors);
+            this.flowLayoutPanel1.Controls.Add(this.btnPrintEmpContractType);
+            this.flowLayoutPanel1.Controls.Add(this.rdbAsassi);
+            this.flowLayoutPanel1.Controls.Add(this.label10);
+            this.flowLayoutPanel1.Controls.Add(this.rdbMotaon);
+            this.flowLayoutPanel1.Controls.Add(this.label14);
             this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 49);
             this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(2);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Padding = new System.Windows.Forms.Padding(3);
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(824, 56);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(824, 129);
             this.flowLayoutPanel1.TabIndex = 22;
             // 
             // btnNew
@@ -282,9 +292,9 @@
             this.btnRefreshDoctor.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(197)))), ((int)(((byte)(127)))));
             this.btnRefreshDoctor.Image = ((System.Drawing.Image)(resources.GetObject("btnRefreshDoctor.Image")));
             this.btnRefreshDoctor.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnRefreshDoctor.Location = new System.Drawing.Point(8, 6);
+            this.btnRefreshDoctor.Location = new System.Drawing.Point(600, 56);
             this.btnRefreshDoctor.Name = "btnRefreshDoctor";
-            this.btnRefreshDoctor.Size = new System.Drawing.Size(201, 44);
+            this.btnRefreshDoctor.Size = new System.Drawing.Size(215, 44);
             this.btnRefreshDoctor.TabIndex = 20;
             this.btnRefreshDoctor.Text = "تحديث القائمة";
             this.btnRefreshDoctor.Click += new System.EventHandler(this.btnRefreshDoctor_Click);
@@ -310,9 +320,9 @@
             this.btnPrintOne.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(121)))), ((int)(((byte)(214)))));
             this.btnPrintOne.Image = ((System.Drawing.Image)(resources.GetObject("btnPrintOne.Image")));
             this.btnPrintOne.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnPrintOne.Location = new System.Drawing.Point(609, 56);
+            this.btnPrintOne.Location = new System.Drawing.Point(359, 56);
             this.btnPrintOne.Name = "btnPrintOne";
-            this.btnPrintOne.Size = new System.Drawing.Size(206, 44);
+            this.btnPrintOne.Size = new System.Drawing.Size(235, 44);
             this.btnPrintOne.TabIndex = 21;
             this.btnPrintOne.Text = "طباعة الطبيب المحدد";
             this.btnPrintOne.Click += new System.EventHandler(this.btnPrintOne_Click);
@@ -338,9 +348,9 @@
             this.btnPrintDoctors.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(121)))), ((int)(((byte)(214)))));
             this.btnPrintDoctors.Image = ((System.Drawing.Image)(resources.GetObject("btnPrintDoctors.Image")));
             this.btnPrintDoctors.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnPrintDoctors.Location = new System.Drawing.Point(397, 56);
+            this.btnPrintDoctors.Location = new System.Drawing.Point(118, 56);
             this.btnPrintDoctors.Name = "btnPrintDoctors";
-            this.btnPrintDoctors.Size = new System.Drawing.Size(206, 44);
+            this.btnPrintDoctors.Size = new System.Drawing.Size(235, 44);
             this.btnPrintDoctors.TabIndex = 18;
             this.btnPrintDoctors.Text = "طباعة القائمة";
             this.btnPrintDoctors.Click += new System.EventHandler(this.btnPrintDoctors_Click);
@@ -352,12 +362,12 @@
             this.guna2GroupBox2.Controls.Add(this.flowLayoutPanel2);
             this.guna2GroupBox2.Font = new System.Drawing.Font("Cairo", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2GroupBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.guna2GroupBox2.Location = new System.Drawing.Point(6, 177);
+            this.guna2GroupBox2.Location = new System.Drawing.Point(6, 234);
             this.guna2GroupBox2.Margin = new System.Windows.Forms.Padding(0);
             this.guna2GroupBox2.Name = "guna2GroupBox2";
             this.guna2GroupBox2.Padding = new System.Windows.Forms.Padding(3);
             this.guna2GroupBox2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.guna2GroupBox2.Size = new System.Drawing.Size(830, 238);
+            this.guna2GroupBox2.Size = new System.Drawing.Size(830, 199);
             this.guna2GroupBox2.TabIndex = 23;
             this.guna2GroupBox2.Text = "بيانات الطبيب";
             this.guna2GroupBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -795,24 +805,24 @@
             this.dgvDoctors.AllowUserToDeleteRows = false;
             this.dgvDoctors.AllowUserToResizeColumns = false;
             this.dgvDoctors.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Lavender;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Cairo Medium", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Blue;
-            this.dgvDoctors.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle26.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle26.BackColor = System.Drawing.Color.Lavender;
+            dataGridViewCellStyle26.Font = new System.Drawing.Font("Cairo Medium", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle26.SelectionBackColor = System.Drawing.Color.Blue;
+            this.dgvDoctors.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle26;
             this.dgvDoctors.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvDoctors.BackgroundColor = System.Drawing.Color.White;
             this.dgvDoctors.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Lavender;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Cairo Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvDoctors.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle27.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle27.BackColor = System.Drawing.Color.Lavender;
+            dataGridViewCellStyle27.Font = new System.Drawing.Font("Cairo Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle27.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle27.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle27.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle27.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvDoctors.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle27;
             this.dgvDoctors.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDoctors.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
@@ -825,36 +835,36 @@
             this.Column8,
             this.Column9,
             this.Column10});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Cairo Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvDoctors.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle28.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle28.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle28.Font = new System.Drawing.Font("Cairo Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle28.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle28.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle28.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle28.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvDoctors.DefaultCellStyle = dataGridViewCellStyle28;
             this.dgvDoctors.EnableHeadersVisualStyles = false;
-            this.dgvDoctors.Location = new System.Drawing.Point(6, 474);
+            this.dgvDoctors.Location = new System.Drawing.Point(6, 501);
             this.dgvDoctors.MultiSelect = false;
             this.dgvDoctors.Name = "dgvDoctors";
             this.dgvDoctors.ReadOnly = true;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.SpringGreen;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Cairo Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvDoctors.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle29.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle29.BackColor = System.Drawing.Color.SpringGreen;
+            dataGridViewCellStyle29.Font = new System.Drawing.Font("Cairo Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle29.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle29.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle29.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle29.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvDoctors.RowHeadersDefaultCellStyle = dataGridViewCellStyle29;
             this.dgvDoctors.RowHeadersVisible = false;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Cairo Medium", 13.8F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.dgvDoctors.RowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle30.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle30.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle30.Font = new System.Drawing.Font("Cairo Medium", 13.8F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle30.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.dgvDoctors.RowsDefaultCellStyle = dataGridViewCellStyle30;
             this.dgvDoctors.RowTemplate.Height = 40;
             this.dgvDoctors.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvDoctors.Size = new System.Drawing.Size(830, 173);
+            this.dgvDoctors.Size = new System.Drawing.Size(830, 146);
             this.dgvDoctors.TabIndex = 24;
             this.dgvDoctors.DoubleClick += new System.EventHandler(this.dgvDoctors_DoubleClick);
             // 
@@ -942,7 +952,7 @@
             // 
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(121)))), ((int)(((byte)(214)))));
-            this.panel1.Location = new System.Drawing.Point(678, 466);
+            this.panel1.Location = new System.Drawing.Point(678, 484);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(170, 1);
             this.panel1.TabIndex = 27;
@@ -952,7 +962,7 @@
             this.label12.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label12.Font = new System.Drawing.Font("Cairo", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label12.Location = new System.Drawing.Point(676, 420);
+            this.label12.Location = new System.Drawing.Point(676, 438);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(166, 39);
             this.label12.TabIndex = 26;
@@ -977,7 +987,7 @@
             this.txtSearchDoctors.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtSearchDoctors.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtSearchDoctors.IconLeft = ((System.Drawing.Image)(resources.GetObject("txtSearchDoctors.IconLeft")));
-            this.txtSearchDoctors.Location = new System.Drawing.Point(268, 424);
+            this.txtSearchDoctors.Location = new System.Drawing.Point(268, 442);
             this.txtSearchDoctors.Margin = new System.Windows.Forms.Padding(4, 9, 4, 9);
             this.txtSearchDoctors.Name = "txtSearchDoctors";
             this.txtSearchDoctors.PlaceholderText = "";
@@ -994,7 +1004,7 @@
             this.label13.Font = new System.Drawing.Font("Cairo SemiBold", 13.8F, System.Drawing.FontStyle.Bold);
             this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.label13.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.label13.Location = new System.Drawing.Point(579, 425);
+            this.label13.Location = new System.Drawing.Point(579, 443);
             this.label13.Name = "label13";
             this.label13.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.label13.Size = new System.Drawing.Size(93, 46);
@@ -1006,6 +1016,102 @@
             // 
             this.toolTip1.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
             this.toolTip1.ToolTipTitle = "توضيح";
+            // 
+            // btnPrintEmpContractType
+            // 
+            this.btnPrintEmpContractType.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnPrintEmpContractType.Animated = true;
+            this.btnPrintEmpContractType.AnimatedGIF = true;
+            this.btnPrintEmpContractType.BorderRadius = 6;
+            this.btnPrintEmpContractType.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnPrintEmpContractType.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 5);
+            this.btnPrintEmpContractType.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnPrintEmpContractType.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnPrintEmpContractType.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnPrintEmpContractType.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnPrintEmpContractType.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(121)))), ((int)(((byte)(214)))));
+            this.btnPrintEmpContractType.Font = new System.Drawing.Font("Cairo SemiBold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPrintEmpContractType.ForeColor = System.Drawing.Color.White;
+            this.btnPrintEmpContractType.HoverState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(197)))), ((int)(((byte)(127)))));
+            this.btnPrintEmpContractType.HoverState.FillColor = System.Drawing.Color.White;
+            this.btnPrintEmpContractType.HoverState.Font = new System.Drawing.Font("Cairo", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPrintEmpContractType.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(197)))), ((int)(((byte)(127)))));
+            this.btnPrintEmpContractType.Image = ((System.Drawing.Image)(resources.GetObject("btnPrintEmpContractType.Image")));
+            this.btnPrintEmpContractType.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnPrintEmpContractType.Location = new System.Drawing.Point(466, 106);
+            this.btnPrintEmpContractType.Margin = new System.Windows.Forms.Padding(3, 3, 30, 3);
+            this.btnPrintEmpContractType.Name = "btnPrintEmpContractType";
+            this.btnPrintEmpContractType.Size = new System.Drawing.Size(349, 44);
+            this.btnPrintEmpContractType.TabIndex = 81;
+            this.btnPrintEmpContractType.Text = "طباعة حسب نوع العقد";
+            this.btnPrintEmpContractType.Click += new System.EventHandler(this.btnPrintEmpContractType_Click);
+            // 
+            // rdbAsassi
+            // 
+            this.rdbAsassi.Animated = true;
+            this.rdbAsassi.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.rdbAsassi.CheckedState.BorderThickness = 0;
+            this.rdbAsassi.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.rdbAsassi.CheckedState.InnerColor = System.Drawing.Color.White;
+            this.rdbAsassi.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.rdbAsassi.Location = new System.Drawing.Point(416, 113);
+            this.rdbAsassi.Margin = new System.Windows.Forms.Padding(0, 10, 0, 3);
+            this.rdbAsassi.Name = "rdbAsassi";
+            this.rdbAsassi.Size = new System.Drawing.Size(20, 44);
+            this.rdbAsassi.TabIndex = 83;
+            this.rdbAsassi.Text = "أساسي";
+            this.rdbAsassi.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.rdbAsassi.UncheckedState.BorderThickness = 2;
+            this.rdbAsassi.UncheckedState.FillColor = System.Drawing.Color.Transparent;
+            this.rdbAsassi.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
+            // 
+            // label10
+            // 
+            this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label10.Font = new System.Drawing.Font("Cairo SemiBold", 13.8F, System.Drawing.FontStyle.Bold);
+            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label10.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.label10.Location = new System.Drawing.Point(317, 113);
+            this.label10.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
+            this.label10.Name = "label10";
+            this.label10.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.label10.Size = new System.Drawing.Size(99, 44);
+            this.label10.TabIndex = 82;
+            this.label10.Text = "أساسي";
+            this.label10.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // rdbMotaon
+            // 
+            this.rdbMotaon.Animated = true;
+            this.rdbMotaon.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.rdbMotaon.CheckedState.BorderThickness = 0;
+            this.rdbMotaon.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.rdbMotaon.CheckedState.InnerColor = System.Drawing.Color.White;
+            this.rdbMotaon.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.rdbMotaon.Location = new System.Drawing.Point(297, 113);
+            this.rdbMotaon.Margin = new System.Windows.Forms.Padding(0, 10, 0, 3);
+            this.rdbMotaon.Name = "rdbMotaon";
+            this.rdbMotaon.Size = new System.Drawing.Size(20, 44);
+            this.rdbMotaon.TabIndex = 85;
+            this.rdbMotaon.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.rdbMotaon.UncheckedState.BorderThickness = 2;
+            this.rdbMotaon.UncheckedState.FillColor = System.Drawing.Color.Transparent;
+            this.rdbMotaon.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
+            // 
+            // label14
+            // 
+            this.label14.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label14.Font = new System.Drawing.Font("Cairo SemiBold", 13.8F, System.Drawing.FontStyle.Bold);
+            this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label14.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.label14.Location = new System.Drawing.Point(198, 113);
+            this.label14.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
+            this.label14.Name = "label14";
+            this.label14.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.label14.Size = new System.Drawing.Size(99, 44);
+            this.label14.TabIndex = 84;
+            this.label14.Text = "متعاون";
+            this.label14.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // UCDoctor
             // 
@@ -1086,5 +1192,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
+        private Guna.UI2.WinForms.Guna2Button btnPrintEmpContractType;
+        private Guna.UI2.WinForms.Guna2CustomRadioButton rdbAsassi;
+        private System.Windows.Forms.Label label10;
+        private Guna.UI2.WinForms.Guna2CustomRadioButton rdbMotaon;
+        private System.Windows.Forms.Label label14;
     }
 }

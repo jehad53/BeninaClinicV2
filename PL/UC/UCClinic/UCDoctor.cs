@@ -18,6 +18,8 @@ namespace BeninaClinic.PL.UC.UCClinic
 {
     public partial class UCDoctor : UserControl
     {
+        public string conttacttype;
+
         public UCDoctor()
         {
             InitializeComponent();
@@ -74,9 +76,9 @@ namespace BeninaClinic.PL.UC.UCClinic
             }
             else
             {
-                for (int i = 0; i < dgvDoctors.Rows.Count -1; i++)
+                for (int i = 0; i < dgvDoctors.Rows.Count - 1; i++)
                 {
-                    if(dgvDoctors.Rows[i].Cells[2].Value.ToString() == txtDoctorNatNum.Text)
+                    if (dgvDoctors.Rows[i].Cells[2].Value.ToString() == txtDoctorNatNum.Text)
                     {
                         FrmAlertMessageBox frmalertmessagebox = new FrmAlertMessageBox();
                         frmalertmessagebox.lblMessage.Text = "الرقم الوطني مدخل مسبقا";
@@ -113,7 +115,7 @@ namespace BeninaClinic.PL.UC.UCClinic
 
         private void btnShowAsForm_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void dgvDoctors_DoubleClick(object sender, EventArgs e)
@@ -192,7 +194,7 @@ namespace BeninaClinic.PL.UC.UCClinic
                     frmsucces.Show();
                     ClearTools();
                     LoadData();
-                    
+
                 }
             }
             catch
@@ -206,7 +208,7 @@ namespace BeninaClinic.PL.UC.UCClinic
             try
             {
                 DoctorsManagement doctorsmanagement = new DoctorsManagement();
-               dgvDoctors.DataSource =   doctorsmanagement.SearchDoctorByNameOrNatNum(txtSearchDoctors.Text);
+                dgvDoctors.DataSource = doctorsmanagement.SearchDoctorByNameOrNatNum(txtSearchDoctors.Text);
             }
             catch
             {
@@ -218,7 +220,7 @@ namespace BeninaClinic.PL.UC.UCClinic
         {
             if (dgvDoctors.Rows.Count == 0)
             {
-                MessageBox.Show("القائمة فارغة لا يمكن الطباعة ","تنبيه",MessageBoxButtons.OK);
+                MessageBox.Show("القائمة فارغة لا يمكن الطباعة ", "تنبيه", MessageBoxButtons.OK);
                 return;
             }
 
@@ -233,10 +235,10 @@ namespace BeninaClinic.PL.UC.UCClinic
             }
 
             catch
-             {
-                MessageBox.Show("حدث خطأ أثناء الطباعة يُرجى المحاولة لاحـقًـا","تنبيه",MessageBoxButtons.OK);
-             }
+            {
+                MessageBox.Show("حدث خطأ أثناء الطباعة يُرجى المحاولة لاحـقًـا", "تنبيه", MessageBoxButtons.OK);
             }
+        }
 
         private void btnPrintOne_Click(object sender, EventArgs e)
         {
@@ -256,7 +258,45 @@ namespace BeninaClinic.PL.UC.UCClinic
                 Forms.FrmAlertMessageBox frmalert = new FrmAlertMessageBox();
                 frmalert.lblMessage.Text = "يرجى الـتـأكـد من تحديد الطبيب ";
                 frmalert.ShowDialog();
-               // MessageBox.Show("يرجى الـتـأكـد من تحديد الطبيب ","تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation );
+                // MessageBox.Show("يرجى الـتـأكـد من تحديد الطبيب ","تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation );
+            }
+        }
+
+        private void btnPrintEmpContractType_Click(object sender, EventArgs e)
+        {
+            if (!rdbAsassi.Checked && !rdbMotaon.Checked)
+            {
+                FrmAlertMessageBox frmalert = new FrmAlertMessageBox();
+                frmalert.lblMessage.Text = "يـرجـى تـحديد نـوع الـعـقد  ";
+                frmalert.ShowDialog();
+                return;
+            }
+
+            try
+            {
+
+                RptListDoctorByContractType rptdocbycontracttype = new RptListDoctorByContractType();
+                //("@Id",this.dataGridView1.CurrentRow.Cells[0].Value.ToString());
+                if (rdbAsassi.Checked == true)
+                {
+                    conttacttype = "أساسي";
+                }
+                else
+                {
+                    conttacttype = "متعاون";
+                }
+                rptdocbycontracttype.SetParameterValue("@Word", conttacttype);
+                FrmReport frmrpt = new FrmReport();
+                frmrpt.crystalReportViewer1.ShowRefreshButton = false;
+                frmrpt.crystalReportViewer1.ReportSource = rptdocbycontracttype;
+                frmrpt.Show();
+            }
+            catch
+            {
+                Forms.FrmAlertMessageBox frmalert = new FrmAlertMessageBox();
+                frmalert.lblMessage.Text = "يرجى الـتـأكـد من تحديد نوع العقد ";
+                frmalert.ShowDialog();
+                // MessageBox.Show("يرجى الـتـأكـد من تحديد الموظف ","تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation );
             }
         }
     }

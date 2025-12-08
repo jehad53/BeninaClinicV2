@@ -109,7 +109,6 @@ E:\نسخه تجريبية للمنظومة\BeninaClinic\BeninaClinic\bin\Debug\
 E:\نسخه تجريبية للمنظومة\BeninaClinic\BeninaClinic\bin\Debug\CrystalDecisions.ReportAppServer.ObjectFactory.dll
 E:\نسخه تجريبية للمنظومة\BeninaClinic\BeninaClinic\bin\Debug\stdole.dll
 E:\نسخه تجريبية للمنظومة\BeninaClinic\BeninaClinic\bin\Debug\CrystalDecisions.ReportAppServer.CommonControls.dll
-E:\نسخه تجريبية للمنظومة\BeninaClinic\BeninaClinic\obj\Debug\BeninaClinic.csprojResolveAssemblyReference.cache
 E:\نسخه تجريبية للمنظومة\BeninaClinic\BeninaClinic\obj\Debug\BeninaClinic.PL.Forms.FrmPharmacy.FrmMedicationList.resources
 E:\نسخه تجريبية للمنظومة\BeninaClinic\BeninaClinic\obj\Debug\BeninaClinic.PL.Forms.FrmPharmacy.FrmAddMedication.resources
 E:\نسخه تجريبية للمنظومة\BeninaClinic\BeninaClinic\obj\Debug\BeninaClinic.PL.Forms.FrmPharmacy.FrmDispense.resources

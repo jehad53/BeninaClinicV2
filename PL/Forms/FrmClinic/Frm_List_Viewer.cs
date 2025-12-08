@@ -30,18 +30,20 @@ namespace BeninaClinic.PL.Forms.FrmClinic
         {
             try
             {
-                if(dgvList.CurrentRow != null)
-                { 
-                frmApp.txtPatientID.Text = dgvList.CurrentRow.Cells[0].Value.ToString();
-                frmApp.txtPatientName.Text = dgvList.CurrentRow.Cells[1].Value.ToString();
-                frmApp.txtNatNum.Text = dgvList.CurrentRow.Cells[2].Value.ToString();
-                frmApp.txtBoD.Text = dgvList.CurrentRow.Cells[3].Value.ToString();
-                frmApp.txtGender.Text = dgvList.CurrentRow.Cells[4].Value.ToString();
-                frmApp.txtPhone.Text = dgvList.CurrentRow.Cells[5].Value.ToString();
-                frmApp.txtAddress.Text = dgvList.CurrentRow.Cells[6].Value.ToString();
-                frmApp.txtPatientNote.Text = dgvList.CurrentRow.Cells[7].Value.ToString();
+                if (dgvList.Rows.Count > 0)
+                {
+                    frmApp.txtPatientID.Text = dgvList.CurrentRow.Cells[0].Value.ToString();
+                    frmApp.txtPatientName.Text = dgvList.CurrentRow.Cells[1].Value.ToString();
+                    frmApp.txtNatNum.Text = dgvList.CurrentRow.Cells[2].Value.ToString();
+                    //frmApp.txtBoD.Text = dgvList.CurrentRow.Cells[3].Value.ToString();
+                    //frmApp.txtGender.Text = dgvList.CurrentRow.Cells[4].Value.ToString();
+                    //frmApp.txtPhone.Text = dgvList.CurrentRow.Cells[5].Value.ToString();
+                    // frmApp.txtAddress.Text = dgvList.CurrentRow.Cells[6].Value.ToString();
+                    //   frmApp.txtPatientNote.Text = dgvList.CurrentRow.Cells[7].Value.ToString();
+                    btnClose_Click(null,null);
                 }
                 this.Close();
+
             }
             catch
             {
@@ -52,6 +54,11 @@ namespace BeninaClinic.PL.Forms.FrmClinic
         private void dgvList_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
