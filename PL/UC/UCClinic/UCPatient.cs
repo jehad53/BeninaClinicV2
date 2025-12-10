@@ -146,12 +146,16 @@ namespace BeninaClinic.PL.UC.UCClinic
         {
             try
             {
+                MessageDialog.Text = "هل تريد بالفعل حذف المريض المحدد ";
+                MessageDialog.Parent = this.FindForm();
+                var result = MessageDialog.Show();
                 if (dgvPatients.Rows.Count == 0)
                 {
                     MessageBox.Show("القائمة فارغة لا يمكن الحذف", " تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     return;
                 }
-                else if (MessageBox.Show("هل تريد حذف المريض المحدد في قائمة المرضـى بالفعل؟", "تأكيد الحذف", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+
+                else if (result == DialogResult.Yes)
                 {
                     PatientManagement patientmanagement = new PatientManagement();
                     patientmanagement.DeletePatient(Convert.ToInt32(dgvPatients.CurrentRow.Cells[0].Value));
@@ -253,6 +257,21 @@ namespace BeninaClinic.PL.UC.UCClinic
         private void dtpPatientDateofBirth_ValueChanged(object sender, EventArgs e)
         {
             CalcAge();
+        }
+
+        private void txtSearchEmployee_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                PatientManagement patientmanagement = new PatientManagement();
+                dgvPatients.AutoGenerateColumns = false;
+                dgvPatients.ColumnHeadersDefaultCellStyle.Font = new Font("Cairo", 12, FontStyle.Bold);
+                dgvPatients.DataSource = patientmanagement.SearchPatient(txtSearchEmployee.Text);
+            }
+            catch
+            {
+                MessageBox.Show("يوجد خطأ في عملية البحث عن مريض", " البحث عن مريض", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
         }
     }
 }

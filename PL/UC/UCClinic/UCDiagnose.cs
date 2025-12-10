@@ -219,12 +219,17 @@ namespace BeninaClinic.PL.UC.UCClinic
         {
             try
             {
-                if (dgvDiagonses.Rows.Count <= 0)
+                MessageDialog.Caption = "تأكيد الحذف";
+                MessageDialog.Text = "هل تريد بالفعل حذف التشخيص المحدد ";
+                MessageDialog.Parent = this.FindForm();
+                var result = MessageDialog.Show();
+                if (dgvDiagonses.Rows.Count == 0)
                 {
                     MessageBox.Show("القائمة فارغة لا يمكن الحذف", " تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     return;
                 }
-                else if (MessageBox.Show("هل تريد حذف القسم المحدد في قائمة الأقسام بالفعل؟", "تأكيد الحذف", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+     
+                else if (result == DialogResult.Yes)
                 {
                     DiagnoseManagement diagnosemanagement = new DiagnoseManagement();
                     diagnosemanagement.DeleteDiagnose(Convert.ToInt32(dgvDiagonses.CurrentRow.Cells[0].Value));

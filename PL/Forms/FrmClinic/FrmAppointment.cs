@@ -115,40 +115,8 @@ namespace BeninaClinic.PL.Forms.FrmClinic
 
         private void btnFrmListPatient_Click(object sender, EventArgs e)
         {
-            Frm_List_Viewer frmlist = new Frm_List_Viewer(this);
-            frmlist.lbListName.Text = "قائمة المرضـى";
-            frmlist.dgvList.ColumnCount = 3;
-            frmlist.dgvList.Columns[0].HeaderText = "رقم المريض";
-            frmlist.dgvList.Columns[1].HeaderText = "اسم المريض";
-            frmlist.dgvList.Columns[2].HeaderText = " الرقم الوطني";
-            //frmlist.dgvList.Columns[3].HeaderText = "تاريخ الميلاد";
-            //frmlist.dgvList.Columns[4].HeaderText = "الجنس";
-            //frmlist.dgvList.Columns[5].HeaderText = "رقم الهاتف";
-            //frmlist.dgvList.Columns[6].HeaderText = "العنوان";
-            //frmlist.dgvList.Columns[7].HeaderText = "الملاحظة";
-
-            // مــــمـــكـــن نــلــــــغــــــي الــــكــــــلام الاعــــمــــدة اللــي زدتـها مـن 3 إلـى 7
-
-            frmlist.dgvList.Columns[0].DataPropertyName = "Patient_Id";
-            frmlist.dgvList.Columns[1].DataPropertyName = "PatientName";
-            frmlist.dgvList.Columns[2].DataPropertyName = "NationalNum";
-            //frmlist.dgvList.Columns[3].DataPropertyName = "DateofBirth";
-            //frmlist.dgvList.Columns[4].DataPropertyName = "Gender";
-            //frmlist.dgvList.Columns[5].DataPropertyName = "Phone";
-            //frmlist.dgvList.Columns[6].DataPropertyName = "Address";
-            //frmlist.dgvList.Columns[7].DataPropertyName = "Note";
-
-            //frmlist.dgvList.Columns[3].Visible = false;
-            //frmlist.dgvList.Columns[4].Visible = false;
-            //frmlist.dgvList.Columns[5].Visible = false;
-            //frmlist.dgvList.Columns[6].Visible = false;
-            //frmlist.dgvList.Columns[7].Visible = false;
-
-            PatientManagement patientmanagement = new PatientManagement();
-            frmlist.dgvList.AutoGenerateColumns = false;
-            //dgvAppointments.ColumnHeadersDefaultCellStyle.Font = new Font("Cairo", 12, FontStyle.Bold);
-            frmlist.dgvList.DataSource = patientmanagement.GetAllPatients();
-            frmlist.ShowDialog();
+            Frm_Select_Patient frmselectpat = new Frm_Select_Patient();
+            frmselectpat.ShowDialog();
         }
 
         private void btnNew_Click(object sender, EventArgs e)
@@ -282,12 +250,17 @@ namespace BeninaClinic.PL.Forms.FrmClinic
         {
             try
             {
+                MessageDialog.Caption = "تأكيد الخروج";
+                MessageDialog.Text = "هل تريد بالفعل تسجيل الخروج من النظام";
+                var result = MessageDialog.Show();
                 if (dgvAppointments.Rows.Count <= 0)
                 {
                     MessageBox.Show("القائمة فارغة لا يمكن الحذف", " تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     return;
                 }
-                else if (MessageBox.Show("هل تريد حذف الموعد المحدد في قائمة الأطباء بالفعل؟", "تأكيد الحذف", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+
+          
+               else if (result == DialogResult.Yes)
                 {
                     AppointmentManagement appointmentmanagement = new AppointmentManagement();
                     appointmentmanagement.DeleteAppointment(Convert.ToInt32(dgvAppointments.CurrentRow.Cells[0].Value));
@@ -364,5 +337,12 @@ namespace BeninaClinic.PL.Forms.FrmClinic
 
             }
         }
+
+        public void GetDataFromFrm(string PatientID, string PatientName)
+        {
+            txtPatientID.Text = PatientID;
+            txtPatientName.Text = PatientName;
+        }
+
     }
 }

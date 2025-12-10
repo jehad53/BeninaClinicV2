@@ -66,7 +66,7 @@ namespace BeninaClinic.PL.Forms.FrmPharmacy
                 if(dgvNotifications.Columns.Contains("Visit_Id")) dgvNotifications.Columns["Visit_Id"].Visible = false;
                 if(dgvNotifications.Columns.Contains("Patient_Id")) dgvNotifications.Columns["Patient_Id"].Visible = false;
             }
-            catch (Exception e)
+            catch 
             {
                 // Silent fail on timer?
             }

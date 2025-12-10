@@ -30,11 +30,11 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UCUsers));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.CBMain = new System.Windows.Forms.CheckBox();
             this.CBDoctors = new System.Windows.Forms.CheckBox();
             this.CBEmployees = new System.Windows.Forms.CheckBox();
@@ -48,6 +48,13 @@
             this.CBRecordPatient = new System.Windows.Forms.CheckBox();
             this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
             this.CBTest = new System.Windows.Forms.CheckBox();
+            this.CBClinics = new System.Windows.Forms.CheckBox();
+            this.CBAppointment = new System.Windows.Forms.CheckBox();
+            this.CBVisits = new System.Windows.Forms.CheckBox();
+            this.CBMedicenReport = new System.Windows.Forms.CheckBox();
+            this.CBDose = new System.Windows.Forms.CheckBox();
+            this.CBDepartments = new System.Windows.Forms.CheckBox();
+            this.CBJobs = new System.Windows.Forms.CheckBox();
             this.txtUserPass = new Guna.UI2.WinForms.Guna2TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
@@ -76,13 +83,6 @@
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.guna2GroupBox2 = new Guna.UI2.WinForms.Guna2GroupBox();
             this.dgvUsers = new System.Windows.Forms.DataGridView();
-            this.CBClinics = new System.Windows.Forms.CheckBox();
-            this.CBAppointment = new System.Windows.Forms.CheckBox();
-            this.CBVisits = new System.Windows.Forms.CheckBox();
-            this.CBMedicenReport = new System.Windows.Forms.CheckBox();
-            this.CBDose = new System.Windows.Forms.CheckBox();
-            this.CBDepartments = new System.Windows.Forms.CheckBox();
-            this.CBJobs = new System.Windows.Forms.CheckBox();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -106,6 +106,7 @@
             this.Column21 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.Column22 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.Column23 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.MessageDialog = new Guna.UI2.WinForms.Guna2MessageDialog();
             this.flowLayoutPanel3.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
             this.guna2GroupBox3.SuspendLayout();
@@ -263,6 +264,76 @@
             this.CBTest.TabIndex = 67;
             this.CBTest.Text = "العيادات";
             this.CBTest.UseVisualStyleBackColor = true;
+            // 
+            // CBClinics
+            // 
+            this.CBClinics.AutoSize = true;
+            this.CBClinics.Location = new System.Drawing.Point(668, 199);
+            this.CBClinics.Name = "CBClinics";
+            this.CBClinics.Size = new System.Drawing.Size(149, 57);
+            this.CBClinics.TabIndex = 69;
+            this.CBClinics.Text = "العيادات";
+            this.CBClinics.UseVisualStyleBackColor = true;
+            // 
+            // CBAppointment
+            // 
+            this.CBAppointment.AutoSize = true;
+            this.CBAppointment.Location = new System.Drawing.Point(461, 199);
+            this.CBAppointment.Name = "CBAppointment";
+            this.CBAppointment.Size = new System.Drawing.Size(201, 57);
+            this.CBAppointment.TabIndex = 70;
+            this.CBAppointment.Text = "حجز المواعيد";
+            this.CBAppointment.UseVisualStyleBackColor = true;
+            // 
+            // CBVisits
+            // 
+            this.CBVisits.AutoSize = true;
+            this.CBVisits.Location = new System.Drawing.Point(320, 199);
+            this.CBVisits.Name = "CBVisits";
+            this.CBVisits.Size = new System.Drawing.Size(135, 57);
+            this.CBVisits.TabIndex = 71;
+            this.CBVisits.Text = "الزيارات";
+            this.CBVisits.UseVisualStyleBackColor = true;
+            // 
+            // CBMedicenReport
+            // 
+            this.CBMedicenReport.AutoSize = true;
+            this.CBMedicenReport.Location = new System.Drawing.Point(142, 199);
+            this.CBMedicenReport.Name = "CBMedicenReport";
+            this.CBMedicenReport.Size = new System.Drawing.Size(172, 57);
+            this.CBMedicenReport.TabIndex = 72;
+            this.CBMedicenReport.Text = "الفحوصات";
+            this.CBMedicenReport.UseVisualStyleBackColor = true;
+            // 
+            // CBDose
+            // 
+            this.CBDose.AutoSize = true;
+            this.CBDose.Location = new System.Drawing.Point(679, 262);
+            this.CBDose.Name = "CBDose";
+            this.CBDose.Size = new System.Drawing.Size(138, 57);
+            this.CBDose.TabIndex = 73;
+            this.CBDose.Text = "الجرعات";
+            this.CBDose.UseVisualStyleBackColor = true;
+            // 
+            // CBDepartments
+            // 
+            this.CBDepartments.AutoSize = true;
+            this.CBDepartments.Location = new System.Drawing.Point(528, 262);
+            this.CBDepartments.Name = "CBDepartments";
+            this.CBDepartments.Size = new System.Drawing.Size(145, 57);
+            this.CBDepartments.TabIndex = 74;
+            this.CBDepartments.Text = "الأقسام";
+            this.CBDepartments.UseVisualStyleBackColor = true;
+            // 
+            // CBJobs
+            // 
+            this.CBJobs.AutoSize = true;
+            this.CBJobs.Location = new System.Drawing.Point(372, 262);
+            this.CBJobs.Name = "CBJobs";
+            this.CBJobs.Size = new System.Drawing.Size(150, 57);
+            this.CBJobs.TabIndex = 75;
+            this.CBJobs.Text = "الوظائف";
+            this.CBJobs.UseVisualStyleBackColor = true;
             // 
             // txtUserPass
             // 
@@ -832,24 +903,24 @@
             this.dgvUsers.AllowUserToDeleteRows = false;
             this.dgvUsers.AllowUserToResizeColumns = false;
             this.dgvUsers.AllowUserToResizeRows = false;
-            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle16.BackColor = System.Drawing.Color.Lavender;
-            dataGridViewCellStyle16.Font = new System.Drawing.Font("Cairo Medium", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.Color.Blue;
-            this.dgvUsers.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Lavender;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Cairo Medium", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Blue;
+            this.dgvUsers.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvUsers.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvUsers.BackgroundColor = System.Drawing.Color.White;
             this.dgvUsers.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle17.BackColor = System.Drawing.Color.Lavender;
-            dataGridViewCellStyle17.Font = new System.Drawing.Font("Cairo Medium", 12F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvUsers.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle17;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Lavender;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Cairo Medium", 12F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvUsers.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvUsers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvUsers.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
@@ -875,110 +946,40 @@
             this.Column21,
             this.Column22,
             this.Column23});
-            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle18.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle18.Font = new System.Drawing.Font("Cairo Medium", 12F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle18.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvUsers.DefaultCellStyle = dataGridViewCellStyle18;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Cairo Medium", 12F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvUsers.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvUsers.EnableHeadersVisualStyles = false;
             this.dgvUsers.Location = new System.Drawing.Point(3, 570);
             this.dgvUsers.Margin = new System.Windows.Forms.Padding(4, 7, 4, 7);
             this.dgvUsers.MultiSelect = false;
             this.dgvUsers.Name = "dgvUsers";
             this.dgvUsers.ReadOnly = true;
-            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle19.BackColor = System.Drawing.Color.SpringGreen;
-            dataGridViewCellStyle19.Font = new System.Drawing.Font("Cairo Medium", 12F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle19.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle19.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle19.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvUsers.RowHeadersDefaultCellStyle = dataGridViewCellStyle19;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.SpringGreen;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Cairo Medium", 12F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvUsers.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvUsers.RowHeadersVisible = false;
-            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle20.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle20.Font = new System.Drawing.Font("Cairo Medium", 13.8F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle20.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.dgvUsers.RowsDefaultCellStyle = dataGridViewCellStyle20;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Cairo Medium", 13.8F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.dgvUsers.RowsDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvUsers.RowTemplate.Height = 40;
             this.dgvUsers.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvUsers.Size = new System.Drawing.Size(836, 73);
             this.dgvUsers.TabIndex = 76;
             this.dgvUsers.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvUsers_CellContentClick);
             this.dgvUsers.DoubleClick += new System.EventHandler(this.dgvUsers_DoubleClick);
-            // 
-            // CBClinics
-            // 
-            this.CBClinics.AutoSize = true;
-            this.CBClinics.Location = new System.Drawing.Point(668, 199);
-            this.CBClinics.Name = "CBClinics";
-            this.CBClinics.Size = new System.Drawing.Size(149, 57);
-            this.CBClinics.TabIndex = 69;
-            this.CBClinics.Text = "العيادات";
-            this.CBClinics.UseVisualStyleBackColor = true;
-            // 
-            // CBAppointment
-            // 
-            this.CBAppointment.AutoSize = true;
-            this.CBAppointment.Location = new System.Drawing.Point(461, 199);
-            this.CBAppointment.Name = "CBAppointment";
-            this.CBAppointment.Size = new System.Drawing.Size(201, 57);
-            this.CBAppointment.TabIndex = 70;
-            this.CBAppointment.Text = "حجز المواعيد";
-            this.CBAppointment.UseVisualStyleBackColor = true;
-            // 
-            // CBVisits
-            // 
-            this.CBVisits.AutoSize = true;
-            this.CBVisits.Location = new System.Drawing.Point(320, 199);
-            this.CBVisits.Name = "CBVisits";
-            this.CBVisits.Size = new System.Drawing.Size(135, 57);
-            this.CBVisits.TabIndex = 71;
-            this.CBVisits.Text = "الزيارات";
-            this.CBVisits.UseVisualStyleBackColor = true;
-            // 
-            // CBMedicenReport
-            // 
-            this.CBMedicenReport.AutoSize = true;
-            this.CBMedicenReport.Location = new System.Drawing.Point(142, 199);
-            this.CBMedicenReport.Name = "CBMedicenReport";
-            this.CBMedicenReport.Size = new System.Drawing.Size(172, 57);
-            this.CBMedicenReport.TabIndex = 72;
-            this.CBMedicenReport.Text = "الفحوصات";
-            this.CBMedicenReport.UseVisualStyleBackColor = true;
-            // 
-            // CBDose
-            // 
-            this.CBDose.AutoSize = true;
-            this.CBDose.Location = new System.Drawing.Point(679, 262);
-            this.CBDose.Name = "CBDose";
-            this.CBDose.Size = new System.Drawing.Size(138, 57);
-            this.CBDose.TabIndex = 73;
-            this.CBDose.Text = "الجرعات";
-            this.CBDose.UseVisualStyleBackColor = true;
-            // 
-            // CBDepartments
-            // 
-            this.CBDepartments.AutoSize = true;
-            this.CBDepartments.Location = new System.Drawing.Point(528, 262);
-            this.CBDepartments.Name = "CBDepartments";
-            this.CBDepartments.Size = new System.Drawing.Size(145, 57);
-            this.CBDepartments.TabIndex = 74;
-            this.CBDepartments.Text = "الأقسام";
-            this.CBDepartments.UseVisualStyleBackColor = true;
-            // 
-            // CBJobs
-            // 
-            this.CBJobs.AutoSize = true;
-            this.CBJobs.Location = new System.Drawing.Point(372, 262);
-            this.CBJobs.Name = "CBJobs";
-            this.CBJobs.Size = new System.Drawing.Size(150, 57);
-            this.CBJobs.TabIndex = 75;
-            this.CBJobs.Text = "الوظائف";
-            this.CBJobs.UseVisualStyleBackColor = true;
             // 
             // Column1
             // 
@@ -1159,6 +1160,15 @@
             this.Column23.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.Column23.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
+            // MessageDialog
+            // 
+            this.MessageDialog.Buttons = Guna.UI2.WinForms.MessageDialogButtons.YesNo;
+            this.MessageDialog.Caption = "تنبيه";
+            this.MessageDialog.Icon = Guna.UI2.WinForms.MessageDialogIcon.Question;
+            this.MessageDialog.Parent = null;
+            this.MessageDialog.Style = Guna.UI2.WinForms.MessageDialogStyle.Dark;
+            this.MessageDialog.Text = "تمت العملية بنجاح";
+            // 
             // UCUsers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 37F);
@@ -1257,5 +1267,6 @@
         private System.Windows.Forms.DataGridViewCheckBoxColumn Column21;
         private System.Windows.Forms.DataGridViewCheckBoxColumn Column22;
         private System.Windows.Forms.DataGridViewCheckBoxColumn Column23;
+        public Guna.UI2.WinForms.Guna2MessageDialog MessageDialog;
     }
 }

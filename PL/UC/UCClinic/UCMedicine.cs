@@ -168,12 +168,16 @@ namespace BeninaClinic.PL.UC.UCClinic
         {
             try
             {
-                if (dgvMedicines.Rows.Count <= 0)
+                MessageDialog.Text = "هل تريد بالفعل حذف العيادة المحددة ";
+                MessageDialog.Parent = this.FindForm();
+                var result = MessageDialog.Show();
+                if (dgvMedicines.Rows.Count == 0)
                 {
                     MessageBox.Show("القائمة فارغة لا يمكن الحذف", " تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     return;
                 }
-                else if (MessageBox.Show("هل تريد حذف الدواء المحدد في قائمة الادوية بالفعل؟", "تأكيد الحذف", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+
+                else if (result == DialogResult.Yes)
                 {
                     MedicineManagement MedicineManagement = new MedicineManagement();
                     MedicineManagement.DeleteMedicine(Convert.ToInt32(dgvMedicines.CurrentRow.Cells[0].Value));

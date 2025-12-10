@@ -16,18 +16,13 @@ namespace BeninaClinic.PL.Forms.FrmPharmacy
 
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnlMain = new Guna.UI2.WinForms.Guna2ShadowPanel();
+            this.btnPrintPharmacyList = new Guna.UI2.WinForms.Guna2Button();
             this.dgvMedications = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.txtSearch = new Guna.UI2.WinForms.Guna2TextBox();
-            this.btnDelete = new Guna.UI2.WinForms.Guna2Button();
-            this.btnEdit = new Guna.UI2.WinForms.Guna2Button();
-            this.btnAdd = new Guna.UI2.WinForms.Guna2Button();
-            this.btnClose = new Guna.UI2.WinForms.Guna2Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -41,7 +36,13 @@ namespace BeninaClinic.PL.Forms.FrmPharmacy
             this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnPrintPharmacyList = new Guna.UI2.WinForms.Guna2Button();
+            this.txtSearch = new Guna.UI2.WinForms.Guna2TextBox();
+            this.btnDelete = new Guna.UI2.WinForms.Guna2Button();
+            this.btnEdit = new Guna.UI2.WinForms.Guna2Button();
+            this.btnAdd = new Guna.UI2.WinForms.Guna2Button();
+            this.btnClose = new Guna.UI2.WinForms.Guna2Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.MessageDialog = new Guna.UI2.WinForms.Guna2MessageDialog();
             this.pnlMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMedications)).BeginInit();
             this.SuspendLayout();
@@ -66,24 +67,37 @@ namespace BeninaClinic.PL.Forms.FrmPharmacy
             this.pnlMain.Size = new System.Drawing.Size(1294, 700);
             this.pnlMain.TabIndex = 0;
             // 
+            // btnPrintPharmacyList
+            // 
+            this.btnPrintPharmacyList.Animated = true;
+            this.btnPrintPharmacyList.BorderRadius = 10;
+            this.btnPrintPharmacyList.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(121)))), ((int)(((byte)(214)))));
+            this.btnPrintPharmacyList.Font = new System.Drawing.Font("Cairo", 10F, System.Drawing.FontStyle.Bold);
+            this.btnPrintPharmacyList.ForeColor = System.Drawing.Color.White;
+            this.btnPrintPharmacyList.Location = new System.Drawing.Point(12, 80);
+            this.btnPrintPharmacyList.Name = "btnPrintPharmacyList";
+            this.btnPrintPharmacyList.Size = new System.Drawing.Size(382, 40);
+            this.btnPrintPharmacyList.TabIndex = 13;
+            this.btnPrintPharmacyList.Text = "طباعة قائمة الأدوية";
+            // 
             // dgvMedications
             // 
             this.dgvMedications.AllowUserToAddRows = false;
             this.dgvMedications.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle13.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle13.Font = new System.Drawing.Font("Cairo", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgvMedications.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Cairo", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvMedications.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvMedications.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("Cairo", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvMedications.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Cairo", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvMedications.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvMedications.ColumnHeadersHeight = 40;
             this.dgvMedications.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.dgvMedications.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -100,14 +114,14 @@ namespace BeninaClinic.PL.Forms.FrmPharmacy
             this.Column11,
             this.Column12,
             this.Column13});
-            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle16.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle16.Font = new System.Drawing.Font("Cairo", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvMedications.DefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Cairo", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvMedications.DefaultCellStyle = dataGridViewCellStyle4;
             this.dgvMedications.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvMedications.Location = new System.Drawing.Point(12, 150);
             this.dgvMedications.Name = "dgvMedications";
@@ -138,6 +152,89 @@ namespace BeninaClinic.PL.Forms.FrmPharmacy
             this.dgvMedications.ThemeStyle.RowsStyle.Height = 40;
             this.dgvMedications.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvMedications.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            // 
+            // Column1
+            // 
+            this.Column1.DataPropertyName = "Id";
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Cairo", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Column1.DefaultCellStyle = dataGridViewCellStyle3;
+            this.Column1.HeaderText = "المعرف";
+            this.Column1.Name = "Column1";
+            // 
+            // Column2
+            // 
+            this.Column2.DataPropertyName = "Code";
+            this.Column2.HeaderText = "الباركود";
+            this.Column2.Name = "Column2";
+            // 
+            // Column3
+            // 
+            this.Column3.DataPropertyName = "Name";
+            this.Column3.HeaderText = "الاسم";
+            this.Column3.Name = "Column3";
+            // 
+            // Column4
+            // 
+            this.Column4.DataPropertyName = "ScientificName";
+            this.Column4.HeaderText = "الاسم العلمي";
+            this.Column4.Name = "Column4";
+            // 
+            // Column5
+            // 
+            this.Column5.DataPropertyName = "Type";
+            this.Column5.HeaderText = "النوع";
+            this.Column5.Name = "Column5";
+            // 
+            // Column6
+            // 
+            this.Column6.DataPropertyName = "PurchasePrice";
+            this.Column6.HeaderText = "سعر الشراء";
+            this.Column6.Name = "Column6";
+            this.Column6.Visible = false;
+            // 
+            // Column7
+            // 
+            this.Column7.DataPropertyName = "SellingPrice";
+            this.Column7.HeaderText = "سعر البيع";
+            this.Column7.Name = "Column7";
+            this.Column7.Visible = false;
+            // 
+            // Column8
+            // 
+            this.Column8.DataPropertyName = "Quantity";
+            this.Column8.HeaderText = "الكمية";
+            this.Column8.Name = "Column8";
+            // 
+            // Column9
+            // 
+            this.Column9.DataPropertyName = "ExpiryDate";
+            this.Column9.HeaderText = "تاريخ الإنتهاء";
+            this.Column9.Name = "Column9";
+            // 
+            // Column10
+            // 
+            this.Column10.DataPropertyName = "ProductionDate";
+            this.Column10.HeaderText = "تاريخ الإنتاج";
+            this.Column10.Name = "Column10";
+            // 
+            // Column11
+            // 
+            this.Column11.DataPropertyName = "AlertQuantity";
+            this.Column11.HeaderText = "حد الطلب";
+            this.Column11.Name = "Column11";
+            // 
+            // Column12
+            // 
+            this.Column12.DataPropertyName = "IsActive";
+            this.Column12.HeaderText = "تفعيل الصرف";
+            this.Column12.Name = "Column12";
+            // 
+            // Column13
+            // 
+            this.Column13.DataPropertyName = "CreatedAt";
+            this.Column13.HeaderText = "تاريخ الإضافة";
+            this.Column13.Name = "Column13";
+            this.Column13.Visible = false;
             // 
             // txtSearch
             // 
@@ -222,101 +319,14 @@ namespace BeninaClinic.PL.Forms.FrmPharmacy
             this.label1.TabIndex = 12;
             this.label1.Text = "قائمة الأدوية";
             // 
-            // Column1
+            // MessageDialog
             // 
-            this.Column1.DataPropertyName = "Id";
-            dataGridViewCellStyle15.Font = new System.Drawing.Font("Cairo", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Column1.DefaultCellStyle = dataGridViewCellStyle15;
-            this.Column1.HeaderText = "المعرف";
-            this.Column1.Name = "Column1";
-            // 
-            // Column2
-            // 
-            this.Column2.DataPropertyName = "Code";
-            this.Column2.HeaderText = "الباركود";
-            this.Column2.Name = "Column2";
-            // 
-            // Column3
-            // 
-            this.Column3.DataPropertyName = "Name";
-            this.Column3.HeaderText = "الاسم";
-            this.Column3.Name = "Column3";
-            // 
-            // Column4
-            // 
-            this.Column4.DataPropertyName = "ScientificName";
-            this.Column4.HeaderText = "الاسم العلمي";
-            this.Column4.Name = "Column4";
-            // 
-            // Column5
-            // 
-            this.Column5.DataPropertyName = "Type";
-            this.Column5.HeaderText = "النوع";
-            this.Column5.Name = "Column5";
-            // 
-            // Column6
-            // 
-            this.Column6.DataPropertyName = "PurchasePrice";
-            this.Column6.HeaderText = "سعر الشراء";
-            this.Column6.Name = "Column6";
-            this.Column6.Visible = false;
-            // 
-            // Column7
-            // 
-            this.Column7.DataPropertyName = "SellingPrice";
-            this.Column7.HeaderText = "سعر البيع";
-            this.Column7.Name = "Column7";
-            this.Column7.Visible = false;
-            // 
-            // Column8
-            // 
-            this.Column8.DataPropertyName = "Quantity";
-            this.Column8.HeaderText = "الكمية";
-            this.Column8.Name = "Column8";
-            // 
-            // Column9
-            // 
-            this.Column9.DataPropertyName = "ExpiryDate";
-            this.Column9.HeaderText = "تاريخ الإنتهاء";
-            this.Column9.Name = "Column9";
-            // 
-            // Column10
-            // 
-            this.Column10.DataPropertyName = "ProductionDate";
-            this.Column10.HeaderText = "تاريخ الإنتاج";
-            this.Column10.Name = "Column10";
-            // 
-            // Column11
-            // 
-            this.Column11.DataPropertyName = "AlertQuantity";
-            this.Column11.HeaderText = "حد الطلب";
-            this.Column11.Name = "Column11";
-            // 
-            // Column12
-            // 
-            this.Column12.DataPropertyName = "IsActive";
-            this.Column12.HeaderText = "تفعيل الصرف";
-            this.Column12.Name = "Column12";
-            // 
-            // Column13
-            // 
-            this.Column13.DataPropertyName = "CreatedAt";
-            this.Column13.HeaderText = "تاريخ الإضافة";
-            this.Column13.Name = "Column13";
-            this.Column13.Visible = false;
-            // 
-            // btnPrintPharmacyList
-            // 
-            this.btnPrintPharmacyList.Animated = true;
-            this.btnPrintPharmacyList.BorderRadius = 10;
-            this.btnPrintPharmacyList.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(121)))), ((int)(((byte)(214)))));
-            this.btnPrintPharmacyList.Font = new System.Drawing.Font("Cairo", 10F, System.Drawing.FontStyle.Bold);
-            this.btnPrintPharmacyList.ForeColor = System.Drawing.Color.White;
-            this.btnPrintPharmacyList.Location = new System.Drawing.Point(12, 80);
-            this.btnPrintPharmacyList.Name = "btnPrintPharmacyList";
-            this.btnPrintPharmacyList.Size = new System.Drawing.Size(382, 40);
-            this.btnPrintPharmacyList.TabIndex = 13;
-            this.btnPrintPharmacyList.Text = "طباعة قائمة الأدوية";
+            this.MessageDialog.Buttons = Guna.UI2.WinForms.MessageDialogButtons.YesNo;
+            this.MessageDialog.Caption = "تنبيه";
+            this.MessageDialog.Icon = Guna.UI2.WinForms.MessageDialogIcon.Question;
+            this.MessageDialog.Parent = null;
+            this.MessageDialog.Style = Guna.UI2.WinForms.MessageDialogStyle.Dark;
+            this.MessageDialog.Text = "تمت العملية بنجاح";
             // 
             // FrmMedicationList
             // 
@@ -359,5 +369,6 @@ namespace BeninaClinic.PL.Forms.FrmPharmacy
         private System.Windows.Forms.DataGridViewTextBoxColumn Column12;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column13;
         private Guna.UI2.WinForms.Guna2Button btnPrintPharmacyList;
+        public Guna.UI2.WinForms.Guna2MessageDialog MessageDialog;
     }
 }

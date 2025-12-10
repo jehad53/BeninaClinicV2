@@ -120,12 +120,17 @@ namespace BeninaClinic.PL.UC.UCClinic
         {
             try
             {
+                MessageDialog.Caption = "تأكيد الحذف";
+                MessageDialog.Text = "هل تريد بالفعل حذف القسم المحدد ";
+                MessageDialog.Parent = this.FindForm();
+                var result = MessageDialog.Show();
                 if (dgvDepartments.Rows.Count == 0)
                 {
                     MessageBox.Show("القائمة فارغة لا يمكن الحذف", " تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     return;
                 }
-                else if (MessageBox.Show("هل تريد حذف القسم المحدد في قائمة الأقسام بالفعل؟", "تأكيد الحذف", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+
+                else if (result == DialogResult.Yes)
                 {
                     DepartmentsManagement departmentsmanagement = new DepartmentsManagement();
                     departmentsmanagement.DeleteDepartment(Convert.ToInt32(dgvDepartments.CurrentRow.Cells[0].Value));

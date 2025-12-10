@@ -81,6 +81,7 @@
             this.label12 = new System.Windows.Forms.Label();
             this.pnlLine = new System.Windows.Forms.Panel();
             this.lblUserName = new System.Windows.Forms.Label();
+            this.MessageDialog = new Guna.UI2.WinForms.Guna2MessageDialog();
             this.flowLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPatients)).BeginInit();
             this.guna2GroupBox1.SuspendLayout();
@@ -515,6 +516,7 @@
             this.txtSearchEmployee.TabIndex = 85;
             this.txtSearchEmployee.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.toolTip1.SetToolTip(this.txtSearchEmployee, "يمكن البحث بواسطة الاسم او الرقم الوطني");
+            this.txtSearchEmployee.TextChanged += new System.EventHandler(this.txtSearchEmployee_TextChanged);
             // 
             // guna2GroupBox2
             // 
@@ -944,6 +946,15 @@
             this.lblUserName.Text = "المرضـى";
             this.lblUserName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // MessageDialog
+            // 
+            this.MessageDialog.Buttons = Guna.UI2.WinForms.MessageDialogButtons.YesNo;
+            this.MessageDialog.Caption = "تأكيد الحذف";
+            this.MessageDialog.Icon = Guna.UI2.WinForms.MessageDialogIcon.Question;
+            this.MessageDialog.Parent = null;
+            this.MessageDialog.Style = Guna.UI2.WinForms.MessageDialogStyle.Dark;
+            this.MessageDialog.Text = "تمت العملية بنجاح";
+            // 
             // UCPatient
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 37F);
@@ -1021,5 +1032,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column12;
+        public Guna.UI2.WinForms.Guna2MessageDialog MessageDialog;
     }
 }

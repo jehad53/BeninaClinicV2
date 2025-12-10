@@ -193,12 +193,17 @@ namespace BeninaClinic.PL.UC.UCClinic
 
         private void btnDeleteClinic_Click(object sender, EventArgs e)
         {
+            MessageDialog.Caption = "تأكيد الحذف";
+            MessageDialog.Text = "هل تريد بالفعل حذف العيادة المحددة ";
+            MessageDialog.Parent = this.FindForm();
+            var result = MessageDialog.Show();
             if (dgvClinic.Rows.Count == 0)
             {
                 MessageBox.Show("القائمة فارغة لا يمكن الحذف", " تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
-            else if (MessageBox.Show("هل تريد حذف العيادة من قائمة العيادات بالفعل؟", "تأكيد الحذف", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+
+            else if ( result == DialogResult.Yes)
             {
                 try
                 {

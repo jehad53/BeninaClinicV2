@@ -65,6 +65,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.cmbMedicineType = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label13 = new System.Windows.Forms.Label();
+            this.MessageDialog = new Guna.UI2.WinForms.Guna2MessageDialog();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMedicines)).BeginInit();
             this.guna2GroupBox1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
@@ -663,6 +664,15 @@
             this.label13.Text = "البحث";
             this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // MessageDialog
+            // 
+            this.MessageDialog.Buttons = Guna.UI2.WinForms.MessageDialogButtons.YesNo;
+            this.MessageDialog.Caption = "تنبيه";
+            this.MessageDialog.Icon = Guna.UI2.WinForms.MessageDialogIcon.Question;
+            this.MessageDialog.Parent = null;
+            this.MessageDialog.Style = Guna.UI2.WinForms.MessageDialogStyle.Dark;
+            this.MessageDialog.Text = "تمت العملية بنجاح";
+            // 
             // UCMedicine
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 37F);
@@ -723,5 +733,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        public Guna.UI2.WinForms.Guna2MessageDialog MessageDialog;
     }
 }

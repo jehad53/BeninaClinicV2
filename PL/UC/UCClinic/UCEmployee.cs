@@ -243,12 +243,16 @@ namespace BeninaClinic.PL.UC.UCClinic
         {
             try
             {
+                MessageDialog.Caption = "تأكيد الحذف";
+                MessageDialog.Text = "هل تريد بالفعل حذف الموظف المحدد ";
+                MessageDialog.Parent = this.FindForm();
+                var result = MessageDialog.Show();
                 if (dgvEmployees.Rows.Count == 0)
                 {
                     MessageBox.Show("القائمة فارغة لا يمكن الحذف", " تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     return;
                 }
-                else if (MessageBox.Show("هل تريد حذف الموظف المحدد في قائمة الموظفين بالفعل؟", "تأكيد الحذف", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                else if (result == DialogResult.Yes)
                 {
                     EmployeesManagement employeesmanagement = new EmployeesManagement();
                     employeesmanagement.DeleteEmployee(Convert.ToInt32(dgvEmployees.CurrentRow.Cells[0].Value));

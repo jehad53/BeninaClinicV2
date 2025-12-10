@@ -179,12 +179,17 @@ namespace BeninaClinic.PL.UC.UCClinic
         {
             try
             {
-                if (dgvUsers.Rows.Count <= 0)
+                MessageDialog.Caption = "تأكيد الحذف";
+                MessageDialog.Text = "هل تريد بالفعل حذف المستخدم المحدد ";
+                MessageDialog.Parent = this.FindForm();
+                var result = MessageDialog.Show();
+                if (dgvUsers.Rows.Count == 0)
                 {
                     MessageBox.Show("القائمة فارغة لا يمكن الحذف", " تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     return;
                 }
-                else if (MessageBox.Show("هل تريد حذف المستخدم المحدد في قائمة المستخدمين بالفعل؟", "تأكيد الحذف", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+
+                else if (result == DialogResult.Yes)
                 {
                     UserManagement UserManagement = new UserManagement();
                     UserManagement.DeleteUser(Convert.ToInt32(dgvUsers.CurrentRow.Cells[0].Value));

@@ -127,12 +127,16 @@ namespace BeninaClinic.PL.UC.UCClinic
         {
             try
             {
+                MessageDialog.Text = "هل تريد بالفعل حذف الفحص المحدد ";
+                MessageDialog.Parent = this.FindForm();
+                var result = MessageDialog.Show();
                 if (dgvTests.Rows.Count == 0)
                 {
                     MessageBox.Show("القائمة فارغة لا يمكن الحذف", " تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     return;
                 }
-                else if (MessageBox.Show("هل تريد حذف الفحص المحدد في قائمة الفحوصات بالفعل؟", "تأكيد الحذف", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+
+                else if (result == DialogResult.Yes)
                 {
                     TestManagement testmanagement = new TestManagement();
                     testmanagement.DeleteTest(Convert.ToInt32(dgvTests.CurrentRow.Cells[0].Value));

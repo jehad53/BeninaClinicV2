@@ -201,7 +201,9 @@ namespace BeninaClinic
 
         private void btnCloseSystem_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("هل تريد بالفعل الخروج من النظام ؟ ", "تنبيه", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            MessageDialog.Text = "هل تريد بالفعل إغــلاق النظام";
+            var result = MessageDialog.Show();
+            if (result == DialogResult.Yes)
             {
                 this.Close();
             }
@@ -234,7 +236,10 @@ namespace BeninaClinic
 
         private void btnLogout_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show(" هل تريد بالفعل تسجيل الخروج؟", "تسجيل الخروج", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            MessageDialog.Caption = "تأكيد الخروج";
+            MessageDialog.Text = "هل تريد بالفعل تسجيل الخروج من النظام";
+            var result = MessageDialog.Show();
+            if (result == DialogResult.Yes)
             {
                 flowLayoutPanel1.Visible = false;
                 lblUserName.Text = "اسم المستخدم";
@@ -253,6 +258,10 @@ namespace BeninaClinic
             else if (btnLogin.Enabled && e.KeyCode == Keys.Insert)
             {
                 btnLogin_Click(null, null);
+            }
+            else if (btnLogout.Enabled ==false && e.KeyCode == Keys.Escape)
+            {
+                btnCloseSystem_Click(null,null);
             }
         }
             private void btnPharmacy_Click(object sender, EventArgs e)

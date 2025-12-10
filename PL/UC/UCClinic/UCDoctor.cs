@@ -179,14 +179,17 @@ namespace BeninaClinic.PL.UC.UCClinic
 
         private void btnDeleteDoctor_Click(object sender, EventArgs e)
         {
-            try
-            {
-                if (dgvDoctors.Rows.Count == 0)
+            try { 
+                  MessageDialog.Caption = "تأكيد الحذف";
+                  MessageDialog.Text = "هل تريد بالفعل حذف الطبيب المحدد ";
+                  MessageDialog.Parent = this.FindForm();
+                  var result = MessageDialog.Show();
+                  if (dgvDoctors.Rows.Count == 0)
                 {
                     MessageBox.Show("القائمة فارغة لا يمكن الحذف", " تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     return;
                 }
-                else if (MessageBox.Show("هل تريد حذف الطبيب المحدد في قائمة الأطباء بالفعل؟", "تأكيد الحذف", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                else if (result == DialogResult.Yes)
                 {
                     DoctorsManagement doctorsmanagement = new DoctorsManagement();
                     doctorsmanagement.DeleteDoctor(Convert.ToInt32(dgvDoctors.CurrentRow.Cells[0].Value));

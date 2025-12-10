@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UCEmployee));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UCEmployee));
             this.guna2GroupBox2 = new Guna.UI2.WinForms.Guna2GroupBox();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.label4 = new System.Windows.Forms.Label();
@@ -68,6 +68,7 @@
             this.pnlLine = new System.Windows.Forms.Panel();
             this.lblUserName = new System.Windows.Forms.Label();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.txtSearchEmployee = new Guna.UI2.WinForms.Guna2TextBox();
             this.dgvEmployees = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -84,15 +85,6 @@
             this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.rdbAsassi = new Guna.UI2.WinForms.Guna2CustomRadioButton();
-            this.label9 = new System.Windows.Forms.Label();
-            this.rdbMotaon = new Guna.UI2.WinForms.Guna2CustomRadioButton();
-            this.label11 = new System.Windows.Forms.Label();
-            this.guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.txtSearchEmployee = new Guna.UI2.WinForms.Guna2TextBox();
             this.btnNew = new Guna.UI2.WinForms.Guna2Button();
             this.btnAddEmployee = new Guna.UI2.WinForms.Guna2Button();
             this.btnEditEmployee = new Guna.UI2.WinForms.Guna2Button();
@@ -101,6 +93,15 @@
             this.btnPrintOneEmployee = new Guna.UI2.WinForms.Guna2Button();
             this.btnPrintEmployees = new Guna.UI2.WinForms.Guna2Button();
             this.btnPrintEmpContractType = new Guna.UI2.WinForms.Guna2Button();
+            this.rdbAsassi = new Guna.UI2.WinForms.Guna2CustomRadioButton();
+            this.label9 = new System.Windows.Forms.Label();
+            this.rdbMotaon = new Guna.UI2.WinForms.Guna2CustomRadioButton();
+            this.label11 = new System.Windows.Forms.Label();
+            this.guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.MessageDialog = new Guna.UI2.WinForms.Guna2MessageDialog();
             this.guna2GroupBox2.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmployees)).BeginInit();
@@ -745,6 +746,34 @@
             this.toolTip1.ToolTipTitle = "توضيح";
             this.toolTip1.Popup += new System.Windows.Forms.PopupEventHandler(this.toolTip1_Popup);
             // 
+            // txtSearchEmployee
+            // 
+            this.txtSearchEmployee.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtSearchEmployee.BorderColor = System.Drawing.Color.Gainsboro;
+            this.txtSearchEmployee.BorderRadius = 6;
+            this.txtSearchEmployee.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtSearchEmployee.DefaultText = "";
+            this.txtSearchEmployee.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtSearchEmployee.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtSearchEmployee.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtSearchEmployee.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtSearchEmployee.FillColor = System.Drawing.Color.WhiteSmoke;
+            this.txtSearchEmployee.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtSearchEmployee.Font = new System.Drawing.Font("Cairo Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSearchEmployee.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtSearchEmployee.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtSearchEmployee.IconLeft = ((System.Drawing.Image)(resources.GetObject("txtSearchEmployee.IconLeft")));
+            this.txtSearchEmployee.Location = new System.Drawing.Point(32, 549);
+            this.txtSearchEmployee.Margin = new System.Windows.Forms.Padding(4, 9, 4, 9);
+            this.txtSearchEmployee.Name = "txtSearchEmployee";
+            this.txtSearchEmployee.PlaceholderText = "";
+            this.txtSearchEmployee.SelectedText = "";
+            this.txtSearchEmployee.Size = new System.Drawing.Size(397, 37);
+            this.txtSearchEmployee.TabIndex = 76;
+            this.txtSearchEmployee.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.toolTip1.SetToolTip(this.txtSearchEmployee, "يمكن البحث بواسطة الاسم او الرقم الوطني");
+            this.txtSearchEmployee.TextChanged += new System.EventHandler(this.txtSearchEmployee_TextChanged);
+            // 
             // dgvEmployees
             // 
             this.dgvEmployees.AllowUserToAddRows = false;
@@ -949,157 +978,6 @@
             this.flowLayoutPanel1.Padding = new System.Windows.Forms.Padding(3);
             this.flowLayoutPanel1.Size = new System.Drawing.Size(831, 115);
             this.flowLayoutPanel1.TabIndex = 22;
-            // 
-            // rdbAsassi
-            // 
-            this.rdbAsassi.Animated = true;
-            this.rdbAsassi.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.rdbAsassi.CheckedState.BorderThickness = 0;
-            this.rdbAsassi.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.rdbAsassi.CheckedState.InnerColor = System.Drawing.Color.White;
-            this.rdbAsassi.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.rdbAsassi.Location = new System.Drawing.Point(491, 113);
-            this.rdbAsassi.Margin = new System.Windows.Forms.Padding(0, 10, 0, 3);
-            this.rdbAsassi.Name = "rdbAsassi";
-            this.rdbAsassi.Size = new System.Drawing.Size(20, 44);
-            this.rdbAsassi.TabIndex = 78;
-            this.rdbAsassi.Text = "أساسي";
-            this.rdbAsassi.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.rdbAsassi.UncheckedState.BorderThickness = 2;
-            this.rdbAsassi.UncheckedState.FillColor = System.Drawing.Color.Transparent;
-            this.rdbAsassi.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
-            this.rdbAsassi.CheckedChanged += new System.EventHandler(this.rdbAsassi_CheckedChanged);
-            // 
-            // label9
-            // 
-            this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label9.Font = new System.Drawing.Font("Cairo SemiBold", 13.8F, System.Drawing.FontStyle.Bold);
-            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label9.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.label9.Location = new System.Drawing.Point(392, 113);
-            this.label9.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
-            this.label9.Name = "label9";
-            this.label9.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label9.Size = new System.Drawing.Size(99, 44);
-            this.label9.TabIndex = 56;
-            this.label9.Text = "أساسي";
-            this.label9.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.label9.Click += new System.EventHandler(this.label9_Click);
-            // 
-            // rdbMotaon
-            // 
-            this.rdbMotaon.Animated = true;
-            this.rdbMotaon.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.rdbMotaon.CheckedState.BorderThickness = 0;
-            this.rdbMotaon.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.rdbMotaon.CheckedState.InnerColor = System.Drawing.Color.White;
-            this.rdbMotaon.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.rdbMotaon.Location = new System.Drawing.Point(372, 113);
-            this.rdbMotaon.Margin = new System.Windows.Forms.Padding(0, 10, 0, 3);
-            this.rdbMotaon.Name = "rdbMotaon";
-            this.rdbMotaon.Size = new System.Drawing.Size(20, 44);
-            this.rdbMotaon.TabIndex = 80;
-            this.rdbMotaon.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.rdbMotaon.UncheckedState.BorderThickness = 2;
-            this.rdbMotaon.UncheckedState.FillColor = System.Drawing.Color.Transparent;
-            this.rdbMotaon.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
-            this.rdbMotaon.CheckedChanged += new System.EventHandler(this.rdbMotaon_CheckedChanged);
-            // 
-            // label11
-            // 
-            this.label11.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label11.Font = new System.Drawing.Font("Cairo SemiBold", 13.8F, System.Drawing.FontStyle.Bold);
-            this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label11.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.label11.Location = new System.Drawing.Point(273, 113);
-            this.label11.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
-            this.label11.Name = "label11";
-            this.label11.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label11.Size = new System.Drawing.Size(99, 44);
-            this.label11.TabIndex = 79;
-            this.label11.Text = "متعاون";
-            this.label11.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // guna2GroupBox1
-            // 
-            this.guna2GroupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.guna2GroupBox1.Controls.Add(this.flowLayoutPanel1);
-            this.guna2GroupBox1.Font = new System.Drawing.Font("Cairo", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2GroupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.guna2GroupBox1.Location = new System.Drawing.Point(3, 60);
-            this.guna2GroupBox1.Margin = new System.Windows.Forms.Padding(0);
-            this.guna2GroupBox1.Name = "guna2GroupBox1";
-            this.guna2GroupBox1.Padding = new System.Windows.Forms.Padding(3);
-            this.guna2GroupBox1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.guna2GroupBox1.Size = new System.Drawing.Size(837, 169);
-            this.guna2GroupBox1.TabIndex = 63;
-            this.guna2GroupBox1.Text = "العمليات";
-            this.guna2GroupBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.guna2GroupBox1.Click += new System.EventHandler(this.guna2GroupBox1_Click);
-            // 
-            // panel1
-            // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(121)))), ((int)(((byte)(214)))));
-            this.panel1.Location = new System.Drawing.Point(651, 590);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(196, 1);
-            this.panel1.TabIndex = 74;
-            // 
-            // label12
-            // 
-            this.label12.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label12.Font = new System.Drawing.Font("Cairo", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label12.Location = new System.Drawing.Point(643, 547);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(199, 39);
-            this.label12.TabIndex = 73;
-            this.label12.Text = "قائمة الموظفين";
-            this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label13
-            // 
-            this.label13.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label13.Font = new System.Drawing.Font("Cairo SemiBold", 13.8F, System.Drawing.FontStyle.Bold);
-            this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(121)))), ((int)(((byte)(214)))));
-            this.label13.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.label13.Location = new System.Drawing.Point(436, 549);
-            this.label13.Name = "label13";
-            this.label13.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label13.Size = new System.Drawing.Size(194, 37);
-            this.label13.TabIndex = 77;
-            this.label13.Text = "البحث عن موظف";
-            this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // txtSearchEmployee
-            // 
-            this.txtSearchEmployee.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtSearchEmployee.BorderColor = System.Drawing.Color.Gainsboro;
-            this.txtSearchEmployee.BorderRadius = 6;
-            this.txtSearchEmployee.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtSearchEmployee.DefaultText = "";
-            this.txtSearchEmployee.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtSearchEmployee.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtSearchEmployee.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtSearchEmployee.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtSearchEmployee.FillColor = System.Drawing.Color.WhiteSmoke;
-            this.txtSearchEmployee.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtSearchEmployee.Font = new System.Drawing.Font("Cairo Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSearchEmployee.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtSearchEmployee.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtSearchEmployee.IconLeft = ((System.Drawing.Image)(resources.GetObject("txtSearchEmployee.IconLeft")));
-            this.txtSearchEmployee.Location = new System.Drawing.Point(32, 549);
-            this.txtSearchEmployee.Margin = new System.Windows.Forms.Padding(4, 9, 4, 9);
-            this.txtSearchEmployee.Name = "txtSearchEmployee";
-            this.txtSearchEmployee.PlaceholderText = "";
-            this.txtSearchEmployee.SelectedText = "";
-            this.txtSearchEmployee.Size = new System.Drawing.Size(397, 37);
-            this.txtSearchEmployee.TabIndex = 76;
-            this.txtSearchEmployee.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.toolTip1.SetToolTip(this.txtSearchEmployee, "يمكن البحث بواسطة الاسم او الرقم الوطني");
-            this.txtSearchEmployee.TextChanged += new System.EventHandler(this.txtSearchEmployee_TextChanged);
             // 
             // btnNew
             // 
@@ -1328,6 +1206,138 @@
             this.btnPrintEmpContractType.Text = "طباعة حسب نوع العقد";
             this.btnPrintEmpContractType.Click += new System.EventHandler(this.btnPrintEmpContractType_Click);
             // 
+            // rdbAsassi
+            // 
+            this.rdbAsassi.Animated = true;
+            this.rdbAsassi.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.rdbAsassi.CheckedState.BorderThickness = 0;
+            this.rdbAsassi.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.rdbAsassi.CheckedState.InnerColor = System.Drawing.Color.White;
+            this.rdbAsassi.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.rdbAsassi.Location = new System.Drawing.Point(491, 113);
+            this.rdbAsassi.Margin = new System.Windows.Forms.Padding(0, 10, 0, 3);
+            this.rdbAsassi.Name = "rdbAsassi";
+            this.rdbAsassi.Size = new System.Drawing.Size(20, 44);
+            this.rdbAsassi.TabIndex = 78;
+            this.rdbAsassi.Text = "أساسي";
+            this.rdbAsassi.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.rdbAsassi.UncheckedState.BorderThickness = 2;
+            this.rdbAsassi.UncheckedState.FillColor = System.Drawing.Color.Transparent;
+            this.rdbAsassi.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
+            this.rdbAsassi.CheckedChanged += new System.EventHandler(this.rdbAsassi_CheckedChanged);
+            // 
+            // label9
+            // 
+            this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label9.Font = new System.Drawing.Font("Cairo SemiBold", 13.8F, System.Drawing.FontStyle.Bold);
+            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label9.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.label9.Location = new System.Drawing.Point(392, 113);
+            this.label9.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
+            this.label9.Name = "label9";
+            this.label9.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.label9.Size = new System.Drawing.Size(99, 44);
+            this.label9.TabIndex = 56;
+            this.label9.Text = "أساسي";
+            this.label9.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.label9.Click += new System.EventHandler(this.label9_Click);
+            // 
+            // rdbMotaon
+            // 
+            this.rdbMotaon.Animated = true;
+            this.rdbMotaon.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.rdbMotaon.CheckedState.BorderThickness = 0;
+            this.rdbMotaon.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.rdbMotaon.CheckedState.InnerColor = System.Drawing.Color.White;
+            this.rdbMotaon.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.rdbMotaon.Location = new System.Drawing.Point(372, 113);
+            this.rdbMotaon.Margin = new System.Windows.Forms.Padding(0, 10, 0, 3);
+            this.rdbMotaon.Name = "rdbMotaon";
+            this.rdbMotaon.Size = new System.Drawing.Size(20, 44);
+            this.rdbMotaon.TabIndex = 80;
+            this.rdbMotaon.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.rdbMotaon.UncheckedState.BorderThickness = 2;
+            this.rdbMotaon.UncheckedState.FillColor = System.Drawing.Color.Transparent;
+            this.rdbMotaon.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
+            this.rdbMotaon.CheckedChanged += new System.EventHandler(this.rdbMotaon_CheckedChanged);
+            // 
+            // label11
+            // 
+            this.label11.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label11.Font = new System.Drawing.Font("Cairo SemiBold", 13.8F, System.Drawing.FontStyle.Bold);
+            this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label11.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.label11.Location = new System.Drawing.Point(273, 113);
+            this.label11.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
+            this.label11.Name = "label11";
+            this.label11.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.label11.Size = new System.Drawing.Size(99, 44);
+            this.label11.TabIndex = 79;
+            this.label11.Text = "متعاون";
+            this.label11.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // guna2GroupBox1
+            // 
+            this.guna2GroupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2GroupBox1.Controls.Add(this.flowLayoutPanel1);
+            this.guna2GroupBox1.Font = new System.Drawing.Font("Cairo", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2GroupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.guna2GroupBox1.Location = new System.Drawing.Point(3, 60);
+            this.guna2GroupBox1.Margin = new System.Windows.Forms.Padding(0);
+            this.guna2GroupBox1.Name = "guna2GroupBox1";
+            this.guna2GroupBox1.Padding = new System.Windows.Forms.Padding(3);
+            this.guna2GroupBox1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.guna2GroupBox1.Size = new System.Drawing.Size(837, 169);
+            this.guna2GroupBox1.TabIndex = 63;
+            this.guna2GroupBox1.Text = "العمليات";
+            this.guna2GroupBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.guna2GroupBox1.Click += new System.EventHandler(this.guna2GroupBox1_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(121)))), ((int)(((byte)(214)))));
+            this.panel1.Location = new System.Drawing.Point(651, 590);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(196, 1);
+            this.panel1.TabIndex = 74;
+            // 
+            // label12
+            // 
+            this.label12.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label12.Font = new System.Drawing.Font("Cairo", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label12.Location = new System.Drawing.Point(643, 547);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(199, 39);
+            this.label12.TabIndex = 73;
+            this.label12.Text = "قائمة الموظفين";
+            this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label13
+            // 
+            this.label13.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label13.Font = new System.Drawing.Font("Cairo SemiBold", 13.8F, System.Drawing.FontStyle.Bold);
+            this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(121)))), ((int)(((byte)(214)))));
+            this.label13.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.label13.Location = new System.Drawing.Point(436, 549);
+            this.label13.Name = "label13";
+            this.label13.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.label13.Size = new System.Drawing.Size(194, 37);
+            this.label13.TabIndex = 77;
+            this.label13.Text = "البحث عن موظف";
+            this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // MessageDialog
+            // 
+            this.MessageDialog.Buttons = Guna.UI2.WinForms.MessageDialogButtons.YesNo;
+            this.MessageDialog.Caption = "تأكيد الحذف";
+            this.MessageDialog.Icon = Guna.UI2.WinForms.MessageDialogIcon.Question;
+            this.MessageDialog.Parent = null;
+            this.MessageDialog.Style = Guna.UI2.WinForms.MessageDialogStyle.Dark;
+            this.MessageDialog.Text = "تمت العملية بنجاح";
+            // 
             // UCEmployee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 37F);
@@ -1425,5 +1435,6 @@
         private System.Windows.Forms.Label label9;
         private Guna.UI2.WinForms.Guna2CustomRadioButton rdbMotaon;
         private System.Windows.Forms.Label label11;
+        public Guna.UI2.WinForms.Guna2MessageDialog MessageDialog;
     }
 }

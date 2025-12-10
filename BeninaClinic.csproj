@@ -60,12 +60,9 @@
     <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="Guna.UI2">
-      <HintPath>..\..\WindowsFormsApplication12\packages\Guna.UI2.WinForms.2.0.4.7\lib\net472\Guna.UI2.dll</HintPath>
+      <HintPath>C:\Users\TST-1M\Documents\Visual Studio 2015\Projects\WindowsFormsApplication12\packages\Guna.UI2.WinForms.2.0.4.7\lib\net472\Guna.UI2.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed" />
-    <Reference Include="SiticoneNetFrameworkUI">
-      <HintPath>..\..\UIsitIcon\packages\Siticone.NetFramework.UI.2025.8.27\lib\net48\SiticoneNetFrameworkUI.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Configuration.Install" />
@@ -141,6 +138,12 @@
     </Compile>
     <Compile Include="PL\Forms\FrmClinic\Frm_List_Viewer.Designer.cs">
       <DependentUpon>Frm_List_Viewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\Forms\FrmClinic\Frm_Select_Patient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\Forms\FrmClinic\Frm_Select_Patient.Designer.cs">
+      <DependentUpon>Frm_Select_Patient.cs</DependentUpon>
     </Compile>
     <Compile Include="PL\Forms\FrmMessages\FrmAlertMessageBox.cs">
       <SubType>Form</SubType>
@@ -418,6 +421,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PL\Forms\FrmClinic\Frm_List_Viewer.resx">
       <DependentUpon>Frm_List_Viewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\Forms\FrmClinic\Frm_Select_Patient.resx">
+      <DependentUpon>Frm_Select_Patient.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PL\Forms\FrmMessages\FrmAlertMessageBox.resx">
       <DependentUpon>FrmAlertMessageBox.cs</DependentUpon>

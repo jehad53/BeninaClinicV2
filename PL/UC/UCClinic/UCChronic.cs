@@ -128,12 +128,16 @@ namespace BeninaClinic.PL.UC.UCClinic
         {
             try
             {
+                MessageDialog.Caption = "تأكيد الحذف";
+                MessageDialog.Text = "هل تريد بالفعل حذف المرض المحدد ";
+                MessageDialog.Parent = this.FindForm();
+                var result = MessageDialog.Show();
                 if (dgvChronics.Rows.Count == 0)
                 {
                     MessageBox.Show("القائمة فارغة لا يمكن الحذف", " تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     return;
                 }
-                else if (MessageBox.Show("هل تريد حذف الفحص المحدد في قائمة الفحوصات بالفعل؟", "تأكيد الحذف", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                else if (result == DialogResult.Yes)
                 {
                     ChronicManagement ChronicManagement = new ChronicManagement();
                     ChronicManagement.DeleteChronic(Convert.ToInt32(dgvChronics.CurrentRow.Cells[0].Value));

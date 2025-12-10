@@ -152,13 +152,17 @@ namespace BeninaClinic.PL.UC.UCClinic
         {
             try
             {
+                MessageDialog.Text = "هل تريد بالفعل حذف الوظيفة المحددة ";
+                MessageDialog.Parent = this.FindForm();
+                var result = MessageDialog.Show();
                 if (dgvJobs.Rows.Count == 0)
                 {
                     MessageBox.Show("القائمة فارغة لا يمكن الحذف", " تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     return;
                 }
-                else if (MessageBox.Show("هل تريد حذف القسم المحدد في قائمة الأقسام بالفعل؟", "تأكيد الحذف", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-                {
+
+                else if (result == DialogResult.Yes)
+                { 
                     JobManagement jobmanagement = new JobManagement();
                     jobmanagement.DeleteJob(Convert.ToInt32(dgvJobs.CurrentRow.Cells[0].Value));
                     FrmSuccesMessageBox frmsucces = new FrmSuccesMessageBox();

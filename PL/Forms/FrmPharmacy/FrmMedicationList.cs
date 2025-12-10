@@ -66,7 +66,10 @@ namespace BeninaClinic.PL.Forms.FrmPharmacy
         {
             if (dgvMedications.SelectedRows.Count > 0)
             {
-                if (MessageBox.Show("هل أنت متأكد من الحذف؟", "تأكيد", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                MessageDialog.Caption = "تأكيد حذف";
+                MessageDialog.Text = "هل تريد بالفعل حذف الدواء المحدد من قائمة الأدوية";
+                var result = MessageDialog.Show();
+                if (result == DialogResult.Yes)
                 {
                     try
                     {
