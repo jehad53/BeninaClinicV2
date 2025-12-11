@@ -57,3 +57,4 @@ E:\BeninaV2\BeninaClinic\BeninaClinic\bin\Debug\CrystalDecisions.ReportAppServer
 E:\BeninaV2\BeninaClinic\BeninaClinic\obj\Debug\BeninaClinic.exe
 E:\BeninaV2\BeninaClinic\BeninaClinic\obj\Debug\BeninaClinic.pdb
 E:\BeninaV2\BeninaClinic\BeninaClinic\obj\Debug\BeninaClinic.PL.Forms.FrmClinic.Frm_Select_Patient.resources
+E:\BeninaV2\BeninaClinic\BeninaClinic\obj\Debug\BeninaClinic.csprojResolveAssemblyReference.cache
