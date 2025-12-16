@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Data;
 using System.Data.SqlClient;
 using BeninaClinic.DAL;
+using BeninaClinic.PL.Forms;
 
 namespace BeninaClinic.BL.Clinic
 {
@@ -41,6 +42,9 @@ namespace BeninaClinic.BL.Clinic
                 {
                     db.ExecuteCommand("InsertDoctor", pr);
                 }
+                AuditLogManagement log = new AuditLogManagement();
+                string newValue = $"Name: {DoctorName}, NatNum: {NationalNum}, Phone: {Phone}, Specialty: {Specialty}";
+                log.AddLog("Insert", "Doctors", NationalNum, Frm_Login.UserID, null, newValue, null);
             }
             catch(Exception ex)
             {
@@ -96,6 +100,9 @@ namespace BeninaClinic.BL.Clinic
                 {
                     db.ExecuteCommand("EditDoctor", pr);
                 }
+                AuditLogManagement log = new AuditLogManagement();
+                string newValue = $"Id: {Doctor_Id}, Name: {DoctorName}, NatNum: {NationalNum}, Phone: {Phone}, Specialty: {Specialty}";
+                log.AddLog("Update", "Doctors", Doctor_Id.ToString(), Frm_Login.UserID, "See Record", newValue, null);
             }
             catch (Exception ex)
             {
@@ -115,6 +122,8 @@ namespace BeninaClinic.BL.Clinic
                 {
                     db.ExecuteCommand("DeleteDoctor", pr);
                 }
+                AuditLogManagement log = new AuditLogManagement();
+                log.AddLog("Delete", "Doctors", Doctor_Id.ToString(), Frm_Login.UserID, $"Deleted ID: {Doctor_Id}", "Deleted", null);
 
 
             }

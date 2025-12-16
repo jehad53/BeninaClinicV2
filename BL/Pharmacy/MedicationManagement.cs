@@ -6,15 +6,35 @@ using System.Threading.Tasks;
 using System.Data;
 using System.Data.SqlClient;
 using BeninaClinic.DAL;
-
+using BeninaClinic.BL.Clinic;
 namespace BeninaClinic.BL.Pharmacy
 {
     public class MedicationManagement
     {
+        AuditLogManagement _audit = new AuditLogManagement();
+
+        // Get Medication By Id
+        public DataTable GetMedicationById(int Id)
+        {
+            try
+            {
+                SqlParameter[] pr = new SqlParameter[1];
+                pr[0] = new SqlParameter("@Id", SqlDbType.Int) { Value = Id };
+                using (Db db = new Db())
+                {
+                    return db.ReadData("Pharmacy_GetMedicationById", pr);
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception($"Error in GetMedicationById --> {ex.Message}");
+            }
+        }
+
         // Insert Medication
         public void InsertMedication(string Code, string Name, string ScientificName, string Type, 
                                      decimal PurchasePrice, decimal SellingPrice, int Quantity, 
-                                     DateTime ExpiryDate, DateTime ProductionDate, int AlertQuantity)
+                                     DateTime ExpiryDate, DateTime ProductionDate, int AlertQuantity, int userId)
         {
             try
             {
@@ -34,6 +54,9 @@ namespace BeninaClinic.BL.Pharmacy
                 {
                     db.ExecuteCommand("Pharmacy_InsertMedication", pr);
                 }
+
+                _audit.AddLog("Insert", "Pharmacy_Medications", Code, Convert.ToInt32(userId), null, $"Name: {Name}, Qty: {Quantity}", null);
+
             }
             catch (Exception ex)
             {
@@ -44,10 +67,18 @@ namespace BeninaClinic.BL.Pharmacy
         // Update Medication
         public void UpdateMedication(int Id, string Code, string Name, string ScientificName, string Type,
                                      decimal PurchasePrice, decimal SellingPrice, int Quantity,
-                                     DateTime ExpiryDate, DateTime ProductionDate, int AlertQuantity)
+                                     DateTime ExpiryDate, DateTime ProductionDate, int AlertQuantity, int userId)
         {
             try
             {
+                // Get Old Value
+                string oldValue = "";
+                DataTable dtOld = GetMedicationById(Id);
+                if (dtOld.Rows.Count > 0)
+                {
+                    oldValue = string.Join(" | ", dtOld.Rows[0].ItemArray);
+                }
+
                 SqlParameter[] pr = new SqlParameter[11];
                 pr[0] = new SqlParameter("@Id", SqlDbType.Int) { Value = Id };
                 pr[1] = new SqlParameter("@Code", SqlDbType.NVarChar, 50) { Value = Code };
@@ -65,6 +96,10 @@ namespace BeninaClinic.BL.Pharmacy
                 {
                     db.ExecuteCommand("Pharmacy_UpdateMedication", pr);
                 }
+                
+                string newValue = $"{Code} | {Name} | {ScientificName} | {Type} | {PurchasePrice} | {SellingPrice} | {Quantity} | {ExpiryDate} | {ProductionDate} | {AlertQuantity}";
+                _audit.AddLog("Update", "Pharmacy_Medications", Id.ToString(), userId, oldValue, newValue, null);
+
             }
             catch (Exception ex)
             {
@@ -73,10 +108,18 @@ namespace BeninaClinic.BL.Pharmacy
         }
 
         // Delete Medication
-        public void DeleteMedication(int Id)
+        public void DeleteMedication(int Id, int userId)
         {
             try
             {
+                // Get Old Value
+                string oldValue = "";
+                DataTable dtOld = GetMedicationById(Id);
+                if (dtOld.Rows.Count > 0)
+                {
+                    oldValue = string.Join(" | ", dtOld.Rows[0].ItemArray);
+                }
+
                 SqlParameter[] pr = new SqlParameter[1];
                 pr[0] = new SqlParameter("@Id", SqlDbType.Int) { Value = Id };
 
@@ -84,6 +127,9 @@ namespace BeninaClinic.BL.Pharmacy
                 {
                     db.ExecuteCommand("Pharmacy_DeleteMedication", pr);
                 }
+
+                _audit.AddLog("Delete", "Pharmacy_Medications", Id.ToString(), userId, oldValue, "Deleted", null);
+
             }
             catch (Exception ex)
             {

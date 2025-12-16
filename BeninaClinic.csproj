@@ -84,6 +84,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BL\Clinic\AppointmentManagement.cs" />
+    <Compile Include="BL\Clinic\AuditLogManagement.cs" />
     <Compile Include="BL\Clinic\ChronicManagement.cs" />
     <Compile Include="BL\Clinic\ClinicManagement.cs" />
     <Compile Include="BL\Clinic\DepartmentsManagement.cs" />
@@ -396,6 +397,12 @@
     <Compile Include="PL\UC\UCClinic\UCUsers.Designer.cs">
       <DependentUpon>UCUsers.cs</DependentUpon>
     </Compile>
+    <Compile Include="PL\UC\UC_AuditLogs.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PL\UC\UC_AuditLogs.Designer.cs">
+      <DependentUpon>UC_AuditLogs.cs</DependentUpon>
+    </Compile>
     <Compile Include="PL\UC\UCHome.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -561,6 +568,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PL\UC\UCClinic\UCUsers.resx">
       <DependentUpon>UCUsers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\UC\UC_AuditLogs.resx">
+      <DependentUpon>UC_AuditLogs.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PL\UC\UCHome.resx">
       <DependentUpon>UCHome.cs</DependentUpon>

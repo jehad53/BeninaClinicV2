@@ -96,6 +96,8 @@ namespace BeninaClinic.PL.UC.UCClinic
             {
                 ChronicManagement ChronicManagement = new ChronicManagement();
                 ChronicManagement.InsertChronic(txtChronicName.Text,txtChronicNote.Text);
+                AuditLogManagement auditlog = new AuditLogManagement();
+                //auditlog.AddLog("إضافة", "tblChronics",txtChronicID.Text,"UserName",DateTime.Now,"", txtChronicName.Text);
                 FrmSuccesMessageBox frmsuccesmessagebox = new FrmSuccesMessageBox();
                 frmsuccesmessagebox.ShowDialog();
                 //  MessageBox.Show("تم إدخال البيانات بنجاح", " إدخال عيادة", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);

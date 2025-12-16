@@ -49,6 +49,7 @@
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -68,6 +69,8 @@
             this.txtNatNum = new Guna.UI2.WinForms.Guna2TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.cmbPatientGender = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.cmbbooldtype = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label10 = new System.Windows.Forms.Label();
             this.dtpPatientDateofBirth = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
@@ -357,6 +360,7 @@
             this.Column1,
             this.Column2,
             this.Column4,
+            this.Column8,
             this.Column11,
             this.Column3,
             this.Column5,
@@ -418,6 +422,13 @@
             this.Column4.HeaderText = "الجنس";
             this.Column4.Name = "Column4";
             this.Column4.ReadOnly = true;
+            // 
+            // Column8
+            // 
+            this.Column8.DataPropertyName = "Booldtypes";
+            this.Column8.HeaderText = "فصيلة الدم";
+            this.Column8.Name = "Column8";
+            this.Column8.ReadOnly = true;
             // 
             // Column11
             // 
@@ -545,6 +556,8 @@
             this.flowLayoutPanel2.Controls.Add(this.txtNatNum);
             this.flowLayoutPanel2.Controls.Add(this.label3);
             this.flowLayoutPanel2.Controls.Add(this.cmbPatientGender);
+            this.flowLayoutPanel2.Controls.Add(this.label8);
+            this.flowLayoutPanel2.Controls.Add(this.cmbbooldtype);
             this.flowLayoutPanel2.Controls.Add(this.label10);
             this.flowLayoutPanel2.Controls.Add(this.dtpPatientDateofBirth);
             this.flowLayoutPanel2.Controls.Add(this.label2);
@@ -568,10 +581,10 @@
             this.label4.Font = new System.Drawing.Font("Cairo SemiBold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.label4.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.label4.Location = new System.Drawing.Point(669, 0);
+            this.label4.Location = new System.Drawing.Point(673, 0);
             this.label4.Name = "label4";
             this.label4.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label4.Size = new System.Drawing.Size(155, 46);
+            this.label4.Size = new System.Drawing.Size(151, 46);
             this.label4.TabIndex = 49;
             this.label4.Text = "رقم المريض";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -592,13 +605,13 @@
             this.txtPatientID.Font = new System.Drawing.Font("Cairo Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPatientID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtPatientID.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtPatientID.Location = new System.Drawing.Point(558, 9);
+            this.txtPatientID.Location = new System.Drawing.Point(539, 9);
             this.txtPatientID.Margin = new System.Windows.Forms.Padding(0, 9, 4, 9);
             this.txtPatientID.Name = "txtPatientID";
             this.txtPatientID.PlaceholderText = "";
             this.txtPatientID.ReadOnly = true;
             this.txtPatientID.SelectedText = "";
-            this.txtPatientID.Size = new System.Drawing.Size(108, 37);
+            this.txtPatientID.Size = new System.Drawing.Size(131, 37);
             this.txtPatientID.TabIndex = 48;
             this.txtPatientID.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -608,7 +621,7 @@
             this.label1.Font = new System.Drawing.Font("Cairo SemiBold", 13.8F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.label1.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.label1.Location = new System.Drawing.Point(460, 0);
+            this.label1.Location = new System.Drawing.Point(441, 0);
             this.label1.Name = "label1";
             this.label1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.label1.Size = new System.Drawing.Size(91, 46);
@@ -632,7 +645,7 @@
             this.txtPatientName.Font = new System.Drawing.Font("Cairo Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPatientName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtPatientName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtPatientName.Location = new System.Drawing.Point(193, 9);
+            this.txtPatientName.Location = new System.Drawing.Point(174, 9);
             this.txtPatientName.Margin = new System.Windows.Forms.Padding(4, 9, 4, 9);
             this.txtPatientName.Name = "txtPatientName";
             this.txtPatientName.PlaceholderText = "";
@@ -647,7 +660,7 @@
             this.label6.Font = new System.Drawing.Font("Cairo SemiBold", 13.8F, System.Drawing.FontStyle.Bold);
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.label6.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.label6.Location = new System.Drawing.Point(24, 0);
+            this.label6.Location = new System.Drawing.Point(5, 0);
             this.label6.Name = "label6";
             this.label6.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.label6.Size = new System.Drawing.Size(162, 46);
@@ -719,13 +732,59 @@
             this.cmbPatientGender.TabIndex = 28;
             this.cmbPatientGender.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
+            // label8
+            // 
+            this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label8.Font = new System.Drawing.Font("Cairo SemiBold", 13.8F, System.Drawing.FontStyle.Bold);
+            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label8.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.label8.Location = new System.Drawing.Point(272, 55);
+            this.label8.Name = "label8";
+            this.label8.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.label8.Size = new System.Drawing.Size(138, 46);
+            this.label8.TabIndex = 93;
+            this.label8.Text = "فصيلة الدم";
+            this.label8.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // cmbbooldtype
+            // 
+            this.cmbbooldtype.BackColor = System.Drawing.Color.Transparent;
+            this.cmbbooldtype.BorderColor = System.Drawing.Color.Gainsboro;
+            this.cmbbooldtype.BorderRadius = 6;
+            this.cmbbooldtype.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmbbooldtype.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbbooldtype.FillColor = System.Drawing.Color.WhiteSmoke;
+            this.cmbbooldtype.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cmbbooldtype.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cmbbooldtype.Font = new System.Drawing.Font("Cairo SemiBold", 12F, System.Drawing.FontStyle.Bold);
+            this.cmbbooldtype.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cmbbooldtype.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.cmbbooldtype.HoverState.Font = new System.Drawing.Font("Cairo", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbbooldtype.ItemHeight = 30;
+            this.cmbbooldtype.Items.AddRange(new object[] {
+            "",
+            "A+",
+            "A-",
+            "B+",
+            "B-",
+            "AB+",
+            "AB-",
+            "O+",
+            "O-"});
+            this.cmbbooldtype.Location = new System.Drawing.Point(160, 61);
+            this.cmbbooldtype.Margin = new System.Windows.Forms.Padding(3, 6, 3, 3);
+            this.cmbbooldtype.Name = "cmbbooldtype";
+            this.cmbbooldtype.Size = new System.Drawing.Size(106, 36);
+            this.cmbbooldtype.TabIndex = 92;
+            this.cmbbooldtype.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // label10
             // 
             this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label10.Font = new System.Drawing.Font("Cairo SemiBold", 13.8F, System.Drawing.FontStyle.Bold);
             this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.label10.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.label10.Location = new System.Drawing.Point(274, 55);
+            this.label10.Location = new System.Drawing.Point(18, 55);
             this.label10.Name = "label10";
             this.label10.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.label10.Size = new System.Drawing.Size(136, 46);
@@ -744,7 +803,7 @@
             this.dtpPatientDateofBirth.Font = new System.Drawing.Font("Cairo SemiBold", 12F, System.Drawing.FontStyle.Bold);
             this.dtpPatientDateofBirth.ForeColor = System.Drawing.Color.Black;
             this.dtpPatientDateofBirth.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpPatientDateofBirth.Location = new System.Drawing.Point(67, 65);
+            this.dtpPatientDateofBirth.Location = new System.Drawing.Point(623, 120);
             this.dtpPatientDateofBirth.Margin = new System.Windows.Forms.Padding(3, 10, 3, 3);
             this.dtpPatientDateofBirth.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.dtpPatientDateofBirth.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
@@ -761,7 +820,7 @@
             this.label2.Font = new System.Drawing.Font("Cairo SemiBold", 13.8F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.label2.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.label2.Location = new System.Drawing.Point(749, 113);
+            this.label2.Location = new System.Drawing.Point(542, 110);
             this.label2.Name = "label2";
             this.label2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.label2.Size = new System.Drawing.Size(75, 46);
@@ -785,10 +844,11 @@
             this.txtAge.Font = new System.Drawing.Font("Cairo Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAge.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtAge.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtAge.Location = new System.Drawing.Point(663, 122);
+            this.txtAge.Location = new System.Drawing.Point(456, 119);
             this.txtAge.Margin = new System.Windows.Forms.Padding(4, 9, 4, 9);
             this.txtAge.Name = "txtAge";
             this.txtAge.PlaceholderText = "";
+            this.txtAge.ReadOnly = true;
             this.txtAge.SelectedText = "";
             this.txtAge.Size = new System.Drawing.Size(79, 37);
             this.txtAge.TabIndex = 85;
@@ -800,7 +860,7 @@
             this.label5.Font = new System.Drawing.Font("Cairo SemiBold", 13.8F, System.Drawing.FontStyle.Bold);
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.label5.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.label5.Location = new System.Drawing.Point(518, 113);
+            this.label5.Location = new System.Drawing.Point(311, 110);
             this.label5.Name = "label5";
             this.label5.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.label5.Size = new System.Drawing.Size(138, 46);
@@ -824,12 +884,12 @@
             this.txtPhone.Font = new System.Drawing.Font("Cairo Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPhone.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtPhone.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtPhone.Location = new System.Drawing.Point(319, 122);
+            this.txtPhone.Location = new System.Drawing.Point(87, 119);
             this.txtPhone.Margin = new System.Windows.Forms.Padding(4, 9, 4, 9);
             this.txtPhone.Name = "txtPhone";
             this.txtPhone.PlaceholderText = "";
             this.txtPhone.SelectedText = "";
-            this.txtPhone.Size = new System.Drawing.Size(192, 37);
+            this.txtPhone.Size = new System.Drawing.Size(217, 37);
             this.txtPhone.TabIndex = 86;
             this.txtPhone.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -839,12 +899,13 @@
             this.label7.Font = new System.Drawing.Font("Cairo SemiBold", 13.8F, System.Drawing.FontStyle.Bold);
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.label7.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.label7.Location = new System.Drawing.Point(198, 113);
+            this.label7.Location = new System.Drawing.Point(695, 178);
+            this.label7.Margin = new System.Windows.Forms.Padding(3, 10, 3, 0);
             this.label7.Name = "label7";
             this.label7.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label7.Size = new System.Drawing.Size(114, 46);
+            this.label7.Size = new System.Drawing.Size(129, 46);
             this.label7.TabIndex = 91;
-            this.label7.Text = "العنوان";
+            this.label7.Text = "العـنـوان";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // txtAdderss
@@ -863,12 +924,12 @@
             this.txtAdderss.Font = new System.Drawing.Font("Cairo Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAdderss.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtAdderss.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtAdderss.Location = new System.Drawing.Point(602, 177);
-            this.txtAdderss.Margin = new System.Windows.Forms.Padding(4, 9, 4, 9);
+            this.txtAdderss.Location = new System.Drawing.Point(492, 188);
+            this.txtAdderss.Margin = new System.Windows.Forms.Padding(3, 20, 3, 0);
             this.txtAdderss.Name = "txtAdderss";
             this.txtAdderss.PlaceholderText = "";
             this.txtAdderss.SelectedText = "";
-            this.txtAdderss.Size = new System.Drawing.Size(221, 37);
+            this.txtAdderss.Size = new System.Drawing.Size(197, 37);
             this.txtAdderss.TabIndex = 90;
             this.txtAdderss.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -878,7 +939,7 @@
             this.label18.Font = new System.Drawing.Font("Cairo SemiBold", 13.8F, System.Drawing.FontStyle.Bold);
             this.label18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.label18.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.label18.Location = new System.Drawing.Point(474, 178);
+            this.label18.Location = new System.Drawing.Point(365, 178);
             this.label18.Margin = new System.Windows.Forms.Padding(3, 10, 3, 0);
             this.label18.Name = "label18";
             this.label18.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -904,12 +965,12 @@
             this.txtPatientNote.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtPatientNote.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtPatientNote.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.txtPatientNote.Location = new System.Drawing.Point(13, 245);
+            this.txtPatientNote.Location = new System.Drawing.Point(112, 245);
             this.txtPatientNote.Margin = new System.Windows.Forms.Padding(4, 20, 4, 9);
             this.txtPatientNote.Name = "txtPatientNote";
             this.txtPatientNote.PlaceholderText = "";
             this.txtPatientNote.SelectedText = "";
-            this.txtPatientNote.Size = new System.Drawing.Size(810, 37);
+            this.txtPatientNote.Size = new System.Drawing.Size(711, 37);
             this.txtPatientNote.TabIndex = 82;
             this.txtPatientNote.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -1023,15 +1084,18 @@
         private Guna.UI2.WinForms.Guna2TextBox txtNatNum;
         private System.Windows.Forms.Label label7;
         private Guna.UI2.WinForms.Guna2TextBox txtAdderss;
+        public Guna.UI2.WinForms.Guna2MessageDialog MessageDialog;
+        private System.Windows.Forms.Label label8;
+        private Guna.UI2.WinForms.Guna2ComboBox cmbbooldtype;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column11;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column12;
-        public Guna.UI2.WinForms.Guna2MessageDialog MessageDialog;
     }
 }

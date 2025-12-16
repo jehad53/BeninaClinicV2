@@ -12,8 +12,29 @@ namespace BeninaClinic.BL.Clinic
    public class EmployeesManagement
     {
 
+        AuditLogManagement _audit = new AuditLogManagement();
+
+        // Get Employee By Id
+        public DataTable GetEmployeeById(int id)
+        {
+            try
+            {
+                SqlParameter[] pr = new SqlParameter[1];
+                pr[0] = new SqlParameter("@Employee_Id", SqlDbType.Int) { Value = id };
+                using (Db db = new Db())
+                {
+                    return db.ReadData("GetEmployeeById", pr);
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception($"Error in GetEmployeeById --> {ex.Message}");
+            }
+        }
+
+
         // Insert Employee 
-        public void InsertEmployee(string EmployeeName, string NationalNum, DateTime DateofBirth ,string Gender,string Phone,string Address, string ContractType, string SocialStatus , DateTime AppointmentDate, decimal Salary, int Job_Id , string Note)
+        public void InsertEmployee(string EmployeeName, string NationalNum, DateTime DateofBirth ,string Gender,string Phone,string Address, string ContractType, string SocialStatus , DateTime AppointmentDate, decimal Salary, int Job_Id , string Note, int userId)
         {
             try
             {
@@ -48,6 +69,9 @@ namespace BeninaClinic.BL.Clinic
                 {
                     db.ExecuteCommand("InsertEmployee", pr);
                 }
+
+                _audit.AddLog("Insert", "Employees", NationalNum, userId, null, $"Name: {EmployeeName}", null);
+
             }
             catch(Exception ex)
             {
@@ -97,7 +121,7 @@ namespace BeninaClinic.BL.Clinic
         }
 
 
-        public void EditEmployee(string EmployeeName, string NationalNum, DateTime DateofBirth, string Gender, string Phone, string Address, string ContractType, string SocialStatus, DateTime AppointmentDate, decimal Salary, int Job_Id, string Note , int Employee_Id)
+        public void EditEmployee(string EmployeeName, string NationalNum, DateTime DateofBirth, string Gender, string Phone, string Address, string ContractType, string SocialStatus, DateTime AppointmentDate, decimal Salary, int Job_Id, string Note , int Employee_Id, int userId)
         {
             try 
             {
@@ -126,13 +150,17 @@ namespace BeninaClinic.BL.Clinic
                 pr[10].Value = Job_Id;
                 pr[11] = new SqlParameter("@Note", SqlDbType.NVarChar);
                 pr[11].Value = Note;
-                pr[12] = new SqlParameter("@Employee_Id", SqlDbType.NVarChar);
+                pr[12] = new SqlParameter("@Employee_Id", SqlDbType.Int);
                 pr[12].Value = Employee_Id;
 
                 using (Db db = new Db())
                 {
                     db.ExecuteCommand("EditEmployee", pr);
                 }
+
+                string newValue = $"{EmployeeName} | {NationalNum} | {Phone} | {Job_Id} | {Salary}";
+                _audit.AddLog("Update", "Employees", Employee_Id.ToString(), userId, "Check Backup", newValue, null );
+
             }
             catch (Exception ex)
             {
@@ -142,16 +170,19 @@ namespace BeninaClinic.BL.Clinic
 
 
         // Method for Delete Employee
-        public void DeleteEmployee(int Doctor_Id)
+        public void DeleteEmployee(int Employee_Id, int userId)
         {
             try
             {
-                SqlParameter[] pr = new SqlParameter[] { new SqlParameter("@Employee_Id", SqlDbType.Int) { Value = Doctor_Id } };
+                SqlParameter[] pr = new SqlParameter[] { new SqlParameter("@Employee_Id", SqlDbType.Int) { Value = Employee_Id } };
 
                 using (Db db = new Db())
                 {
                     db.ExecuteCommand("DeleteEmployee", pr);
                 }
+
+                _audit.AddLog("Delete", "Employees", Employee_Id.ToString(), userId, "Deleted", "Deleted", null);
+
 
 
             }

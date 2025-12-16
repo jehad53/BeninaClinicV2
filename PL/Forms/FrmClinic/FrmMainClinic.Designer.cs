@@ -60,6 +60,7 @@
             this.btnPahrmacy = new Guna.UI2.WinForms.Guna2Button();
             this.pnlContainer = new System.Windows.Forms.Panel();
             this.MessageDialog = new Guna.UI2.WinForms.Guna2MessageDialog();
+            this.btnAuditLogs = new Guna.UI2.WinForms.Guna2Button();
             this.pnlTltle.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnLogout)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnLogin)).BeginInit();
@@ -233,6 +234,7 @@
             this.flowLayoutPanel1.Controls.Add(this.btnMedicine);
             this.flowLayoutPanel1.Controls.Add(this.btnRecordPatient);
             this.flowLayoutPanel1.Controls.Add(this.btnPahrmacy);
+            this.flowLayoutPanel1.Controls.Add(this.btnAuditLogs);
             this.flowLayoutPanel1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 64);
@@ -790,6 +792,34 @@
             this.MessageDialog.Style = Guna.UI2.WinForms.MessageDialogStyle.Dark;
             this.MessageDialog.Text = "تمت العملية بنجاح";
             // 
+            // btnAuditLogs
+            // 
+            this.btnAuditLogs.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAuditLogs.Animated = true;
+            this.btnAuditLogs.AnimatedGIF = true;
+            this.btnAuditLogs.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(121)))), ((int)(((byte)(214)))));
+            this.btnAuditLogs.BorderRadius = 6;
+            this.btnAuditLogs.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAuditLogs.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnAuditLogs.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnAuditLogs.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnAuditLogs.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnAuditLogs.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(121)))), ((int)(((byte)(214)))));
+            this.btnAuditLogs.Font = new System.Drawing.Font("Cairo", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAuditLogs.ForeColor = System.Drawing.Color.White;
+            this.btnAuditLogs.HoverState.FillColor = System.Drawing.Color.White;
+            this.btnAuditLogs.HoverState.Font = new System.Drawing.Font("Cairo", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAuditLogs.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(121)))), ((int)(((byte)(214)))));
+            this.btnAuditLogs.Image = ((System.Drawing.Image)(resources.GetObject("btnAuditLogs.Image")));
+            this.btnAuditLogs.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnAuditLogs.Location = new System.Drawing.Point(16, 1105);
+            this.btnAuditLogs.Name = "btnAuditLogs";
+            this.btnAuditLogs.Size = new System.Drawing.Size(228, 52);
+            this.btnAuditLogs.TabIndex = 21;
+            this.btnAuditLogs.Text = "سجل الحركات";
+            this.btnAuditLogs.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnAuditLogs.Click += new System.EventHandler(this.btnAuditLogs_Click);
+            // 
             // FrmMainClinic
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 32F);
@@ -852,6 +882,7 @@
         public System.Windows.Forms.PictureBox btnLogout;
         public Guna.UI2.WinForms.Guna2Button btnPahrmacy;
         public Guna.UI2.WinForms.Guna2MessageDialog MessageDialog;
+        public Guna.UI2.WinForms.Guna2Button btnAuditLogs;
     }
 }
 

@@ -275,6 +275,15 @@ namespace BeninaClinic
             FrmPharmacyMain frm = new FrmPharmacyMain();
             frm.ShowDialog();
         }
+
+        private void btnAuditLogs_Click(object sender, EventArgs e)
+        {
+            pnlContainer.Controls.Clear();
+            UC_AuditLogs uc = new UC_AuditLogs();
+            uc.Dock = DockStyle.Fill;
+            pnlContainer.Controls.Add(uc);
+
+        }
     }
     }
    

@@ -6,17 +6,18 @@ using System.Threading.Tasks;
 using System.Data;
 using System.Data.SqlClient;
 using BeninaClinic.DAL;
+using BeninaClinic.PL.Forms;
 
 namespace BeninaClinic.BL.Clinic
 {
    public class PatientManagement
     {
         // Insert Patient
-        public void InsertPatient(string PatientName, string Gender , DateTime BoD ,int Age , string Note, string Phone , string NatNum  , string Address)
+        public void InsertPatient(string PatientName, string Gender , DateTime BoD ,int Age , string Note, string Phone , string NatNum  , string Address ,string BooldType)
         {
             try
             {
-                SqlParameter[] pr = new SqlParameter[8];
+                SqlParameter[] pr = new SqlParameter[9];
                 pr[0] = new SqlParameter("@PatientName", SqlDbType.NVarChar, 150);
                 pr[0].Value = PatientName;
                 pr[1] = new SqlParameter("@Gender", SqlDbType.NVarChar , 50);
@@ -33,10 +34,15 @@ namespace BeninaClinic.BL.Clinic
                 pr[6].Value = NatNum;
                 pr[7] = new SqlParameter("@Address", SqlDbType.NVarChar, 150);
                 pr[7].Value = Address;
+                pr[8] = new SqlParameter("@BooldType", SqlDbType.NVarChar, 10);
+                pr[8].Value = BooldType;
                 using (Db db = new Db())
                 {
                     db.ExecuteCommand("InsertPatient", pr);
                 }
+                AuditLogManagement log = new AuditLogManagement();
+                string newValue = $"Name: {PatientName}, Gender: {Gender}, BoD: {BoD}, Phone: {Phone}, NatNum: {NatNum}";
+                log.AddLog("Insert", "Patients", NatNum, Frm_Login.UserID, null, newValue, null);
             }
             catch (Exception ex)
             {
@@ -81,11 +87,11 @@ namespace BeninaClinic.BL.Clinic
 
 
         // Edit Patient 
-        public void EditPatient(int Patient_Id, string PatientName, string Gender, DateTime BoD, int Age, string Note , string Phone, string NatNum, string Address)
+        public void EditPatient(int Patient_Id, string PatientName, string Gender, DateTime BoD, int Age, string Note , string Phone, string NatNum, string Address ,string BooldType)
         {
             try
             {
-                SqlParameter[] pr = new SqlParameter[9];
+                SqlParameter[] pr = new SqlParameter[10];
                 pr[0] = new SqlParameter("@Patient_Id", SqlDbType.Int);
                 pr[0].Value = Patient_Id;
                 pr[1] = new SqlParameter("@PatientName", SqlDbType.NVarChar, 150);
@@ -104,11 +110,16 @@ namespace BeninaClinic.BL.Clinic
                 pr[7].Value = NatNum;
                 pr[8] = new SqlParameter("@Address", SqlDbType.NVarChar , 150);
                 pr[8].Value = Address;
+                pr[9] = new SqlParameter("@BooldType", SqlDbType.VarChar, 10);
+                pr[9].Value = BooldType;
 
                 using (Db db = new Db())
                 {
                     db.ExecuteCommand("EditPatient", pr);
                 }
+                AuditLogManagement log = new AuditLogManagement();
+                string newValue = $"Id: {Patient_Id}, Name: {PatientName}, Phone: {Phone}, NatNum: {NatNum}, Address: {Address}";
+                log.AddLog("Update", "Patients", Patient_Id.ToString(), Frm_Login.UserID, "See Record", newValue, null);
             }
             catch (Exception ex)
             {
@@ -129,6 +140,8 @@ namespace BeninaClinic.BL.Clinic
                 {
                     db.ExecuteCommand("DeletePatient", pr);
                 }
+                AuditLogManagement log = new AuditLogManagement();
+                log.AddLog("Delete", "Patients", Department_Id.ToString(), Frm_Login.UserID, $"Deleted ID: {Department_Id}", "Deleted", null);
             }
             catch (Exception ex)
             {
@@ -156,6 +169,6 @@ namespace BeninaClinic.BL.Clinic
         }
 
 
-        
+
     }
 }

@@ -81,6 +81,42 @@ namespace BeninaClinic.DAL
             }
         }
 
+        public DataTable ReadDataSQL(string sql, SqlParameter[] param)
+        {
+            if (string.IsNullOrWhiteSpace(sql))
+            {
+                throw new ArgumentException("SQL query cannot be null or empty.", nameof(sql));
+            }
+            try
+            {
+                using (SqlCommand cmd = new SqlCommand())
+                {
+                    cmd.Connection = _con;
+                    cmd.CommandType = CommandType.Text;
+                    cmd.CommandText = sql;
+
+                    if (param != null)
+                    {
+                        cmd.Parameters.AddRange(param);
+                    }
+                    using (SqlDataAdapter da = new SqlDataAdapter(cmd))
+                    {
+                        DataTable dt = new DataTable();
+                        da.Fill(dt);
+                        return dt;
+                    }
+                }
+            }
+            catch (SqlException ex)
+            {
+                throw new Exception($"Database error occurred while reading data: {ex.Message}", ex);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception($"Error occurred while reading data: {ex.Message}", ex);
+            }
+        }
+
         // Method for Execute Some Command ex ->  Insert , Update , Delete 
         public void ExecuteCommand(string sp, SqlParameter[] param)
         {
@@ -157,6 +193,47 @@ namespace BeninaClinic.DAL
 
 
         // Method for Fill Combobox
+        // Method for Execute Command and Return Output Parameter Value (INT)
+        public int ExecuteCommandReturnID(string sp, SqlParameter[] param, string outputParamName)
+        {
+            try
+            {
+                Open();
+
+                using (SqlCommand cmd = new SqlCommand())
+                {
+                    cmd.Connection = _con;
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.CommandText = sp;
+
+                    if (param != null)
+                    {
+                        cmd.Parameters.AddRange(param);
+                    }
+
+                    cmd.ExecuteNonQuery();
+                    
+                    if(cmd.Parameters[outputParamName].Value != DBNull.Value)
+                    {
+                        return Convert.ToInt32(cmd.Parameters[outputParamName].Value);
+                    }
+                    return 0;
+                }
+            }
+            catch (SqlException ex)
+            {
+                throw new Exception($"Database error occurred while executing command: {ex.Message}", ex);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception($"Error occurred while executing command: {ex.Message}", ex);
+            }
+            finally
+            {
+                Close();
+            }
+        }
+
         public void Dispose()
         {
             if (_con != null)

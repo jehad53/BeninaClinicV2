@@ -88,7 +88,7 @@ namespace BeninaClinic.PL.UC.UCClinic
                 }
                 DoctorsManagement doctorsmanagement = new DoctorsManagement();
                 doctorsmanagement.InsertDoctor(txtDoctorName.Text, txtDoctorNatNum.Text, cmbDoctorGender.Text,
-                    txtDoctorPhone.Text, txtDoctorAddress.Text, cmbContractType.Text, cmbDoctorsSocial.Text, txtSpecialty.Text, Convert.ToInt32(cmbClinics.SelectedValue));
+                txtDoctorPhone.Text, txtDoctorAddress.Text, cmbContractType.Text, cmbDoctorsSocial.Text, txtSpecialty.Text, Convert.ToInt32(cmbClinics.SelectedValue));
                 FrmSuccesMessageBox frmsuccesmessagebox = new FrmSuccesMessageBox();
                 frmsuccesmessagebox.ShowDialog();
                 //LoadData();

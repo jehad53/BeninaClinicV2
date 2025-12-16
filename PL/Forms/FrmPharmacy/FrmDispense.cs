@@ -180,7 +180,7 @@ namespace BeninaClinic.PL.Forms.FrmPharmacy
                 decimal total = 0;
                 foreach (DataRow row in dtCart.Rows) total += Convert.ToDecimal(row["Total"]);
 
-                int userId = 1; // Using Default User ID for now as I don't have global User context passed easily yet.
+                int userId = BeninaClinic.PL.Forms.Frm_Login.UserID;
                 // Assuming "Program.UserId" or similar? Ref: Frm_Login has static UserName.
                 // I won't query UserID now to save time, defaulting to 1 or 0.
 

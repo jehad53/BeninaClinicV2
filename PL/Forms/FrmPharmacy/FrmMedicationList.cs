@@ -74,7 +74,7 @@ namespace BeninaClinic.PL.Forms.FrmPharmacy
                     try
                     {
                         int id = Convert.ToInt32(dgvMedications.SelectedRows[0].Cells[0].Value);
-                        mm.DeleteMedication(id);
+                        mm.DeleteMedication(id,1);
                         MessageBox.Show("تم الحذف بنجاح");
                         LoadData();
                     }

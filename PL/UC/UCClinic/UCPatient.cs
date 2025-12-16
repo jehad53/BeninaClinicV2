@@ -35,6 +35,11 @@ namespace BeninaClinic.PL.UC.UCClinic
         {
             txtPatientID.Text = MainFunction.GetMaxID("tblPatients", "Patient_Id").ToString();
             txtPatientName.Clear();
+            txtNatNum.Clear();
+            txtAge.Clear();
+            txtAdderss.Clear();
+            txtPhone.Clear();
+            txtPatientNote.Clear();
             btnNew.Enabled = false;
             btnAddPatient.Enabled = true;
             btnEditPatient.Enabled = false;
@@ -78,7 +83,7 @@ namespace BeninaClinic.PL.UC.UCClinic
                 {
                     for (int i = 0; i < dgvPatients.Rows.Count - 1; i++)
                     {
-                        if (dgvPatients.Rows[i].Cells[5].Value.ToString() == txtNatNum.Text)
+                        if (dgvPatients.Rows[i].Cells[6].Value.ToString() == txtNatNum.Text)
                         {
                            FrmAlertMessageBox frmalertmessagebox = new FrmAlertMessageBox();
                            frmalertmessagebox.lblMessage.Text = "الرقم الوطني مدخل مسبقا";
@@ -87,7 +92,7 @@ namespace BeninaClinic.PL.UC.UCClinic
                         }
                     }
                     PatientManagement patientmanagement = new PatientManagement();
-                    patientmanagement.InsertPatient(txtPatientName.Text, cmbPatientGender.Text, dtpPatientDateofBirth.Value, Convert.ToInt32(txtAge.Text), txtPatientNote.Text , txtPhone.Text, txtNatNum.Text, txtAdderss.Text);
+                    patientmanagement.InsertPatient(txtPatientName.Text, cmbPatientGender.Text, dtpPatientDateofBirth.Value, Convert.ToInt32(txtAge.Text), txtPatientNote.Text , txtPhone.Text, txtNatNum.Text, txtAdderss.Text , cmbbooldtype.Text);
                     FrmSuccesMessageBox frmsuccesmessagebox = new FrmSuccesMessageBox();
                     frmsuccesmessagebox.ShowDialog();
                     if (MessageBox.Show("هـل تـريد حـجـز مـوعـد للمـريـض ؟", " حـجـز مـوعـد", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
@@ -115,7 +120,7 @@ namespace BeninaClinic.PL.UC.UCClinic
 
         private void btnEditPatient_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(txtPatientID.Text) || string.IsNullOrWhiteSpace(txtPatientName.Text))
+            if (string.IsNullOrWhiteSpace(txtPatientID.Text) || string.IsNullOrWhiteSpace(txtPatientName.Text) || string.IsNullOrWhiteSpace(txtAge.Text))
             {
                 // MessageBox.Show("يرجى إدخال البيانات", " تحذير", MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
                 FrmAlertMessageBox frmalertmessagebox = new FrmAlertMessageBox();
@@ -125,8 +130,18 @@ namespace BeninaClinic.PL.UC.UCClinic
             {
                 try
                 {
+                    for (int i = 0; i < dgvPatients.Rows.Count - 1; i++)
+                    {
+                        if (dgvPatients.Rows[i].Cells[6].Value.ToString() == txtNatNum.Text)
+                        {
+                            FrmAlertMessageBox frmalertmessagebox = new FrmAlertMessageBox();
+                            frmalertmessagebox.lblMessage.Text = "الرقم الوطني مدخل مسبقا";
+                            frmalertmessagebox.ShowDialog();
+                            return;
+                        }
+                    }
                     PatientManagement patientmanagement = new PatientManagement();
-                    patientmanagement.EditPatient(Convert.ToInt32(txtPatientID.Text), txtPatientName.Text, cmbPatientGender.Text, dtpPatientDateofBirth.Value, Convert.ToInt32(txtAge.Text), txtPatientNote.Text,txtPhone.Text , txtNatNum.Text ,txtAdderss.Text);
+                    patientmanagement.EditPatient(Convert.ToInt32(txtPatientID.Text), txtPatientName.Text, cmbPatientGender.Text, dtpPatientDateofBirth.Value, Convert.ToInt32(txtAge.Text), txtPatientNote.Text,txtPhone.Text , txtNatNum.Text ,txtAdderss.Text , cmbbooldtype.Text);
                     FrmSuccesMessageBox frmsuccesmessagebox = new FrmSuccesMessageBox();
                     frmsuccesmessagebox.ShowDialog();
                     //  MessageBox.Show("تم إدخال البيانات بنجاح", " إدخال عيادة", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
@@ -183,11 +198,13 @@ namespace BeninaClinic.PL.UC.UCClinic
                 txtPatientID.Text = dgvPatients.CurrentRow.Cells[0].Value.ToString();
                 txtPatientName.Text = dgvPatients.CurrentRow.Cells[1].Value.ToString();
                 cmbPatientGender.Text = dgvPatients.CurrentRow.Cells[2].Value.ToString();
-                dtpPatientDateofBirth.Text = dgvPatients.CurrentRow.Cells[3].Value.ToString();
-                txtAge.Text = dgvPatients.CurrentRow.Cells[4].Value.ToString();
-                txtNatNum.Text = dgvPatients.CurrentRow.Cells[5].Value.ToString();
-                txtPhone.Text = dgvPatients.CurrentRow.Cells[6].Value.ToString();
-                txtPatientNote.Text = dgvPatients.CurrentRow.Cells[8].Value.ToString();
+                cmbbooldtype.Text = dgvPatients.CurrentRow.Cells[3].Value.ToString();
+                dtpPatientDateofBirth.Text = dgvPatients.CurrentRow.Cells[4].Value.ToString();
+                txtAge.Text = dgvPatients.CurrentRow.Cells[5].Value.ToString();
+                txtNatNum.Text = dgvPatients.CurrentRow.Cells[6].Value.ToString();
+                txtPhone.Text = dgvPatients.CurrentRow.Cells[7].Value.ToString();
+                txtAdderss.Text = dgvPatients.CurrentRow.Cells[8].Value.ToString();
+                txtPatientNote.Text = dgvPatients.CurrentRow.Cells[9].Value.ToString();
                 btnNew.Enabled = true;
                 btnAddPatient.Enabled = false;
                 btnEditPatient.Enabled = true;

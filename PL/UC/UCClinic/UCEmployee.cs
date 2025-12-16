@@ -164,7 +164,7 @@ namespace BeninaClinic.PL.UC.UCClinic
                     }
                 }
                 EmployeesManagement employeesmanagement = new EmployeesManagement();
-                employeesmanagement.InsertEmployee(txtEmployeeName.Text, txtEmployeeNatNum.Text, dtpEmpDateofBirth.Value, cmbEmployeeGender.Text, txtEmployeePhone.Text, txtEmployeeAddress.Text, cmbContractType.Text, cmbEmployeeSocial.Text, dtpEmpAppointment.Value, Convert.ToDecimal(txtEmployeeSalary.Text), Convert.ToInt32(cmbJobs.SelectedValue), txtEmployeeNote.Text);
+                employeesmanagement.InsertEmployee(txtEmployeeName.Text, txtEmployeeNatNum.Text, dtpEmpDateofBirth.Value, cmbEmployeeGender.Text, txtEmployeePhone.Text, txtEmployeeAddress.Text, cmbContractType.Text, cmbEmployeeSocial.Text, dtpEmpAppointment.Value, Convert.ToDecimal(txtEmployeeSalary.Text), Convert.ToInt32(cmbJobs.SelectedValue), txtEmployeeNote.Text, Frm_Login.UserID);
                 FrmSuccesMessageBox frmsuccesmessagebox = new FrmSuccesMessageBox();
                 frmsuccesmessagebox.ShowDialog();
                 //  MessageBox.Show("تم إدخال البيانات بنجاح", " إدخال عيادة", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
@@ -230,7 +230,7 @@ namespace BeninaClinic.PL.UC.UCClinic
             else
             {
                 EmployeesManagement employeesmanagement = new EmployeesManagement();
-                employeesmanagement.EditEmployee(txtEmployeeName.Text, txtEmployeeNatNum.Text, dtpEmpDateofBirth.Value, cmbEmployeeGender.Text, txtEmployeePhone.Text, txtEmployeeAddress.Text, cmbContractType.Text, cmbEmployeeSocial.Text, dtpEmpAppointment.Value, Convert.ToDecimal(txtEmployeeSalary.Text), Convert.ToInt32(cmbJobs.SelectedValue), txtEmployeeNote.Text, Convert.ToInt32(dgvEmployees.CurrentRow.Cells[0].Value));
+                employeesmanagement.EditEmployee(txtEmployeeName.Text, txtEmployeeNatNum.Text, dtpEmpDateofBirth.Value, cmbEmployeeGender.Text, txtEmployeePhone.Text, txtEmployeeAddress.Text, cmbContractType.Text, cmbEmployeeSocial.Text, dtpEmpAppointment.Value, Convert.ToDecimal(txtEmployeeSalary.Text), Convert.ToInt32(cmbJobs.SelectedValue), txtEmployeeNote.Text, Convert.ToInt32(dgvEmployees.CurrentRow.Cells[0].Value), Frm_Login.UserID);
                 FrmSuccesMessageBox frmsuccesmessagebox = new FrmSuccesMessageBox();
                 frmsuccesmessagebox.ShowDialog();
                 //  MessageBox.Show("تم إدخال البيانات بنجاح", " إدخال عيادة", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
@@ -255,7 +255,7 @@ namespace BeninaClinic.PL.UC.UCClinic
                 else if (result == DialogResult.Yes)
                 {
                     EmployeesManagement employeesmanagement = new EmployeesManagement();
-                    employeesmanagement.DeleteEmployee(Convert.ToInt32(dgvEmployees.CurrentRow.Cells[0].Value));
+                    employeesmanagement.DeleteEmployee(Convert.ToInt32(dgvEmployees.CurrentRow.Cells[0].Value), Frm_Login.UserID);
                     FrmSuccesMessageBox frmsucces = new FrmSuccesMessageBox();
                     frmsucces.ShowDialog();
                     ClearTools();

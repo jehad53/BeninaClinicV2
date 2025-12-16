@@ -345,7 +345,7 @@ namespace BeninaClinic.PL.UC.UCClinic
                     LBgENDER.Text = dt.Rows[0][2].ToString();
                     lbPhone.Text = dt.Rows[0][6].ToString();
                     lbAddress.Text = dt.Rows[0][8].ToString();
-                    lbBloodType.Text = dt.Rows[0][0].ToString();
+                    lbBloodType.Text = dt.Rows[0][9].ToString();
                     lbNote.Text = dt.Rows[0][5].ToString();
                 }
                 else

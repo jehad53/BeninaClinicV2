@@ -82,7 +82,7 @@ namespace BeninaClinic.PL.Forms.FrmPharmacy
                     mm.InsertMedication(txtCode.Text, txtName.Text, txtScientificName.Text, txtType.Text,
                         Convert.ToDecimal(txtPurchasePrice.Text), Convert.ToDecimal(txtSellingPrice.Text),
                         Convert.ToInt32(txtQuantity.Text), dtpExpiry.Value, dtpProduction.Value,
-                        Convert.ToInt32(txtAlertQty.Text));
+                        Convert.ToInt32(txtAlertQty.Text), Frm_Login.UserID);
                     MessageBox.Show("تم الإضافة بنجاح");
                 }
                 else
@@ -90,7 +90,7 @@ namespace BeninaClinic.PL.Forms.FrmPharmacy
                     mm.UpdateMedication(medId, txtCode.Text, txtName.Text, txtScientificName.Text, txtType.Text,
                         Convert.ToDecimal(txtPurchasePrice.Text), Convert.ToDecimal(txtSellingPrice.Text),
                         Convert.ToInt32(txtQuantity.Text), dtpExpiry.Value, dtpProduction.Value,
-                        Convert.ToInt32(txtAlertQty.Text));
+                        Convert.ToInt32(txtAlertQty.Text), Frm_Login.UserID);
                     MessageBox.Show("تم التعديل بنجاح");
                 }
                 this.Close();
