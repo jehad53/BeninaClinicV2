@@ -164,6 +164,12 @@
     <Compile Include="PL\Forms\FrmPharmacy\FrmAddMedication.Designer.cs">
       <DependentUpon>FrmAddMedication.cs</DependentUpon>
     </Compile>
+    <Compile Include="PL\Forms\FrmPharmacy\FrmDispenseHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\Forms\FrmPharmacy\FrmDispenseHistory.Designer.cs">
+      <DependentUpon>FrmDispenseHistory.cs</DependentUpon>
+    </Compile>
     <Compile Include="PL\Forms\FrmPharmacy\FrmDispense.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -299,6 +305,12 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>RptTodayAppointments.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PL\Reports\RptPharmacy\RptMedicationsList.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RptMedicationsList.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="PL\UC\UCClinic\UCMedicine.cs">
@@ -441,11 +453,17 @@
     <EmbeddedResource Include="PL\Forms\FrmPharmacy\FrmAddMedication.resx">
       <DependentUpon>FrmAddMedication.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PL\Forms\FrmPharmacy\FrmDispenseHistory.resx">
+      <DependentUpon>FrmDispenseHistory.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PL\Forms\FrmPharmacy\FrmDispense.resx">
       <DependentUpon>FrmDispense.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PL\Forms\FrmPharmacy\FrmMedicationList.resx">
       <DependentUpon>FrmMedicationList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\Forms\FrmPharmacy\FrmPharmacyMain.resx">
+      <DependentUpon>FrmPharmacyMain.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PL\Forms\Frm_Login.resx">
       <DependentUpon>Frm_Login.cs</DependentUpon>
@@ -520,6 +538,10 @@
     <EmbeddedResource Include="PL\Reports\RptClinic\RptTodayAppointments.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>RptTodayAppointments.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\Reports\RptPharmacy\RptMedicationsList.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RptMedicationsList.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="PL\UC\UCClinic\UCMedicine.resx">
       <DependentUpon>UCMedicine.cs</DependentUpon>
@@ -617,7 +639,6 @@
     <Folder Include="Assets\Images\" />
     <Folder Include="BL\Store\" />
     <Folder Include="PL\Forms\FrmStore\" />
-    <Folder Include="PL\Reports\RptPharmacy\" />
     <Folder Include="PL\Reports\RptStore\" />
     <Folder Include="PL\UC\UCPharmacy\" />
     <Folder Include="PL\UC\UCStore\" />

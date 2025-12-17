@@ -59,3 +59,5 @@ E:\BeninaV2\BeninaClinic\BeninaClinic\obj\Debug\BeninaClinic.csproj.GenerateReso
 E:\BeninaV2\BeninaClinic\BeninaClinic\obj\Debug\BeninaClinic.exe
 E:\BeninaV2\BeninaClinic\BeninaClinic\obj\Debug\BeninaClinic.pdb
 E:\BeninaV2\BeninaClinic\BeninaClinic\obj\Debug\BeninaClinic.csprojResolveAssemblyReference.cache
+E:\BeninaV2\BeninaClinic\BeninaClinic\obj\Debug\BeninaClinic.PL.Forms.FrmPharmacy.FrmDispenseHistory.resources
+E:\BeninaV2\BeninaClinic\BeninaClinic\obj\Debug\BeninaClinic.PL.Forms.FrmPharmacy.FrmPharmacyMain.resources

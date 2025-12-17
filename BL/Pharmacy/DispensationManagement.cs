@@ -73,5 +73,67 @@ namespace BeninaClinic.BL.Pharmacy
                 throw new Exception($"Error in GetDoctorNotifications --> {ex.Message}");
             }
         }
+
+        // Get All Dispensation 
+        public DataTable GetAllDispensation()
+        {
+            try
+            {
+                using (Db db = new Db())
+                {
+                    return db.ReadData("GetAllDispenations", null);
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception($"Error in GetAllDispenations --> {ex.Message}");
+            }
+        }
+
+        // Get Dispensation Between 2 Dates
+        public DataTable GetDispensationBetweenDates(DateTime fromDate, DateTime toDate)
+        {
+            try
+            {
+                using (Db db = new Db())
+                {
+                    SqlParameter[] param = new SqlParameter[2];
+
+                    param[0] = new SqlParameter("@FromDate", SqlDbType.Date);
+                    param[0].Value = fromDate.Date;
+
+                    param[1] = new SqlParameter("@ToDate", SqlDbType.Date);
+                    param[1].Value = toDate.Date;
+
+                    return db.ReadData("GetDispensationBetweenDates", param);
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception($"Error in GetDispensationBetweenDates --> {ex.Message}");
+            }
+        }
+
+       // GetDispensationByName
+        public DataTable GetDispensationByName(string Name)
+        {
+            try
+            {
+                using (Db db = new Db())
+                {
+                    SqlParameter[] param = new SqlParameter[1];
+
+                    param[0] = new SqlParameter("@PatientName", SqlDbType.NVarChar ,100);
+                    param[0].Value = Name;
+
+
+                    return db.ReadData("GetDispensationByName", param);
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception($"Error in GetDispensationByName --> {ex.Message}");
+            }
+        }
     }
 }

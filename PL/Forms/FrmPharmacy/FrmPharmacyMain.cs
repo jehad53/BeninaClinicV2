@@ -33,5 +33,11 @@ namespace BeninaClinic.PL.Forms.FrmPharmacy
            FrmDispense frm = new FrmDispense();
            frm.ShowDialog();
         }
+
+        private void btnDispenseHistory_Click(object sender, EventArgs e)
+        {
+            FrmDispenseHistory frm = new FrmDispenseHistory();
+            frm.ShowDialog();
+        }
     }
 }
