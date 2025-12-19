@@ -104,6 +104,12 @@
     <Compile Include="BL\HelperFunction\GlobalVar.cs" />
     <Compile Include="BL\HelperFunction\MainFunction.cs" />
     <Compile Include="DAL\Db.cs" />
+    <Compile Include="FrmConnectServer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmConnectServer.Designer.cs">
+      <DependentUpon>FrmConnectServer.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmTestUserControl.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -115,6 +121,12 @@
     </Compile>
     <Compile Include="PL\Forms\FrmClinic\FrmAppointment.Designer.cs">
       <DependentUpon>FrmAppointment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\Forms\FrmClinic\FrmDataPatient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\Forms\FrmClinic\FrmDataPatient.Designer.cs">
+      <DependentUpon>FrmDataPatient.cs</DependentUpon>
     </Compile>
     <Compile Include="PL\Forms\FrmClinic\FrmMainClinic.cs">
       <SubType>Form</SubType>
@@ -423,11 +435,17 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FrmConnectServer.resx">
+      <DependentUpon>FrmConnectServer.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmTestUserControl.resx">
       <DependentUpon>FrmTestUserControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PL\Forms\FrmClinic\FrmAppointment.resx">
       <DependentUpon>FrmAppointment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\Forms\FrmClinic\FrmDataPatient.resx">
+      <DependentUpon>FrmDataPatient.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PL\Forms\FrmClinic\FrmMainClinic.resx">
       <DependentUpon>FrmMainClinic.cs</DependentUpon>

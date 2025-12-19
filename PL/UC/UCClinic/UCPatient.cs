@@ -290,5 +290,13 @@ namespace BeninaClinic.PL.UC.UCClinic
                 MessageBox.Show("يوجد خطأ في عملية البحث عن مريض", " البحث عن مريض", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
         }
+
+        private void btnFrmHealthData_Click(object sender, EventArgs e)
+        {
+            FrmDataPatient frm = new FrmDataPatient();
+            frm.lbPatientID.Text = txtPatientID.Text;
+            frm.lbPatineName.Text = txtPatientName.Text;
+            frm.ShowDialog();
+        }
     }
 }

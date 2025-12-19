@@ -29,36 +29,18 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UCPatient));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.btnNew = new Guna.UI2.WinForms.Guna2Button();
-            this.btnAddPatient = new Guna.UI2.WinForms.Guna2Button();
-            this.btnEditPatient = new Guna.UI2.WinForms.Guna2Button();
-            this.btnDeletePatient = new Guna.UI2.WinForms.Guna2Button();
-            this.btnRefreshPatient = new Guna.UI2.WinForms.Guna2Button();
-            this.btnPrintOnePatient = new Guna.UI2.WinForms.Guna2Button();
-            this.btnPrintPatient = new Guna.UI2.WinForms.Guna2Button();
             this.label13 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dgvPatients = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.txtSearchEmployee = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2GroupBox2 = new Guna.UI2.WinForms.Guna2GroupBox();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.label4 = new System.Windows.Forms.Label();
@@ -85,6 +67,25 @@
             this.pnlLine = new System.Windows.Forms.Panel();
             this.lblUserName = new System.Windows.Forms.Label();
             this.MessageDialog = new Guna.UI2.WinForms.Guna2MessageDialog();
+            this.txtSearchEmployee = new Guna.UI2.WinForms.Guna2TextBox();
+            this.btnNew = new Guna.UI2.WinForms.Guna2Button();
+            this.btnAddPatient = new Guna.UI2.WinForms.Guna2Button();
+            this.btnEditPatient = new Guna.UI2.WinForms.Guna2Button();
+            this.btnDeletePatient = new Guna.UI2.WinForms.Guna2Button();
+            this.btnRefreshPatient = new Guna.UI2.WinForms.Guna2Button();
+            this.btnPrintOnePatient = new Guna.UI2.WinForms.Guna2Button();
+            this.btnPrintPatient = new Guna.UI2.WinForms.Guna2Button();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnFrmHealthData = new Guna.UI2.WinForms.Guna2Button();
             this.flowLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPatients)).BeginInit();
             this.guna2GroupBox1.SuspendLayout();
@@ -109,204 +110,6 @@
             this.flowLayoutPanel1.Padding = new System.Windows.Forms.Padding(3);
             this.flowLayoutPanel1.Size = new System.Drawing.Size(827, 115);
             this.flowLayoutPanel1.TabIndex = 22;
-            // 
-            // btnNew
-            // 
-            this.btnNew.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnNew.Animated = true;
-            this.btnNew.AnimatedGIF = true;
-            this.btnNew.BorderRadius = 6;
-            this.btnNew.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnNew.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 5);
-            this.btnNew.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnNew.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnNew.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnNew.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnNew.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(121)))), ((int)(((byte)(214)))));
-            this.btnNew.Font = new System.Drawing.Font("Cairo SemiBold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNew.ForeColor = System.Drawing.Color.White;
-            this.btnNew.HoverState.BorderColor = System.Drawing.Color.Red;
-            this.btnNew.HoverState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(121)))), ((int)(((byte)(214)))));
-            this.btnNew.HoverState.FillColor = System.Drawing.Color.White;
-            this.btnNew.HoverState.Font = new System.Drawing.Font("Cairo", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNew.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(121)))), ((int)(((byte)(214)))));
-            this.btnNew.Image = ((System.Drawing.Image)(resources.GetObject("btnNew.Image")));
-            this.btnNew.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnNew.Location = new System.Drawing.Point(665, 6);
-            this.btnNew.Name = "btnNew";
-            this.btnNew.Size = new System.Drawing.Size(153, 44);
-            this.btnNew.TabIndex = 19;
-            this.btnNew.Text = "جديد";
-            this.btnNew.Click += new System.EventHandler(this.btnNew_Click);
-            // 
-            // btnAddPatient
-            // 
-            this.btnAddPatient.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAddPatient.Animated = true;
-            this.btnAddPatient.AnimatedGIF = true;
-            this.btnAddPatient.BorderRadius = 6;
-            this.btnAddPatient.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAddPatient.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 5);
-            this.btnAddPatient.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnAddPatient.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnAddPatient.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnAddPatient.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnAddPatient.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(121)))), ((int)(((byte)(214)))));
-            this.btnAddPatient.Font = new System.Drawing.Font("Cairo SemiBold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddPatient.ForeColor = System.Drawing.Color.White;
-            this.btnAddPatient.HoverState.BorderColor = System.Drawing.Color.Red;
-            this.btnAddPatient.HoverState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(121)))), ((int)(((byte)(214)))));
-            this.btnAddPatient.HoverState.FillColor = System.Drawing.Color.White;
-            this.btnAddPatient.HoverState.Font = new System.Drawing.Font("Cairo", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddPatient.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(121)))), ((int)(((byte)(214)))));
-            this.btnAddPatient.Image = ((System.Drawing.Image)(resources.GetObject("btnAddPatient.Image")));
-            this.btnAddPatient.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnAddPatient.Location = new System.Drawing.Point(506, 6);
-            this.btnAddPatient.Name = "btnAddPatient";
-            this.btnAddPatient.Size = new System.Drawing.Size(153, 44);
-            this.btnAddPatient.TabIndex = 15;
-            this.btnAddPatient.Text = "إضافة";
-            this.btnAddPatient.Click += new System.EventHandler(this.btnAddPatient_Click);
-            // 
-            // btnEditPatient
-            // 
-            this.btnEditPatient.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnEditPatient.Animated = true;
-            this.btnEditPatient.AnimatedGIF = true;
-            this.btnEditPatient.BorderRadius = 6;
-            this.btnEditPatient.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEditPatient.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 5);
-            this.btnEditPatient.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnEditPatient.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnEditPatient.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnEditPatient.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnEditPatient.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(121)))), ((int)(((byte)(214)))));
-            this.btnEditPatient.Font = new System.Drawing.Font("Cairo SemiBold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditPatient.ForeColor = System.Drawing.Color.White;
-            this.btnEditPatient.HoverState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(121)))), ((int)(((byte)(214)))));
-            this.btnEditPatient.HoverState.FillColor = System.Drawing.Color.White;
-            this.btnEditPatient.HoverState.Font = new System.Drawing.Font("Cairo", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditPatient.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(121)))), ((int)(((byte)(214)))));
-            this.btnEditPatient.Image = ((System.Drawing.Image)(resources.GetObject("btnEditPatient.Image")));
-            this.btnEditPatient.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnEditPatient.Location = new System.Drawing.Point(347, 6);
-            this.btnEditPatient.Name = "btnEditPatient";
-            this.btnEditPatient.Size = new System.Drawing.Size(153, 44);
-            this.btnEditPatient.TabIndex = 16;
-            this.btnEditPatient.Text = "تعديل";
-            this.btnEditPatient.Click += new System.EventHandler(this.btnEditPatient_Click);
-            // 
-            // btnDeletePatient
-            // 
-            this.btnDeletePatient.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnDeletePatient.Animated = true;
-            this.btnDeletePatient.AnimatedGIF = true;
-            this.btnDeletePatient.BorderRadius = 6;
-            this.btnDeletePatient.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnDeletePatient.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 5);
-            this.btnDeletePatient.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnDeletePatient.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnDeletePatient.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnDeletePatient.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnDeletePatient.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(121)))), ((int)(((byte)(214)))));
-            this.btnDeletePatient.Font = new System.Drawing.Font("Cairo SemiBold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDeletePatient.ForeColor = System.Drawing.Color.White;
-            this.btnDeletePatient.HoverState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(59)))), ((int)(((byte)(1)))));
-            this.btnDeletePatient.HoverState.FillColor = System.Drawing.Color.White;
-            this.btnDeletePatient.HoverState.Font = new System.Drawing.Font("Cairo", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDeletePatient.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(59)))), ((int)(((byte)(1)))));
-            this.btnDeletePatient.Image = ((System.Drawing.Image)(resources.GetObject("btnDeletePatient.Image")));
-            this.btnDeletePatient.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnDeletePatient.Location = new System.Drawing.Point(188, 6);
-            this.btnDeletePatient.Name = "btnDeletePatient";
-            this.btnDeletePatient.Size = new System.Drawing.Size(153, 44);
-            this.btnDeletePatient.TabIndex = 17;
-            this.btnDeletePatient.Text = "حذف";
-            this.btnDeletePatient.Click += new System.EventHandler(this.btnDeletePatient_Click);
-            // 
-            // btnRefreshPatient
-            // 
-            this.btnRefreshPatient.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnRefreshPatient.Animated = true;
-            this.btnRefreshPatient.AnimatedGIF = true;
-            this.btnRefreshPatient.BorderRadius = 6;
-            this.btnRefreshPatient.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnRefreshPatient.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 5);
-            this.btnRefreshPatient.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnRefreshPatient.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnRefreshPatient.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnRefreshPatient.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnRefreshPatient.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(121)))), ((int)(((byte)(214)))));
-            this.btnRefreshPatient.Font = new System.Drawing.Font("Cairo SemiBold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRefreshPatient.ForeColor = System.Drawing.Color.White;
-            this.btnRefreshPatient.HoverState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(197)))), ((int)(((byte)(127)))));
-            this.btnRefreshPatient.HoverState.FillColor = System.Drawing.Color.White;
-            this.btnRefreshPatient.HoverState.Font = new System.Drawing.Font("Cairo", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRefreshPatient.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(197)))), ((int)(((byte)(127)))));
-            this.btnRefreshPatient.Image = ((System.Drawing.Image)(resources.GetObject("btnRefreshPatient.Image")));
-            this.btnRefreshPatient.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnRefreshPatient.Location = new System.Drawing.Point(602, 56);
-            this.btnRefreshPatient.Name = "btnRefreshPatient";
-            this.btnRefreshPatient.Size = new System.Drawing.Size(216, 44);
-            this.btnRefreshPatient.TabIndex = 20;
-            this.btnRefreshPatient.Text = "تحديث القائمة";
-            this.btnRefreshPatient.Click += new System.EventHandler(this.btnRefreshPatient_Click);
-            // 
-            // btnPrintOnePatient
-            // 
-            this.btnPrintOnePatient.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnPrintOnePatient.Animated = true;
-            this.btnPrintOnePatient.AnimatedGIF = true;
-            this.btnPrintOnePatient.BorderRadius = 6;
-            this.btnPrintOnePatient.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnPrintOnePatient.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 5);
-            this.btnPrintOnePatient.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnPrintOnePatient.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnPrintOnePatient.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnPrintOnePatient.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnPrintOnePatient.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(121)))), ((int)(((byte)(214)))));
-            this.btnPrintOnePatient.Font = new System.Drawing.Font("Cairo SemiBold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPrintOnePatient.ForeColor = System.Drawing.Color.White;
-            this.btnPrintOnePatient.HoverState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(121)))), ((int)(((byte)(214)))));
-            this.btnPrintOnePatient.HoverState.FillColor = System.Drawing.Color.White;
-            this.btnPrintOnePatient.HoverState.Font = new System.Drawing.Font("Cairo", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPrintOnePatient.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(121)))), ((int)(((byte)(214)))));
-            this.btnPrintOnePatient.Image = ((System.Drawing.Image)(resources.GetObject("btnPrintOnePatient.Image")));
-            this.btnPrintOnePatient.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnPrintOnePatient.Location = new System.Drawing.Point(272, 56);
-            this.btnPrintOnePatient.Name = "btnPrintOnePatient";
-            this.btnPrintOnePatient.Size = new System.Drawing.Size(324, 44);
-            this.btnPrintOnePatient.TabIndex = 21;
-            this.btnPrintOnePatient.Text = "طباعة المريض المحدد";
-            this.btnPrintOnePatient.Click += new System.EventHandler(this.btnPrintOnePatient_Click);
-            // 
-            // btnPrintPatient
-            // 
-            this.btnPrintPatient.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnPrintPatient.Animated = true;
-            this.btnPrintPatient.AnimatedGIF = true;
-            this.btnPrintPatient.BorderRadius = 6;
-            this.btnPrintPatient.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnPrintPatient.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 5);
-            this.btnPrintPatient.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnPrintPatient.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnPrintPatient.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnPrintPatient.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnPrintPatient.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(121)))), ((int)(((byte)(214)))));
-            this.btnPrintPatient.Font = new System.Drawing.Font("Cairo SemiBold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPrintPatient.ForeColor = System.Drawing.Color.White;
-            this.btnPrintPatient.HoverState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(121)))), ((int)(((byte)(214)))));
-            this.btnPrintPatient.HoverState.FillColor = System.Drawing.Color.White;
-            this.btnPrintPatient.HoverState.Font = new System.Drawing.Font("Cairo", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPrintPatient.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(121)))), ((int)(((byte)(214)))));
-            this.btnPrintPatient.Image = ((System.Drawing.Image)(resources.GetObject("btnPrintPatient.Image")));
-            this.btnPrintPatient.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnPrintPatient.Location = new System.Drawing.Point(34, 56);
-            this.btnPrintPatient.Name = "btnPrintPatient";
-            this.btnPrintPatient.Size = new System.Drawing.Size(232, 44);
-            this.btnPrintPatient.TabIndex = 18;
-            this.btnPrintPatient.Text = "طباعة القائمة";
-            this.btnPrintPatient.Click += new System.EventHandler(this.btnPrintPatient_Click);
             // 
             // label13
             // 
@@ -337,24 +140,24 @@
             this.dgvPatients.AllowUserToDeleteRows = false;
             this.dgvPatients.AllowUserToResizeColumns = false;
             this.dgvPatients.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Lavender;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Cairo Medium", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Blue;
-            this.dgvPatients.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.Lavender;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Cairo Medium", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.Blue;
+            this.dgvPatients.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle6;
             this.dgvPatients.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvPatients.BackgroundColor = System.Drawing.Color.White;
             this.dgvPatients.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Lavender;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Cairo Medium", 12F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvPatients.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.Lavender;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Cairo Medium", 12F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvPatients.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.dgvPatients.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvPatients.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
@@ -367,117 +170,38 @@
             this.Column6,
             this.Column7,
             this.Column12});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Cairo Medium", 12F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvPatients.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Cairo Medium", 12F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvPatients.DefaultCellStyle = dataGridViewCellStyle8;
             this.dgvPatients.EnableHeadersVisualStyles = false;
             this.dgvPatients.Location = new System.Drawing.Point(6, 565);
             this.dgvPatients.MultiSelect = false;
             this.dgvPatients.Name = "dgvPatients";
             this.dgvPatients.ReadOnly = true;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.SpringGreen;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Cairo Medium", 12F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvPatients.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.SpringGreen;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Cairo Medium", 12F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvPatients.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
             this.dgvPatients.RowHeadersVisible = false;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Cairo Medium", 13.8F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.dgvPatients.RowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Cairo Medium", 13.8F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.dgvPatients.RowsDefaultCellStyle = dataGridViewCellStyle10;
             this.dgvPatients.RowTemplate.Height = 40;
             this.dgvPatients.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvPatients.Size = new System.Drawing.Size(830, 82);
             this.dgvPatients.TabIndex = 82;
             this.dgvPatients.DoubleClick += new System.EventHandler(this.dgvPatients_DoubleClick);
-            // 
-            // Column1
-            // 
-            this.Column1.DataPropertyName = "Patient_Id";
-            this.Column1.HeaderText = "رقم المريض";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            this.Column1.Width = 150;
-            // 
-            // Column2
-            // 
-            this.Column2.DataPropertyName = "PatientName";
-            this.Column2.HeaderText = "اسم المريض";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            this.Column2.Width = 220;
-            // 
-            // Column4
-            // 
-            this.Column4.DataPropertyName = "Gender";
-            this.Column4.HeaderText = "الجنس";
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            // 
-            // Column8
-            // 
-            this.Column8.DataPropertyName = "Booldtypes";
-            this.Column8.HeaderText = "فصيلة الدم";
-            this.Column8.Name = "Column8";
-            this.Column8.ReadOnly = true;
-            // 
-            // Column11
-            // 
-            this.Column11.DataPropertyName = "DateofBirth";
-            this.Column11.HeaderText = "تاريخ الميلاد";
-            this.Column11.Name = "Column11";
-            this.Column11.ReadOnly = true;
-            this.Column11.Visible = false;
-            this.Column11.Width = 150;
-            // 
-            // Column3
-            // 
-            this.Column3.DataPropertyName = "Age";
-            this.Column3.HeaderText = "العمر";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            this.Column3.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // Column5
-            // 
-            this.Column5.DataPropertyName = "NatNum";
-            this.Column5.HeaderText = "الرقم الوطني";
-            this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
-            this.Column5.Width = 150;
-            // 
-            // Column6
-            // 
-            this.Column6.DataPropertyName = "Phone";
-            this.Column6.HeaderText = "رقم الهاتف";
-            this.Column6.Name = "Column6";
-            this.Column6.ReadOnly = true;
-            this.Column6.Width = 120;
-            // 
-            // Column7
-            // 
-            this.Column7.DataPropertyName = "Address";
-            this.Column7.HeaderText = "العنوان";
-            this.Column7.Name = "Column7";
-            this.Column7.ReadOnly = true;
-            this.Column7.Visible = false;
-            // 
-            // Column12
-            // 
-            this.Column12.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column12.DataPropertyName = "Note";
-            this.Column12.HeaderText = "ملاحظات";
-            this.Column12.Name = "Column12";
-            this.Column12.ReadOnly = true;
             // 
             // guna2GroupBox1
             // 
@@ -500,34 +224,6 @@
             // 
             this.toolTip1.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
             this.toolTip1.ToolTipTitle = "توضيح";
-            // 
-            // txtSearchEmployee
-            // 
-            this.txtSearchEmployee.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtSearchEmployee.BorderColor = System.Drawing.Color.Gainsboro;
-            this.txtSearchEmployee.BorderRadius = 6;
-            this.txtSearchEmployee.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtSearchEmployee.DefaultText = "";
-            this.txtSearchEmployee.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtSearchEmployee.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtSearchEmployee.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtSearchEmployee.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtSearchEmployee.FillColor = System.Drawing.Color.WhiteSmoke;
-            this.txtSearchEmployee.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtSearchEmployee.Font = new System.Drawing.Font("Cairo Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSearchEmployee.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtSearchEmployee.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtSearchEmployee.IconLeft = ((System.Drawing.Image)(resources.GetObject("txtSearchEmployee.IconLeft")));
-            this.txtSearchEmployee.Location = new System.Drawing.Point(19, 508);
-            this.txtSearchEmployee.Margin = new System.Windows.Forms.Padding(4, 9, 4, 9);
-            this.txtSearchEmployee.Name = "txtSearchEmployee";
-            this.txtSearchEmployee.PlaceholderText = "";
-            this.txtSearchEmployee.SelectedText = "";
-            this.txtSearchEmployee.Size = new System.Drawing.Size(390, 37);
-            this.txtSearchEmployee.TabIndex = 85;
-            this.txtSearchEmployee.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.toolTip1.SetToolTip(this.txtSearchEmployee, "يمكن البحث بواسطة الاسم او الرقم الوطني");
-            this.txtSearchEmployee.TextChanged += new System.EventHandler(this.txtSearchEmployee_TextChanged);
             // 
             // guna2GroupBox2
             // 
@@ -568,6 +264,7 @@
             this.flowLayoutPanel2.Controls.Add(this.txtAdderss);
             this.flowLayoutPanel2.Controls.Add(this.label18);
             this.flowLayoutPanel2.Controls.Add(this.txtPatientNote);
+            this.flowLayoutPanel2.Controls.Add(this.btnFrmHealthData);
             this.flowLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel2.Location = new System.Drawing.Point(3, 43);
             this.flowLayoutPanel2.Margin = new System.Windows.Forms.Padding(0);
@@ -1016,6 +713,341 @@
             this.MessageDialog.Style = Guna.UI2.WinForms.MessageDialogStyle.Dark;
             this.MessageDialog.Text = "تمت العملية بنجاح";
             // 
+            // txtSearchEmployee
+            // 
+            this.txtSearchEmployee.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtSearchEmployee.BorderColor = System.Drawing.Color.Gainsboro;
+            this.txtSearchEmployee.BorderRadius = 6;
+            this.txtSearchEmployee.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtSearchEmployee.DefaultText = "";
+            this.txtSearchEmployee.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtSearchEmployee.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtSearchEmployee.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtSearchEmployee.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtSearchEmployee.FillColor = System.Drawing.Color.WhiteSmoke;
+            this.txtSearchEmployee.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtSearchEmployee.Font = new System.Drawing.Font("Cairo Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSearchEmployee.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtSearchEmployee.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtSearchEmployee.IconLeft = ((System.Drawing.Image)(resources.GetObject("txtSearchEmployee.IconLeft")));
+            this.txtSearchEmployee.Location = new System.Drawing.Point(19, 508);
+            this.txtSearchEmployee.Margin = new System.Windows.Forms.Padding(4, 9, 4, 9);
+            this.txtSearchEmployee.Name = "txtSearchEmployee";
+            this.txtSearchEmployee.PlaceholderText = "";
+            this.txtSearchEmployee.SelectedText = "";
+            this.txtSearchEmployee.Size = new System.Drawing.Size(390, 37);
+            this.txtSearchEmployee.TabIndex = 85;
+            this.txtSearchEmployee.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.toolTip1.SetToolTip(this.txtSearchEmployee, "يمكن البحث بواسطة الاسم او الرقم الوطني");
+            this.txtSearchEmployee.TextChanged += new System.EventHandler(this.txtSearchEmployee_TextChanged);
+            // 
+            // btnNew
+            // 
+            this.btnNew.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnNew.Animated = true;
+            this.btnNew.AnimatedGIF = true;
+            this.btnNew.BorderRadius = 6;
+            this.btnNew.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnNew.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 5);
+            this.btnNew.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnNew.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnNew.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnNew.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnNew.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(121)))), ((int)(((byte)(214)))));
+            this.btnNew.Font = new System.Drawing.Font("Cairo SemiBold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNew.ForeColor = System.Drawing.Color.White;
+            this.btnNew.HoverState.BorderColor = System.Drawing.Color.Red;
+            this.btnNew.HoverState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(121)))), ((int)(((byte)(214)))));
+            this.btnNew.HoverState.FillColor = System.Drawing.Color.White;
+            this.btnNew.HoverState.Font = new System.Drawing.Font("Cairo", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNew.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(121)))), ((int)(((byte)(214)))));
+            this.btnNew.Image = ((System.Drawing.Image)(resources.GetObject("btnNew.Image")));
+            this.btnNew.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnNew.Location = new System.Drawing.Point(665, 6);
+            this.btnNew.Name = "btnNew";
+            this.btnNew.Size = new System.Drawing.Size(153, 44);
+            this.btnNew.TabIndex = 19;
+            this.btnNew.Text = "جديد";
+            this.btnNew.Click += new System.EventHandler(this.btnNew_Click);
+            // 
+            // btnAddPatient
+            // 
+            this.btnAddPatient.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAddPatient.Animated = true;
+            this.btnAddPatient.AnimatedGIF = true;
+            this.btnAddPatient.BorderRadius = 6;
+            this.btnAddPatient.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAddPatient.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 5);
+            this.btnAddPatient.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnAddPatient.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnAddPatient.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnAddPatient.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnAddPatient.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(121)))), ((int)(((byte)(214)))));
+            this.btnAddPatient.Font = new System.Drawing.Font("Cairo SemiBold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddPatient.ForeColor = System.Drawing.Color.White;
+            this.btnAddPatient.HoverState.BorderColor = System.Drawing.Color.Red;
+            this.btnAddPatient.HoverState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(121)))), ((int)(((byte)(214)))));
+            this.btnAddPatient.HoverState.FillColor = System.Drawing.Color.White;
+            this.btnAddPatient.HoverState.Font = new System.Drawing.Font("Cairo", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddPatient.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(121)))), ((int)(((byte)(214)))));
+            this.btnAddPatient.Image = ((System.Drawing.Image)(resources.GetObject("btnAddPatient.Image")));
+            this.btnAddPatient.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnAddPatient.Location = new System.Drawing.Point(506, 6);
+            this.btnAddPatient.Name = "btnAddPatient";
+            this.btnAddPatient.Size = new System.Drawing.Size(153, 44);
+            this.btnAddPatient.TabIndex = 15;
+            this.btnAddPatient.Text = "إضافة";
+            this.btnAddPatient.Click += new System.EventHandler(this.btnAddPatient_Click);
+            // 
+            // btnEditPatient
+            // 
+            this.btnEditPatient.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnEditPatient.Animated = true;
+            this.btnEditPatient.AnimatedGIF = true;
+            this.btnEditPatient.BorderRadius = 6;
+            this.btnEditPatient.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEditPatient.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 5);
+            this.btnEditPatient.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnEditPatient.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnEditPatient.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnEditPatient.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnEditPatient.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(121)))), ((int)(((byte)(214)))));
+            this.btnEditPatient.Font = new System.Drawing.Font("Cairo SemiBold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditPatient.ForeColor = System.Drawing.Color.White;
+            this.btnEditPatient.HoverState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(121)))), ((int)(((byte)(214)))));
+            this.btnEditPatient.HoverState.FillColor = System.Drawing.Color.White;
+            this.btnEditPatient.HoverState.Font = new System.Drawing.Font("Cairo", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditPatient.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(121)))), ((int)(((byte)(214)))));
+            this.btnEditPatient.Image = ((System.Drawing.Image)(resources.GetObject("btnEditPatient.Image")));
+            this.btnEditPatient.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnEditPatient.Location = new System.Drawing.Point(347, 6);
+            this.btnEditPatient.Name = "btnEditPatient";
+            this.btnEditPatient.Size = new System.Drawing.Size(153, 44);
+            this.btnEditPatient.TabIndex = 16;
+            this.btnEditPatient.Text = "تعديل";
+            this.btnEditPatient.Click += new System.EventHandler(this.btnEditPatient_Click);
+            // 
+            // btnDeletePatient
+            // 
+            this.btnDeletePatient.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnDeletePatient.Animated = true;
+            this.btnDeletePatient.AnimatedGIF = true;
+            this.btnDeletePatient.BorderRadius = 6;
+            this.btnDeletePatient.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDeletePatient.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 5);
+            this.btnDeletePatient.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnDeletePatient.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnDeletePatient.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnDeletePatient.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnDeletePatient.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(121)))), ((int)(((byte)(214)))));
+            this.btnDeletePatient.Font = new System.Drawing.Font("Cairo SemiBold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDeletePatient.ForeColor = System.Drawing.Color.White;
+            this.btnDeletePatient.HoverState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(59)))), ((int)(((byte)(1)))));
+            this.btnDeletePatient.HoverState.FillColor = System.Drawing.Color.White;
+            this.btnDeletePatient.HoverState.Font = new System.Drawing.Font("Cairo", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDeletePatient.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(59)))), ((int)(((byte)(1)))));
+            this.btnDeletePatient.Image = ((System.Drawing.Image)(resources.GetObject("btnDeletePatient.Image")));
+            this.btnDeletePatient.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnDeletePatient.Location = new System.Drawing.Point(188, 6);
+            this.btnDeletePatient.Name = "btnDeletePatient";
+            this.btnDeletePatient.Size = new System.Drawing.Size(153, 44);
+            this.btnDeletePatient.TabIndex = 17;
+            this.btnDeletePatient.Text = "حذف";
+            this.btnDeletePatient.Click += new System.EventHandler(this.btnDeletePatient_Click);
+            // 
+            // btnRefreshPatient
+            // 
+            this.btnRefreshPatient.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnRefreshPatient.Animated = true;
+            this.btnRefreshPatient.AnimatedGIF = true;
+            this.btnRefreshPatient.BorderRadius = 6;
+            this.btnRefreshPatient.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRefreshPatient.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 5);
+            this.btnRefreshPatient.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnRefreshPatient.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnRefreshPatient.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnRefreshPatient.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnRefreshPatient.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(121)))), ((int)(((byte)(214)))));
+            this.btnRefreshPatient.Font = new System.Drawing.Font("Cairo SemiBold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRefreshPatient.ForeColor = System.Drawing.Color.White;
+            this.btnRefreshPatient.HoverState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(197)))), ((int)(((byte)(127)))));
+            this.btnRefreshPatient.HoverState.FillColor = System.Drawing.Color.White;
+            this.btnRefreshPatient.HoverState.Font = new System.Drawing.Font("Cairo", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRefreshPatient.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(197)))), ((int)(((byte)(127)))));
+            this.btnRefreshPatient.Image = ((System.Drawing.Image)(resources.GetObject("btnRefreshPatient.Image")));
+            this.btnRefreshPatient.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnRefreshPatient.Location = new System.Drawing.Point(602, 56);
+            this.btnRefreshPatient.Name = "btnRefreshPatient";
+            this.btnRefreshPatient.Size = new System.Drawing.Size(216, 44);
+            this.btnRefreshPatient.TabIndex = 20;
+            this.btnRefreshPatient.Text = "تحديث القائمة";
+            this.btnRefreshPatient.Click += new System.EventHandler(this.btnRefreshPatient_Click);
+            // 
+            // btnPrintOnePatient
+            // 
+            this.btnPrintOnePatient.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnPrintOnePatient.Animated = true;
+            this.btnPrintOnePatient.AnimatedGIF = true;
+            this.btnPrintOnePatient.BorderRadius = 6;
+            this.btnPrintOnePatient.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnPrintOnePatient.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 5);
+            this.btnPrintOnePatient.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnPrintOnePatient.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnPrintOnePatient.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnPrintOnePatient.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnPrintOnePatient.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(121)))), ((int)(((byte)(214)))));
+            this.btnPrintOnePatient.Font = new System.Drawing.Font("Cairo SemiBold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPrintOnePatient.ForeColor = System.Drawing.Color.White;
+            this.btnPrintOnePatient.HoverState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(121)))), ((int)(((byte)(214)))));
+            this.btnPrintOnePatient.HoverState.FillColor = System.Drawing.Color.White;
+            this.btnPrintOnePatient.HoverState.Font = new System.Drawing.Font("Cairo", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPrintOnePatient.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(121)))), ((int)(((byte)(214)))));
+            this.btnPrintOnePatient.Image = ((System.Drawing.Image)(resources.GetObject("btnPrintOnePatient.Image")));
+            this.btnPrintOnePatient.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnPrintOnePatient.Location = new System.Drawing.Point(272, 56);
+            this.btnPrintOnePatient.Name = "btnPrintOnePatient";
+            this.btnPrintOnePatient.Size = new System.Drawing.Size(324, 44);
+            this.btnPrintOnePatient.TabIndex = 21;
+            this.btnPrintOnePatient.Text = "طباعة المريض المحدد";
+            this.btnPrintOnePatient.Click += new System.EventHandler(this.btnPrintOnePatient_Click);
+            // 
+            // btnPrintPatient
+            // 
+            this.btnPrintPatient.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnPrintPatient.Animated = true;
+            this.btnPrintPatient.AnimatedGIF = true;
+            this.btnPrintPatient.BorderRadius = 6;
+            this.btnPrintPatient.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnPrintPatient.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 5);
+            this.btnPrintPatient.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnPrintPatient.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnPrintPatient.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnPrintPatient.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnPrintPatient.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(121)))), ((int)(((byte)(214)))));
+            this.btnPrintPatient.Font = new System.Drawing.Font("Cairo SemiBold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPrintPatient.ForeColor = System.Drawing.Color.White;
+            this.btnPrintPatient.HoverState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(121)))), ((int)(((byte)(214)))));
+            this.btnPrintPatient.HoverState.FillColor = System.Drawing.Color.White;
+            this.btnPrintPatient.HoverState.Font = new System.Drawing.Font("Cairo", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPrintPatient.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(121)))), ((int)(((byte)(214)))));
+            this.btnPrintPatient.Image = ((System.Drawing.Image)(resources.GetObject("btnPrintPatient.Image")));
+            this.btnPrintPatient.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnPrintPatient.Location = new System.Drawing.Point(34, 56);
+            this.btnPrintPatient.Name = "btnPrintPatient";
+            this.btnPrintPatient.Size = new System.Drawing.Size(232, 44);
+            this.btnPrintPatient.TabIndex = 18;
+            this.btnPrintPatient.Text = "طباعة القائمة";
+            this.btnPrintPatient.Click += new System.EventHandler(this.btnPrintPatient_Click);
+            // 
+            // Column1
+            // 
+            this.Column1.DataPropertyName = "Patient_Id";
+            this.Column1.HeaderText = "رقم المريض";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Width = 150;
+            // 
+            // Column2
+            // 
+            this.Column2.DataPropertyName = "PatientName";
+            this.Column2.HeaderText = "اسم المريض";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            this.Column2.Width = 220;
+            // 
+            // Column4
+            // 
+            this.Column4.DataPropertyName = "Gender";
+            this.Column4.HeaderText = "الجنس";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            // 
+            // Column8
+            // 
+            this.Column8.DataPropertyName = "Booldtypes";
+            this.Column8.HeaderText = "فصيلة الدم";
+            this.Column8.Name = "Column8";
+            this.Column8.ReadOnly = true;
+            this.Column8.Width = 120;
+            // 
+            // Column11
+            // 
+            this.Column11.DataPropertyName = "DateofBirth";
+            this.Column11.HeaderText = "تاريخ الميلاد";
+            this.Column11.Name = "Column11";
+            this.Column11.ReadOnly = true;
+            this.Column11.Visible = false;
+            this.Column11.Width = 150;
+            // 
+            // Column3
+            // 
+            this.Column3.DataPropertyName = "Age";
+            this.Column3.HeaderText = "العمر";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            this.Column3.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Column3.Width = 80;
+            // 
+            // Column5
+            // 
+            this.Column5.DataPropertyName = "NatNum";
+            this.Column5.HeaderText = "الرقم الوطني";
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            this.Column5.Width = 150;
+            // 
+            // Column6
+            // 
+            this.Column6.DataPropertyName = "Phone";
+            this.Column6.HeaderText = "رقم الهاتف";
+            this.Column6.Name = "Column6";
+            this.Column6.ReadOnly = true;
+            this.Column6.Width = 120;
+            // 
+            // Column7
+            // 
+            this.Column7.DataPropertyName = "Address";
+            this.Column7.HeaderText = "العنوان";
+            this.Column7.Name = "Column7";
+            this.Column7.ReadOnly = true;
+            this.Column7.Visible = false;
+            // 
+            // Column12
+            // 
+            this.Column12.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column12.DataPropertyName = "Note";
+            this.Column12.HeaderText = "ملاحظات";
+            this.Column12.Name = "Column12";
+            this.Column12.ReadOnly = true;
+            // 
+            // btnFrmHealthData
+            // 
+            this.btnFrmHealthData.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnFrmHealthData.Animated = true;
+            this.btnFrmHealthData.AnimatedGIF = true;
+            this.btnFrmHealthData.BorderRadius = 6;
+            this.btnFrmHealthData.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnFrmHealthData.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 5);
+            this.btnFrmHealthData.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnFrmHealthData.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnFrmHealthData.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnFrmHealthData.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnFrmHealthData.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(121)))), ((int)(((byte)(214)))));
+            this.btnFrmHealthData.Font = new System.Drawing.Font("Cairo SemiBold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFrmHealthData.ForeColor = System.Drawing.Color.White;
+            this.btnFrmHealthData.HoverState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(121)))), ((int)(((byte)(214)))));
+            this.btnFrmHealthData.HoverState.FillColor = System.Drawing.Color.White;
+            this.btnFrmHealthData.HoverState.Font = new System.Drawing.Font("Cairo", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFrmHealthData.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(121)))), ((int)(((byte)(214)))));
+            this.btnFrmHealthData.Image = ((System.Drawing.Image)(resources.GetObject("btnFrmHealthData.Image")));
+            this.btnFrmHealthData.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnFrmHealthData.Location = new System.Drawing.Point(602, 294);
+            this.btnFrmHealthData.Name = "btnFrmHealthData";
+            this.btnFrmHealthData.Size = new System.Drawing.Size(222, 39);
+            this.btnFrmHealthData.TabIndex = 94;
+            this.btnFrmHealthData.Text = "البيانات الصحية";
+            this.btnFrmHealthData.Click += new System.EventHandler(this.btnFrmHealthData_Click);
+            // 
             // UCPatient
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 37F);
@@ -1097,5 +1129,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column12;
+        private Guna.UI2.WinForms.Guna2Button btnFrmHealthData;
     }
 }

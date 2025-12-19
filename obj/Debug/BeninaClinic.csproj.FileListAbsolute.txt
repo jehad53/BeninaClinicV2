@@ -58,6 +58,7 @@ E:\BeninaV2\BeninaClinic\BeninaClinic\obj\Debug\BeninaClinic.Properties.Resource
 E:\BeninaV2\BeninaClinic\BeninaClinic\obj\Debug\BeninaClinic.csproj.GenerateResource.Cache
 E:\BeninaV2\BeninaClinic\BeninaClinic\obj\Debug\BeninaClinic.exe
 E:\BeninaV2\BeninaClinic\BeninaClinic\obj\Debug\BeninaClinic.pdb
-E:\BeninaV2\BeninaClinic\BeninaClinic\obj\Debug\BeninaClinic.csprojResolveAssemblyReference.cache
 E:\BeninaV2\BeninaClinic\BeninaClinic\obj\Debug\BeninaClinic.PL.Forms.FrmPharmacy.FrmDispenseHistory.resources
 E:\BeninaV2\BeninaClinic\BeninaClinic\obj\Debug\BeninaClinic.PL.Forms.FrmPharmacy.FrmPharmacyMain.resources
+E:\BeninaV2\BeninaClinic\BeninaClinic\obj\Debug\BeninaClinic.PL.Forms.FrmClinic.FrmDataPatient.resources
+E:\BeninaV2\BeninaClinic\BeninaClinic\obj\Debug\BeninaClinic.FrmConnectServer.resources
