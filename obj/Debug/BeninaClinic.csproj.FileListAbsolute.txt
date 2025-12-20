@@ -22,7 +22,6 @@ E:\BeninaV2\BeninaClinic\BeninaClinic\bin\Debug\CrystalDecisions.ReportAppServer
 E:\BeninaV2\BeninaClinic\BeninaClinic\bin\Debug\CrystalDecisions.ReportAppServer.ObjectFactory.dll
 E:\BeninaV2\BeninaClinic\BeninaClinic\bin\Debug\stdole.dll
 E:\BeninaV2\BeninaClinic\BeninaClinic\bin\Debug\CrystalDecisions.ReportAppServer.CommonControls.dll
-E:\BeninaV2\BeninaClinic\BeninaClinic\obj\Debug\BeninaClinic.FrmTestUserControl.resources
 E:\BeninaV2\BeninaClinic\BeninaClinic\obj\Debug\BeninaClinic.PL.Forms.FrmClinic.FrmAppointment.resources
 E:\BeninaV2\BeninaClinic\BeninaClinic\obj\Debug\BeninaClinic.FrmMainClinic.resources
 E:\BeninaV2\BeninaClinic\BeninaClinic\obj\Debug\BeninaClinic.PL.Forms.FrmClinic.FrmSelection.resources
@@ -62,3 +61,4 @@ E:\BeninaV2\BeninaClinic\BeninaClinic\obj\Debug\BeninaClinic.PL.Forms.FrmPharmac
 E:\BeninaV2\BeninaClinic\BeninaClinic\obj\Debug\BeninaClinic.PL.Forms.FrmPharmacy.FrmPharmacyMain.resources
 E:\BeninaV2\BeninaClinic\BeninaClinic\obj\Debug\BeninaClinic.PL.Forms.FrmClinic.FrmDataPatient.resources
 E:\BeninaV2\BeninaClinic\BeninaClinic\obj\Debug\BeninaClinic.FrmConnectServer.resources
+E:\BeninaV2\BeninaClinic\BeninaClinic\obj\Debug\BeninaClinic.FrmStartApp.resources

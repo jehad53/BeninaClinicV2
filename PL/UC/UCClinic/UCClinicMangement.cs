@@ -143,12 +143,12 @@ namespace BeninaClinic.PL.UC.UCClinic
 
         private void btnShowAsForm_Click(object sender, EventArgs e)
         {
-            FrmTestUserControl frm = new FrmTestUserControl();
+          //  FrmTestUserControl frm = new FrmTestUserControl();
             UC.UCClinic.UCClinicMangement userclinic = new UCClinicMangement();
-            frm.panel1.Controls.Clear();
+         //   frm.panel1.Controls.Clear();
             userclinic.Dock = DockStyle.Fill;
-            frm.panel1.Controls.Add(userclinic);
-            frm.Show();
+          //  frm.panel1.Controls.Add(userclinic);
+          //  frm.Show();
         }
 
         private void btnRefreshClinic_Click(object sender, EventArgs e)

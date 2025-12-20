@@ -110,11 +110,11 @@
     <Compile Include="FrmConnectServer.Designer.cs">
       <DependentUpon>FrmConnectServer.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmTestUserControl.cs">
+    <Compile Include="FrmStartApp.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmTestUserControl.Designer.cs">
-      <DependentUpon>FrmTestUserControl.cs</DependentUpon>
+    <Compile Include="FrmStartApp.Designer.cs">
+      <DependentUpon>FrmStartApp.cs</DependentUpon>
     </Compile>
     <Compile Include="PL\Forms\FrmClinic\FrmAppointment.cs">
       <SubType>Form</SubType>
@@ -438,8 +438,8 @@
     <EmbeddedResource Include="FrmConnectServer.resx">
       <DependentUpon>FrmConnectServer.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmTestUserControl.resx">
-      <DependentUpon>FrmTestUserControl.cs</DependentUpon>
+    <EmbeddedResource Include="FrmStartApp.resx">
+      <DependentUpon>FrmStartApp.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PL\Forms\FrmClinic\FrmAppointment.resx">
       <DependentUpon>FrmAppointment.cs</DependentUpon>
@@ -625,7 +625,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <None Include="ClassDiagram1.cd" />
     <None Include="PL\Reports\DataSet\DsClinic.xsc">
       <DependentUpon>DsClinic.xsd</DependentUpon>
     </None>
