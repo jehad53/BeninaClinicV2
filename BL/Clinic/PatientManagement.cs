@@ -168,7 +168,26 @@ namespace BeninaClinic.BL.Clinic
             }
         }
 
+        // SP_Patient_NationalNumber_Exists
+        public bool Patient_NationalNumber_Exists(string NatNum)
+        {
+            try
+            {
+                SqlParameter[] pr = new SqlParameter[] { new SqlParameter("@NatNum", SqlDbType.NVarChar, 20) { Value = NatNum } };
+                DataTable dt = new DataTable();
+                using (Db db = new Db())
+                {
+                  dt = db.ReadData("SP_Patient_NationalNumber_Exists", pr);
+                }
+               
+                return dt.Rows.Count > 0 && Convert.ToInt32(dt.Rows[0][0]) == 1;
 
+            }
+            catch (Exception ex)
+            {
+                throw new Exception($"Error in SP_Patient_NationalNumber_Exists  --> {ex.Message}");
+            }
+        }
 
     }
 }

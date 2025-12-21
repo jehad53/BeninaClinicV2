@@ -27,25 +27,10 @@ namespace BeninaClinic.PL.UC.UCClinic
             btnEditPatient.Enabled = false;
             btnDeletePatient.Enabled = false;
             LoadData();
-        
-        }
 
 
-        public void ClearTools()
-        {
-            txtPatientID.Text = MainFunction.GetMaxID("tblPatients", "Patient_Id").ToString();
-            txtPatientName.Clear();
-            txtNatNum.Clear();
-            txtAge.Clear();
-            txtAdderss.Clear();
-            txtPhone.Clear();
-            txtPatientNote.Clear();
-            btnNew.Enabled = false;
-            btnAddPatient.Enabled = true;
-            btnEditPatient.Enabled = false;
-            btnDeletePatient.Enabled = false;
-            txtPatientName.Focus();
         }
+
 
 
         public void LoadData()
@@ -66,95 +51,35 @@ namespace BeninaClinic.PL.UC.UCClinic
 
         private void btnNew_Click(object sender, EventArgs e)
         {
-            ClearTools();
+        
         }
 
         private void btnAddPatient_Click(object sender, EventArgs e)
         {
-            if(string.IsNullOrWhiteSpace(txtPatientID.Text) || string.IsNullOrWhiteSpace(txtPatientName.Text) || string.IsNullOrWhiteSpace(txtAge.Text))
-            {
-                // MessageBox.Show("يرجى إدخال البيانات", " تحذير", MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
-                FrmAlertMessageBox frmalertmessagebox = new FrmAlertMessageBox();
-                frmalertmessagebox.ShowDialog();
-            }
-            else
-            {
-                try
-                {
-                    for (int i = 0; i < dgvPatients.Rows.Count - 1; i++)
-                    {
-                        if (dgvPatients.Rows[i].Cells[6].Value.ToString() == txtNatNum.Text)
-                        {
-                           FrmAlertMessageBox frmalertmessagebox = new FrmAlertMessageBox();
-                           frmalertmessagebox.lblMessage.Text = "الرقم الوطني مدخل مسبقا";
-                           frmalertmessagebox.ShowDialog();
-                           return;
-                        }
-                    }
-                    PatientManagement patientmanagement = new PatientManagement();
-                    patientmanagement.InsertPatient(txtPatientName.Text, cmbPatientGender.Text, dtpPatientDateofBirth.Value, Convert.ToInt32(txtAge.Text), txtPatientNote.Text , txtPhone.Text, txtNatNum.Text, txtAdderss.Text , cmbbooldtype.Text);
-                    FrmSuccesMessageBox frmsuccesmessagebox = new FrmSuccesMessageBox();
-                    frmsuccesmessagebox.ShowDialog();
-                    if (MessageBox.Show("هـل تـريد حـجـز مـوعـد للمـريـض ؟", " حـجـز مـوعـد", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-                    {
-                        FrmAppointment frmAppointment = new FrmAppointment();
-                        frmAppointment.txtPatientID.Text = txtPatientID.Text;
-                        frmAppointment.txtPatientName.Text = txtPatientName.Text;
-                        frmAppointment.ShowDialog();
-                    }
-                    else
-                    {
-                        return;
-                    }
-                    LoadData();
-                    ClearTools();
-                }
-                catch
-                {
-                    FrmAlertMessageBox frmalertmessagebox = new FrmAlertMessageBox();
-                    frmalertmessagebox.lblMessage.Text = "يرجى التأكد من صحة المدخلات";
-                    frmalertmessagebox.ShowDialog();
-                }
-            }
+            FrmDataPatient frm = new FrmDataPatient();
+            frm.txtPatientID.Text = txtPatientID.Text;
+            frm.btnAddPatient.Visible = true;
+            frm.btnEditPatient.Visible = false;
+            frm.ShowDialog();
+            //-------------
         }
 
         private void btnEditPatient_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(txtPatientID.Text) || string.IsNullOrWhiteSpace(txtPatientName.Text) || string.IsNullOrWhiteSpace(txtAge.Text))
-            {
-                // MessageBox.Show("يرجى إدخال البيانات", " تحذير", MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
-                FrmAlertMessageBox frmalertmessagebox = new FrmAlertMessageBox();
-                frmalertmessagebox.ShowDialog();
-            }
-            else
-            {
-                try
-                {
-                    for (int i = 0; i < dgvPatients.Rows.Count - 1; i++)
-                    {
-                        if (dgvPatients.Rows[i].Cells[6].Value.ToString() == txtNatNum.Text)
-                        {
-                            FrmAlertMessageBox frmalertmessagebox = new FrmAlertMessageBox();
-                            frmalertmessagebox.lblMessage.Text = "الرقم الوطني مدخل مسبقا";
-                            frmalertmessagebox.ShowDialog();
-                            return;
-                        }
-                    }
-                    PatientManagement patientmanagement = new PatientManagement();
-                    patientmanagement.EditPatient(Convert.ToInt32(txtPatientID.Text), txtPatientName.Text, cmbPatientGender.Text, dtpPatientDateofBirth.Value, Convert.ToInt32(txtAge.Text), txtPatientNote.Text,txtPhone.Text , txtNatNum.Text ,txtAdderss.Text , cmbbooldtype.Text);
-                    FrmSuccesMessageBox frmsuccesmessagebox = new FrmSuccesMessageBox();
-                    frmsuccesmessagebox.ShowDialog();
-                    //  MessageBox.Show("تم إدخال البيانات بنجاح", " إدخال عيادة", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                    LoadData();
-                    ClearTools();
-                }
-                catch
-                {
-                    FrmAlertMessageBox frmalertmessagebox = new FrmAlertMessageBox();
-                    frmalertmessagebox.lblMessage.Text = "يرجى التأكد من صحة المدخلات";
-                    frmalertmessagebox.ShowDialog();
-                }
-                }
+              FrmDataPatient frm = new FrmDataPatient();
+              frm.txtPatientID.Text = dgvPatients.CurrentRow.Cells[0].Value.ToString();
+              frm.txtPatientName.Text = dgvPatients.CurrentRow.Cells[1].Value.ToString();
+              frm.cmbPatientGender.Text = dgvPatients.CurrentRow.Cells[2].Value.ToString();
+              frm.cmbbooldtype.Text = dgvPatients.CurrentRow.Cells[3].Value.ToString();
+              frm.dtpPatientDateofBirth.Text = dgvPatients.CurrentRow.Cells[4].Value.ToString();
+              frm.txtAge.Text = dgvPatients.CurrentRow.Cells[5].Value.ToString();
+              frm.txtNatNum.Text = dgvPatients.CurrentRow.Cells[6].Value.ToString();
+              frm.txtPhone.Text = dgvPatients.CurrentRow.Cells[7].Value.ToString();
+              frm.txtAdderss.Text = dgvPatients.CurrentRow.Cells[8].Value.ToString();
+              frm.txtPatientNote.Text = dgvPatients.CurrentRow.Cells[9].Value.ToString();
+
+              frm.txtNatNum.Enabled = false;
+              frm.ShowDialog();
         }
 
         private void btnDeletePatient_Click(object sender, EventArgs e)
@@ -176,7 +101,6 @@ namespace BeninaClinic.PL.UC.UCClinic
                     patientmanagement.DeletePatient(Convert.ToInt32(dgvPatients.CurrentRow.Cells[0].Value));
                     FrmSuccesMessageBox frmsucces = new FrmSuccesMessageBox();
                     frmsucces.Show();
-                    ClearTools();
                     LoadData();
                 }
             }
@@ -188,23 +112,13 @@ namespace BeninaClinic.PL.UC.UCClinic
 
         private void UCPatient_Load(object sender, EventArgs e)
         {
-            
+
         }
 
         private void dgvPatients_DoubleClick(object sender, EventArgs e)
         {
             try
             {
-                txtPatientID.Text = dgvPatients.CurrentRow.Cells[0].Value.ToString();
-                txtPatientName.Text = dgvPatients.CurrentRow.Cells[1].Value.ToString();
-                cmbPatientGender.Text = dgvPatients.CurrentRow.Cells[2].Value.ToString();
-                cmbbooldtype.Text = dgvPatients.CurrentRow.Cells[3].Value.ToString();
-                dtpPatientDateofBirth.Text = dgvPatients.CurrentRow.Cells[4].Value.ToString();
-                txtAge.Text = dgvPatients.CurrentRow.Cells[5].Value.ToString();
-                txtNatNum.Text = dgvPatients.CurrentRow.Cells[6].Value.ToString();
-                txtPhone.Text = dgvPatients.CurrentRow.Cells[7].Value.ToString();
-                txtAdderss.Text = dgvPatients.CurrentRow.Cells[8].Value.ToString();
-                txtPatientNote.Text = dgvPatients.CurrentRow.Cells[9].Value.ToString();
                 btnNew.Enabled = true;
                 btnAddPatient.Enabled = false;
                 btnEditPatient.Enabled = true;
@@ -265,16 +179,7 @@ namespace BeninaClinic.PL.UC.UCClinic
             }
         }
 
-        // Method for Calculate Age
-        public void CalcAge()
-        {
-            txtAge.Text = (DateTime.Now.Year - dtpPatientDateofBirth.Value.Year).ToString();
-        }
 
-        private void dtpPatientDateofBirth_ValueChanged(object sender, EventArgs e)
-        {
-            CalcAge();
-        }
 
         private void txtSearchEmployee_TextChanged(object sender, EventArgs e)
         {
@@ -295,8 +200,15 @@ namespace BeninaClinic.PL.UC.UCClinic
         {
             FrmDataPatient frm = new FrmDataPatient();
             frm.lbPatientID.Text = txtPatientID.Text;
-            frm.lbPatineName.Text = txtPatientName.Text;
             frm.ShowDialog();
+        }
+
+    
+
+        private void btnFrmHealthData_Click_1(object sender, EventArgs e)
+        {
+            FrmDataPatient frmpatientdate = new FrmDataPatient();
+            frmpatientdate.ShowDialog();
         }
     }
 }

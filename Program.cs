@@ -16,7 +16,7 @@ namespace BeninaClinic
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmStartApp());
+            Application.Run(new FrmMainClinic());
         }
     }
 }

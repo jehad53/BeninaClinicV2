@@ -58,9 +58,9 @@
             this.btnMedicine = new Guna.UI2.WinForms.Guna2Button();
             this.btnRecordPatient = new Guna.UI2.WinForms.Guna2Button();
             this.btnPahrmacy = new Guna.UI2.WinForms.Guna2Button();
+            this.btnAuditLogs = new Guna.UI2.WinForms.Guna2Button();
             this.pnlContainer = new System.Windows.Forms.Panel();
             this.MessageDialog = new Guna.UI2.WinForms.Guna2MessageDialog();
-            this.btnAuditLogs = new Guna.UI2.WinForms.Guna2Button();
             this.pnlTltle.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnLogout)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnLogin)).BeginInit();
@@ -775,23 +775,6 @@
             this.btnPahrmacy.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnPahrmacy.Click += new System.EventHandler(this.btnPahrmacy_Click);
             // 
-            // pnlContainer
-            // 
-            this.pnlContainer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlContainer.Location = new System.Drawing.Point(268, 64);
-            this.pnlContainer.Name = "pnlContainer";
-            this.pnlContainer.Size = new System.Drawing.Size(812, 901);
-            this.pnlContainer.TabIndex = 9;
-            // 
-            // MessageDialog
-            // 
-            this.MessageDialog.Buttons = Guna.UI2.WinForms.MessageDialogButtons.YesNo;
-            this.MessageDialog.Caption = "تنبيه";
-            this.MessageDialog.Icon = Guna.UI2.WinForms.MessageDialogIcon.Question;
-            this.MessageDialog.Parent = this;
-            this.MessageDialog.Style = Guna.UI2.WinForms.MessageDialogStyle.Dark;
-            this.MessageDialog.Text = "تمت العملية بنجاح";
-            // 
             // btnAuditLogs
             // 
             this.btnAuditLogs.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -820,6 +803,23 @@
             this.btnAuditLogs.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnAuditLogs.Click += new System.EventHandler(this.btnAuditLogs_Click);
             // 
+            // pnlContainer
+            // 
+            this.pnlContainer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlContainer.Location = new System.Drawing.Point(268, 64);
+            this.pnlContainer.Name = "pnlContainer";
+            this.pnlContainer.Size = new System.Drawing.Size(812, 901);
+            this.pnlContainer.TabIndex = 9;
+            // 
+            // MessageDialog
+            // 
+            this.MessageDialog.Buttons = Guna.UI2.WinForms.MessageDialogButtons.YesNo;
+            this.MessageDialog.Caption = "تنبيه";
+            this.MessageDialog.Icon = Guna.UI2.WinForms.MessageDialogIcon.Question;
+            this.MessageDialog.Parent = this;
+            this.MessageDialog.Style = Guna.UI2.WinForms.MessageDialogStyle.Dark;
+            this.MessageDialog.Text = "تمت العملية بنجاح";
+            // 
             // FrmMainClinic
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 32F);
@@ -832,6 +832,7 @@
             this.Font = new System.Drawing.Font("Cairo SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.IsMdiContainer = true;
+            this.KeyPreview = true;
             this.Margin = new System.Windows.Forms.Padding(3, 6, 3, 6);
             this.Name = "FrmMainClinic";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;

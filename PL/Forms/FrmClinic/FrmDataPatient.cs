@@ -7,21 +7,29 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BeninaClinic.BL.Clinic;
+using BeninaClinic.BL.GeneralFunction;
+using BeninaClinic.PL.Forms;
+using BeninaClinic.PL.Forms.FrmClinic;
+using BeninaClinic.PL.Reports;
+using BeninaClinic.PL.Reports.RptClinic;
 
 namespace BeninaClinic.PL.Forms.FrmClinic
 {
     public partial class FrmDataPatient : Form
     {
+        // 1 for Add 2 for Edit
         public FrmDataPatient()
         {
             InitializeComponent();
+
 
         }
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
             //FrmSelection frm = new FrmSelection();
-            
+
         }
 
         private void tabPage2_Click(object sender, EventArgs e)
@@ -36,20 +44,20 @@ namespace BeninaClinic.PL.Forms.FrmClinic
 
         private void btnAddDesies_Click(object sender, EventArgs e)
         {
-            if(string.IsNullOrWhiteSpace(txtDiseaseName.Text))
+            if (string.IsNullOrWhiteSpace(txtDiseaseName.Text))
             {
                 FrmAlertMessageBox frm = new FrmAlertMessageBox();
                 frm.ShowDialog();
             }
             else
-            { 
-            int rowIndex = dgvDiseases.Rows.Add();
-            dgvDiseases.Rows[rowIndex].Cells["DiseaseName"].Value = txtDiseaseName.Text;
-            dgvDiseases.Rows[rowIndex].Cells["DiseaseDate"].Value = txtDiseaseDate.Text;
-            dgvDiseases.Rows[rowIndex].Cells["Description"].Value = txtDiseaseNote.Text;
-            txtDiseaseName.Clear();
-            txtDiseaseDate.Clear();
-            txtDiseaseNote.Clear();
+            {
+                int rowIndex = dgvDiseases.Rows.Add();
+                dgvDiseases.Rows[rowIndex].Cells["DiseaseName"].Value = txtDiseaseName.Text;
+                dgvDiseases.Rows[rowIndex].Cells["DiseaseDate"].Value = txtDiseaseDate.Text;
+                dgvDiseases.Rows[rowIndex].Cells["Description"].Value = txtDiseaseNote.Text;
+                txtDiseaseName.Clear();
+                txtDiseaseDate.Clear();
+                txtDiseaseNote.Clear();
             }
         }
 
@@ -80,9 +88,9 @@ namespace BeninaClinic.PL.Forms.FrmClinic
                 dgvAllergies.Rows[rowIndex].Cells["TypeAllergies"].Value = cmbAllergiesType.Text;
                 dgvAllergies.Rows[rowIndex].Cells["Substance"].Value = txtSubstance.Text;
 
-                cmbAllergiesType.Text ="";
+                cmbAllergiesType.Text = "";
                 txtSubstance.Clear();
-          
+
             }
         }
 
@@ -91,7 +99,7 @@ namespace BeninaClinic.PL.Forms.FrmClinic
             if (e.KeyCode == Keys.Enter)
             {
                 btnAddAllergies.PerformClick();
-              //  e.SuppressKeyPress = true; // لمنع صوت الـ Beep
+                //  e.SuppressKeyPress = true; // لمنع صوت الـ Beep
             }
         }
 
@@ -110,11 +118,7 @@ namespace BeninaClinic.PL.Forms.FrmClinic
 
         private void txtDiseaseName_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter)
-            {
-                txtDiseaseDate.Focus();
-                e.SuppressKeyPress = true; // لمنع صوت الـ Beep
-            }
+
         }
 
         private void txtDiseaseDate_KeyDown(object sender, KeyEventArgs e)
@@ -131,7 +135,7 @@ namespace BeninaClinic.PL.Forms.FrmClinic
             if (e.KeyCode == Keys.Enter)
             {
                 btnAddDesies.PerformClick();
-               
+
             }
         }
 
@@ -158,7 +162,7 @@ namespace BeninaClinic.PL.Forms.FrmClinic
             if (e.KeyCode == Keys.Enter)
             {
                 btnAddSurgerie.PerformClick();
-              
+
             }
         }
 
@@ -211,7 +215,7 @@ namespace BeninaClinic.PL.Forms.FrmClinic
 
 
                 txtMedicationName.Clear();
-                txtMedicationsTime.Clear();     
+                txtMedicationsTime.Clear();
             }
         }
 
@@ -312,7 +316,7 @@ namespace BeninaClinic.PL.Forms.FrmClinic
             {
                 tabControl1.SelectedIndex = 0;
             }
-           else if (e.KeyCode == Keys.F2)
+            else if (e.KeyCode == Keys.F2)
             {
                 tabControl1.SelectedIndex = 1;
             }
@@ -322,13 +326,143 @@ namespace BeninaClinic.PL.Forms.FrmClinic
             }
             else if (e.KeyCode == Keys.F4)
             {
-                tabControl1.SelectedIndex =3 ;
+                tabControl1.SelectedIndex = 3;
             }
             else if (e.KeyCode == Keys.F5)
             {
                 tabControl1.SelectedIndex = 4;
             }
+            else if (e.KeyCode == Keys.F6)
+            {
+                tabControl1.SelectedIndex = 5;
+            }
+        }
+        // --------------------------------------------------------------------
+        private void txtDiseaseName_KeyDown_1(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                txtDiseaseDate.Focus();
+                e.SuppressKeyPress = true; // لمنع صوت الـ Beep
+            }
+        }
+
+        private void txtDiseaseName_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+
+
+        //-------------------------------------- Add & Edit --------------------------------------
+
+      
+        private void btnEditPatient_Click(object sender, EventArgs e)
+        {
+ 
+            if (string.IsNullOrWhiteSpace(txtPatientID.Text) || string.IsNullOrWhiteSpace(txtPatientName.Text) || string.IsNullOrWhiteSpace(txtAge.Text))
+            {
+                // MessageBox.Show("يرجى إدخال البيانات", " تحذير", MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
+                FrmAlertMessageBox frmalertmessagebox = new FrmAlertMessageBox();
+                frmalertmessagebox.ShowDialog();
+            }
+            else
+            {
+                try
+                {
+                    PatientManagement patientmanagement = new PatientManagement();
+                    patientmanagement.EditPatient(Convert.ToInt32(txtPatientID.Text), txtPatientName.Text, cmbPatientGender.Text, dtpPatientDateofBirth.Value, Convert.ToInt32(txtAge.Text), txtPatientNote.Text, txtPhone.Text, txtNatNum.Text, txtAdderss.Text, cmbbooldtype.Text);
+                    FrmSuccesMessageBox frmsuccesmessagebox = new FrmSuccesMessageBox();
+                    frmsuccesmessagebox.ShowDialog();
+                    //  MessageBox.Show("تم إدخال البيانات بنجاح", " إدخال عيادة", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+                }
+                catch
+                {
+                    FrmAlertMessageBox frmalertmessagebox = new FrmAlertMessageBox();
+                    frmalertmessagebox.lblMessage.Text = "يرجى التأكد من صحة المدخلات";
+                    frmalertmessagebox.ShowDialog();
+                }
+                ClearTools();
+
+            }
+        }
+
+        private void btnAddPatient_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtPatientID.Text) || string.IsNullOrWhiteSpace(txtPatientName.Text) || string.IsNullOrWhiteSpace(txtAge.Text))
+            {
+                // MessageBox.Show("يرجى إدخال البيانات", " تحذير", MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
+                FrmAlertMessageBox frmalertmessagebox = new FrmAlertMessageBox();
+                frmalertmessagebox.ShowDialog();
+            }
+            else
+            {
+                
+                try
+                {
+                    PatientManagement patientmanagement = new PatientManagement();
+
+                    if (patientmanagement.Patient_NationalNumber_Exists(txtNatNum.Text))
+                    {
+                        FrmAlertMessageBox frmalert = new FrmAlertMessageBox();
+                        frmalert.lblMessage.Text = "الرقم الوطني مدخل مسبقاً";
+                        frmalert.ShowDialog();
+                        txtNatNum.Focus();
+                        txtNatNum.SelectAll();
+                        return;
+                    }
+                    patientmanagement.InsertPatient(txtPatientName.Text, cmbPatientGender.Text, dtpPatientDateofBirth.Value, Convert.ToInt32(txtAge.Text), txtPatientNote.Text, txtPhone.Text, txtNatNum.Text, txtAdderss.Text, cmbbooldtype.Text);
+                    FrmSuccesMessageBox frmsuccesmessagebox = new FrmSuccesMessageBox();
+                    frmsuccesmessagebox.ShowDialog();
+                    if (MessageBox.Show("هـل تـريد حـجـز مـوعـد للمـريـض ؟", " حـجـز مـوعـد", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    {
+                        FrmAppointment frmAppointment = new FrmAppointment();
+                        frmAppointment.txtPatientID.Text = txtPatientID.Text;
+                        frmAppointment.txtPatientName.Text = txtPatientName.Text;
+                        frmAppointment.ShowDialog();
+                    }
+                    else
+                    {
+                        return;
+                    }
+                    // LoadData();
+                    ClearTools();
+                }
+                catch(Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                    FrmAlertMessageBox frmalertmessagebox = new FrmAlertMessageBox();
+                    frmalertmessagebox.lblMessage.Text = "يرجى التأكد من صحة المدخلات";
+              //      frmalertmessagebox.ShowDialog();
+                }
+            }
+        }
+
+
+        // Method for Calculate Age
+        public void CalcAge()
+        {
+            txtAge.Text = (DateTime.Now.Year - dtpPatientDateofBirth.Value.Year).ToString();
+        }
+
+        private void dtpPatientDateofBirth_ValueChanged(object sender, EventArgs e)
+        {
+            CalcAge();
+        }
+
+        public void ClearTools()
+        {
+            txtPatientID.Text = MainFunction.GetMaxID("tblPatients", "Patient_Id").ToString();
+            txtPatientName.Clear();
+            txtNatNum.Clear();
+            txtAge.Clear();
+            txtAdderss.Clear();
+            txtPhone.Clear();
+            txtPatientNote.Clear();
+            txtPatientName.Focus();
         }
     }
-    }
+
+}
 

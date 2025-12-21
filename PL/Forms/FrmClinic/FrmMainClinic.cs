@@ -205,7 +205,7 @@ namespace BeninaClinic
             var result = MessageDialog.Show();
             if (result == DialogResult.Yes)
             {
-                this.Close();
+               Application.Exit();
             }
             else
             {
