@@ -142,7 +142,7 @@ namespace BeninaClinic.PL.Forms.FrmPharmacy
                 
                 int stock = Convert.ToInt32(stockItem["Quantity"]);
                 if(stock <= 0)
-                     newRow["Status"] = "نافذ (Out of Stock)";
+                     newRow["Status"] = "غـير متوفر (Out of Stock)";
                 else
                      newRow["Status"] = "متوفر";
 

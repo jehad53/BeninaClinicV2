@@ -37,10 +37,10 @@
             this.txtUserName = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtUserPassword = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2ShadowPanel1 = new Guna.UI2.WinForms.Guna2ShadowPanel();
+            this.Progress = new Guna.UI2.WinForms.Guna2WinProgressIndicator();
             this.label4 = new System.Windows.Forms.Label();
             this.guna2Separator1 = new Guna.UI2.WinForms.Guna2Separator();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.Progress = new Guna.UI2.WinForms.Guna2WinProgressIndicator();
             this.guna2ShadowPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -121,6 +121,7 @@
             // txtUserName
             // 
             this.txtUserName.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtUserName.Animated = true;
             this.txtUserName.BorderRadius = 6;
             this.txtUserName.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtUserName.DefaultText = "";
@@ -144,6 +145,7 @@
             // txtUserPassword
             // 
             this.txtUserPassword.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtUserPassword.Animated = true;
             this.txtUserPassword.BorderRadius = 6;
             this.txtUserPassword.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtUserPassword.DefaultText = "";
@@ -191,6 +193,16 @@
             this.guna2ShadowPanel1.Size = new System.Drawing.Size(535, 547);
             this.guna2ShadowPanel1.TabIndex = 9;
             // 
+            // Progress
+            // 
+            this.Progress.AnimationSpeed = 50;
+            this.Progress.CircleSize = 1F;
+            this.Progress.Location = new System.Drawing.Point(285, 11);
+            this.Progress.Name = "Progress";
+            this.Progress.ProgressColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(121)))), ((int)(((byte)(214)))));
+            this.Progress.Size = new System.Drawing.Size(82, 90);
+            this.Progress.TabIndex = 12;
+            // 
             // label4
             // 
             this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -225,20 +237,10 @@
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             // 
-            // Progress
-            // 
-            this.Progress.AnimationSpeed = 50;
-            this.Progress.CircleSize = 1F;
-            this.Progress.Location = new System.Drawing.Point(285, 11);
-            this.Progress.Name = "Progress";
-            this.Progress.ProgressColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(121)))), ((int)(((byte)(214)))));
-            this.Progress.Size = new System.Drawing.Size(82, 90);
-            this.Progress.TabIndex = 12;
-            // 
             // Frm_Login
             // 
             this.AcceptButton = this.btnLogin;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 30F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(535, 547);

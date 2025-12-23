@@ -71,14 +71,7 @@ namespace BeninaClinic.BL.Pharmacy
         {
             try
             {
-                // Get Old Value
-                string oldValue = "";
-                DataTable dtOld = GetMedicationById(Id);
-                if (dtOld.Rows.Count > 0)
-                {
-                    oldValue = string.Join(" | ", dtOld.Rows[0].ItemArray);
-                }
-
+ 
                 SqlParameter[] pr = new SqlParameter[11];
                 pr[0] = new SqlParameter("@Id", SqlDbType.Int) { Value = Id };
                 pr[1] = new SqlParameter("@Code", SqlDbType.NVarChar, 50) { Value = Code };
@@ -98,7 +91,7 @@ namespace BeninaClinic.BL.Pharmacy
                 }
                 
                 string newValue = $"{Code} | {Name} | {ScientificName} | {Type} | {PurchasePrice} | {SellingPrice} | {Quantity} | {ExpiryDate} | {ProductionDate} | {AlertQuantity}";
-                _audit.AddLog("Update", "Pharmacy_Medications", Id.ToString(), userId, oldValue, newValue, null);
+                _audit.AddLog("Update", "Pharmacy_Medications", Id.ToString(), userId, "oldValue", newValue, null);
 
             }
             catch (Exception ex)

@@ -51,7 +51,7 @@ namespace BeninaClinic.PL.UC.UCClinic
 
         private void btnNew_Click(object sender, EventArgs e)
         {
-        
+            btnAddPatient.Enabled = true;
         }
 
         private void btnAddPatient_Click(object sender, EventArgs e)

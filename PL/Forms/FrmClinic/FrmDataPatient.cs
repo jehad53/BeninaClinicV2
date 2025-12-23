@@ -307,7 +307,7 @@ namespace BeninaClinic.PL.Forms.FrmClinic
 
         private void FrmDataPatient_Load(object sender, EventArgs e)
         {
-            this.KeyPreview = true;
+            txtPatientName.Focus();
         }
 
         private void FrmDataPatient_KeyDown(object sender, KeyEventArgs e)
@@ -461,6 +461,77 @@ namespace BeninaClinic.PL.Forms.FrmClinic
             txtPhone.Clear();
             txtPatientNote.Clear();
             txtPatientName.Focus();
+        }
+
+        private void txtPatientName_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                cmbPatientGender.Focus();
+                e.SuppressKeyPress = true; // لمنع صوت الـ Beep
+            }
+        }
+
+        private void txtNatNum_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                cmbbooldtype.Focus();
+                e.SuppressKeyPress = true; // لمنع صوت الـ Beep
+            }
+        }
+
+        private void cmbPatientGender_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                txtNatNum.Focus();
+                e.SuppressKeyPress = true; // لمنع صوت الـ Beep
+            }
+        }
+
+        private void cmbbooldtype_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                dtpPatientDateofBirth.Focus();
+                e.SuppressKeyPress = true; // لمنع صوت الـ Beep
+            }
+        }
+
+        private void dtpPatientDateofBirth_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                txtPhone.Focus();
+                e.SuppressKeyPress = true; // لمنع صوت الـ Beep
+            }
+        }
+
+        private void txtPhone_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                txtAdderss.Focus();
+                e.SuppressKeyPress = true; // لمنع صوت الـ Beep
+            }
+        }
+
+        private void txtAdderss_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                txtPatientNote.Focus();
+                e.SuppressKeyPress = true; // لمنع صوت الـ Beep
+            }
+        }
+
+        private void txtPatientNote_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                btnEditPatient.PerformClick();
+            }
         }
     }
 
