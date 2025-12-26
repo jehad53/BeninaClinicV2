@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UCClinicMangement));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnlLine = new System.Windows.Forms.Panel();
             this.lblUserName = new System.Windows.Forms.Label();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
@@ -69,9 +69,9 @@
             // 
             this.pnlLine.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlLine.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(121)))), ((int)(((byte)(214)))));
-            this.pnlLine.Location = new System.Drawing.Point(853, 35);
+            this.pnlLine.Location = new System.Drawing.Point(746, 35);
             this.pnlLine.Name = "pnlLine";
-            this.pnlLine.Size = new System.Drawing.Size(200, 1);
+            this.pnlLine.Size = new System.Drawing.Size(175, 1);
             this.pnlLine.TabIndex = 0;
             // 
             // lblUserName
@@ -79,9 +79,9 @@
             this.lblUserName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblUserName.Font = new System.Drawing.Font("Cairo", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUserName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lblUserName.Location = new System.Drawing.Point(809, 0);
+            this.lblUserName.Location = new System.Drawing.Point(708, 0);
             this.lblUserName.Name = "lblUserName";
-            this.lblUserName.Size = new System.Drawing.Size(242, 32);
+            this.lblUserName.Size = new System.Drawing.Size(212, 32);
             this.lblUserName.TabIndex = 4;
             this.lblUserName.Text = "العـيـادات الطـبـيـة";
             this.lblUserName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -99,7 +99,7 @@
             this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 39);
             this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(0);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(1043, 49);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(913, 49);
             this.flowLayoutPanel1.TabIndex = 21;
             // 
             // btnNew
@@ -124,9 +124,9 @@
             this.btnNew.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(121)))), ((int)(((byte)(214)))));
             this.btnNew.Image = ((System.Drawing.Image)(resources.GetObject("btnNew.Image")));
             this.btnNew.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnNew.Location = new System.Drawing.Point(895, 3);
+            this.btnNew.Location = new System.Drawing.Point(783, 3);
             this.btnNew.Name = "btnNew";
-            this.btnNew.Size = new System.Drawing.Size(145, 30);
+            this.btnNew.Size = new System.Drawing.Size(127, 30);
             this.btnNew.TabIndex = 19;
             this.btnNew.Text = "جديد";
             this.btnNew.Click += new System.EventHandler(this.btnNew_Click);
@@ -153,9 +153,9 @@
             this.btnAddClinic.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(121)))), ((int)(((byte)(214)))));
             this.btnAddClinic.Image = ((System.Drawing.Image)(resources.GetObject("btnAddClinic.Image")));
             this.btnAddClinic.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnAddClinic.Location = new System.Drawing.Point(744, 3);
+            this.btnAddClinic.Location = new System.Drawing.Point(650, 3);
             this.btnAddClinic.Name = "btnAddClinic";
-            this.btnAddClinic.Size = new System.Drawing.Size(145, 30);
+            this.btnAddClinic.Size = new System.Drawing.Size(127, 30);
             this.btnAddClinic.TabIndex = 15;
             this.btnAddClinic.Text = "إضافة";
             this.btnAddClinic.Click += new System.EventHandler(this.btnAddClinic_Click);
@@ -181,9 +181,9 @@
             this.btnEditClinic.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(121)))), ((int)(((byte)(214)))));
             this.btnEditClinic.Image = ((System.Drawing.Image)(resources.GetObject("btnEditClinic.Image")));
             this.btnEditClinic.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnEditClinic.Location = new System.Drawing.Point(596, 3);
+            this.btnEditClinic.Location = new System.Drawing.Point(520, 3);
             this.btnEditClinic.Name = "btnEditClinic";
-            this.btnEditClinic.Size = new System.Drawing.Size(142, 30);
+            this.btnEditClinic.Size = new System.Drawing.Size(124, 30);
             this.btnEditClinic.TabIndex = 16;
             this.btnEditClinic.Text = "تعديل";
             this.btnEditClinic.Click += new System.EventHandler(this.guna2Button1_Click);
@@ -209,9 +209,9 @@
             this.btnDeleteClinic.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(59)))), ((int)(((byte)(1)))));
             this.btnDeleteClinic.Image = ((System.Drawing.Image)(resources.GetObject("btnDeleteClinic.Image")));
             this.btnDeleteClinic.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnDeleteClinic.Location = new System.Drawing.Point(440, 3);
+            this.btnDeleteClinic.Location = new System.Drawing.Point(383, 3);
             this.btnDeleteClinic.Name = "btnDeleteClinic";
-            this.btnDeleteClinic.Size = new System.Drawing.Size(150, 30);
+            this.btnDeleteClinic.Size = new System.Drawing.Size(131, 30);
             this.btnDeleteClinic.TabIndex = 17;
             this.btnDeleteClinic.Text = "حذف";
             this.btnDeleteClinic.Click += new System.EventHandler(this.btnDeleteClinic_Click);
@@ -237,9 +237,9 @@
             this.btnRefreshClinic.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(197)))), ((int)(((byte)(127)))));
             this.btnRefreshClinic.Image = ((System.Drawing.Image)(resources.GetObject("btnRefreshClinic.Image")));
             this.btnRefreshClinic.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnRefreshClinic.Location = new System.Drawing.Point(210, 3);
+            this.btnRefreshClinic.Location = new System.Drawing.Point(181, 3);
             this.btnRefreshClinic.Name = "btnRefreshClinic";
-            this.btnRefreshClinic.Size = new System.Drawing.Size(224, 30);
+            this.btnRefreshClinic.Size = new System.Drawing.Size(196, 30);
             this.btnRefreshClinic.TabIndex = 20;
             this.btnRefreshClinic.Text = "تحديث القائمة";
             this.btnRefreshClinic.Click += new System.EventHandler(this.btnRefreshClinic_Click);
@@ -265,9 +265,9 @@
             this.btnPrintClinic.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(121)))), ((int)(((byte)(214)))));
             this.btnPrintClinic.Image = ((System.Drawing.Image)(resources.GetObject("btnPrintClinic.Image")));
             this.btnPrintClinic.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnPrintClinic.Location = new System.Drawing.Point(834, 39);
+            this.btnPrintClinic.Location = new System.Drawing.Point(730, 39);
             this.btnPrintClinic.Name = "btnPrintClinic";
-            this.btnPrintClinic.Size = new System.Drawing.Size(206, 30);
+            this.btnPrintClinic.Size = new System.Drawing.Size(180, 30);
             this.btnPrintClinic.TabIndex = 18;
             this.btnPrintClinic.Text = "طباعة القائمة";
             this.btnPrintClinic.Click += new System.EventHandler(this.btnPrintClinic_Click);
@@ -289,7 +289,7 @@
             this.groupBox1.Margin = new System.Windows.Forms.Padding(0);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(0);
-            this.groupBox1.Size = new System.Drawing.Size(1043, 95);
+            this.groupBox1.Size = new System.Drawing.Size(913, 95);
             this.groupBox1.TabIndex = 22;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "بيانات العيادة";
@@ -299,10 +299,10 @@
             // 
             this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.Font = new System.Drawing.Font("Cairo Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(927, 44);
+            this.label4.Location = new System.Drawing.Point(811, 44);
             this.label4.Name = "label4";
             this.label4.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label4.Size = new System.Drawing.Size(110, 25);
+            this.label4.Size = new System.Drawing.Size(96, 25);
             this.label4.TabIndex = 45;
             this.label4.Text = "رقم العيادة";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -323,13 +323,13 @@
             this.txtClinicID.Font = new System.Drawing.Font("Cairo", 13.8F);
             this.txtClinicID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtClinicID.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtClinicID.Location = new System.Drawing.Point(801, 44);
+            this.txtClinicID.Location = new System.Drawing.Point(701, 44);
             this.txtClinicID.Margin = new System.Windows.Forms.Padding(4, 9, 4, 9);
             this.txtClinicID.Name = "txtClinicID";
             this.txtClinicID.PlaceholderText = "";
             this.txtClinicID.ReadOnly = true;
             this.txtClinicID.SelectedText = "";
-            this.txtClinicID.Size = new System.Drawing.Size(119, 25);
+            this.txtClinicID.Size = new System.Drawing.Size(104, 25);
             this.txtClinicID.TabIndex = 0;
             this.txtClinicID.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -337,9 +337,9 @@
             // 
             this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label6.Font = new System.Drawing.Font("Cairo Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(690, 44);
+            this.label6.Location = new System.Drawing.Point(604, 44);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(116, 25);
+            this.label6.Size = new System.Drawing.Size(102, 25);
             this.label6.TabIndex = 47;
             this.label6.Text = "اسم العيادة";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -360,22 +360,23 @@
             this.txtClinicName.Font = new System.Drawing.Font("Cairo", 13.8F);
             this.txtClinicName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtClinicName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtClinicName.Location = new System.Drawing.Point(493, 44);
+            this.txtClinicName.Location = new System.Drawing.Point(431, 44);
             this.txtClinicName.Margin = new System.Windows.Forms.Padding(4, 9, 4, 9);
             this.txtClinicName.Name = "txtClinicName";
             this.txtClinicName.PlaceholderText = "";
             this.txtClinicName.SelectedText = "";
-            this.txtClinicName.Size = new System.Drawing.Size(190, 25);
+            this.txtClinicName.Size = new System.Drawing.Size(166, 25);
             this.txtClinicName.TabIndex = 1;
             this.txtClinicName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtClinicName.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtClinicName_KeyDown);
             // 
             // label7
             // 
             this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label7.Font = new System.Drawing.Font("Cairo Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(362, 44);
+            this.label7.Location = new System.Drawing.Point(317, 44);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(124, 25);
+            this.label7.Size = new System.Drawing.Size(108, 25);
             this.label7.TabIndex = 49;
             this.label7.Text = "مدير العيادة";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -396,22 +397,23 @@
             this.txtClinicManger.Font = new System.Drawing.Font("Cairo", 13.8F);
             this.txtClinicManger.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtClinicManger.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtClinicManger.Location = new System.Drawing.Point(154, 44);
+            this.txtClinicManger.Location = new System.Drawing.Point(135, 44);
             this.txtClinicManger.Margin = new System.Windows.Forms.Padding(4, 9, 4, 9);
             this.txtClinicManger.Name = "txtClinicManger";
             this.txtClinicManger.PlaceholderText = "";
             this.txtClinicManger.SelectedText = "";
-            this.txtClinicManger.Size = new System.Drawing.Size(201, 25);
+            this.txtClinicManger.Size = new System.Drawing.Size(176, 25);
             this.txtClinicManger.TabIndex = 2;
             this.txtClinicManger.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtClinicManger.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtClinicManger_KeyDown);
             // 
             // label5
             // 
             this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label5.Font = new System.Drawing.Font("Cairo Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(46, 44);
+            this.label5.Location = new System.Drawing.Point(40, 44);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(111, 25);
+            this.label5.Size = new System.Drawing.Size(97, 25);
             this.label5.TabIndex = 51;
             this.label5.Text = "رقم الهاتف";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -432,14 +434,15 @@
             this.txtClinicPhone.Font = new System.Drawing.Font("Cairo", 13.8F);
             this.txtClinicPhone.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtClinicPhone.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtClinicPhone.Location = new System.Drawing.Point(-137, 44);
+            this.txtClinicPhone.Location = new System.Drawing.Point(-120, 44);
             this.txtClinicPhone.Margin = new System.Windows.Forms.Padding(4, 9, 4, 9);
             this.txtClinicPhone.Name = "txtClinicPhone";
             this.txtClinicPhone.PlaceholderText = "";
             this.txtClinicPhone.SelectedText = "";
-            this.txtClinicPhone.Size = new System.Drawing.Size(176, 25);
+            this.txtClinicPhone.Size = new System.Drawing.Size(154, 25);
             this.txtClinicPhone.TabIndex = 3;
             this.txtClinicPhone.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtClinicPhone.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtClinicPhone_KeyDown);
             // 
             // dgvClinic
             // 
@@ -447,59 +450,59 @@
             this.dgvClinic.AllowUserToDeleteRows = false;
             this.dgvClinic.AllowUserToResizeColumns = false;
             this.dgvClinic.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Lavender;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Cairo Medium", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Blue;
-            this.dgvClinic.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.Lavender;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Cairo Medium", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.Blue;
+            this.dgvClinic.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle11;
             this.dgvClinic.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvClinic.BackgroundColor = System.Drawing.Color.White;
             this.dgvClinic.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Lavender;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Cairo", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvClinic.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.Lavender;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Cairo", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvClinic.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle12;
             this.dgvClinic.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvClinic.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column2,
             this.Column3,
             this.Column4});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Cairo Medium", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvClinic.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle13.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle13.Font = new System.Drawing.Font("Cairo Medium", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvClinic.DefaultCellStyle = dataGridViewCellStyle13;
             this.dgvClinic.EnableHeadersVisualStyles = false;
-            this.dgvClinic.Location = new System.Drawing.Point(9, 229);
+            this.dgvClinic.Location = new System.Drawing.Point(8, 229);
             this.dgvClinic.MultiSelect = false;
             this.dgvClinic.Name = "dgvClinic";
             this.dgvClinic.ReadOnly = true;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.SpringGreen;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Cairo Medium", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvClinic.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle14.BackColor = System.Drawing.Color.SpringGreen;
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Cairo Medium", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvClinic.RowHeadersDefaultCellStyle = dataGridViewCellStyle14;
             this.dgvClinic.RowHeadersVisible = false;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Cairo Medium", 13.8F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.dgvClinic.RowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle15.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle15.Font = new System.Drawing.Font("Cairo Medium", 13.8F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.dgvClinic.RowsDefaultCellStyle = dataGridViewCellStyle15;
             this.dgvClinic.RowTemplate.Height = 40;
             this.dgvClinic.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvClinic.Size = new System.Drawing.Size(1034, 237);
+            this.dgvClinic.Size = new System.Drawing.Size(905, 237);
             this.dgvClinic.TabIndex = 23;
             this.dgvClinic.DoubleClick += new System.EventHandler(this.dgvClinic_DoubleClick);
             // 
@@ -540,9 +543,9 @@
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.Font = new System.Drawing.Font("Cairo", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label1.Location = new System.Drawing.Point(837, 184);
+            this.label1.Location = new System.Drawing.Point(732, 184);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(209, 32);
+            this.label1.Size = new System.Drawing.Size(183, 32);
             this.label1.TabIndex = 24;
             this.label1.Text = "قائمة العـيـادات";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -552,9 +555,9 @@
             // 
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(121)))), ((int)(((byte)(214)))));
-            this.panel1.Location = new System.Drawing.Point(882, 219);
+            this.panel1.Location = new System.Drawing.Point(772, 219);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(170, 1);
+            this.panel1.Size = new System.Drawing.Size(149, 1);
             this.panel1.TabIndex = 25;
             // 
             // MessageDialog
@@ -568,7 +571,7 @@
             // 
             // UCClinicMangement
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.panel1);
@@ -580,7 +583,7 @@
             this.Controls.Add(this.pnlLine);
             this.Name = "UCClinicMangement";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.Size = new System.Drawing.Size(1049, 480);
+            this.Size = new System.Drawing.Size(918, 480);
             this.Load += new System.EventHandler(this.UCClinicMangement_Load);
             this.flowLayoutPanel1.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);

@@ -239,6 +239,7 @@
             this.txtChronicName.Size = new System.Drawing.Size(269, 37);
             this.txtChronicName.TabIndex = 50;
             this.txtChronicName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtChronicName.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtChronicName_KeyDown);
             // 
             // label2
             // 
@@ -599,6 +600,7 @@
             this.txtChronicNote.Size = new System.Drawing.Size(269, 37);
             this.txtChronicNote.TabIndex = 54;
             this.txtChronicNote.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtChronicNote.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtChronicNote_KeyDown);
             // 
             // label13
             // 

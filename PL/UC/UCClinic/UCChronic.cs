@@ -227,5 +227,25 @@ namespace BeninaClinic.PL.UC.UCClinic
                 }
             }
         }
+
+        private void txtChronicName_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                txtChronicNote.Focus();
+            }
+        }
+
+        private void txtChronicNote_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter && btnAddChronic.Enabled)
+            {
+                btnAddChronic.PerformClick();
+            }
+            else if (e.KeyCode == Keys.Enter && btnEditChronic.Enabled)
+            {
+                btnEditChronic.PerformClick();
+            }
+        }
     }
 }

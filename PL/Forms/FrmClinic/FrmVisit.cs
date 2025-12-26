@@ -440,5 +440,13 @@ namespace BeninaClinic.PL.Forms.FrmClinic
             dgvChronics.Rows.Clear();
             dgvMedicen.Rows.Clear();
         }
+
+        private void FrmVisit_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Escape)
+            {
+                this.Close();
+            }
+        }
     }
 }

@@ -228,5 +228,33 @@ namespace BeninaClinic.PL.UC.UCClinic
             frmrpt.crystalReportViewer1.ReportSource = rptListClinic;
             frmrpt.Show();
         }
+
+        private void txtClinicName_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                txtClinicManger.Focus();
+            }
+        }
+
+        private void txtClinicManger_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                txtClinicPhone.Focus();
+            }
+        }
+
+        private void txtClinicPhone_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter && btnAddClinic.Enabled)
+            {
+                btnAddClinic.PerformClick();
+            }
+           else if (e.KeyCode == Keys.Enter && btnEditClinic.Enabled)
+            {
+                btnEditClinic.PerformClick();
+            }
+        }
     }
 }

@@ -62,4 +62,3 @@ E:\BeninaV2\BeninaClinic\BeninaClinic\obj\Debug\BeninaClinic.PL.Forms.FrmPharmac
 E:\BeninaV2\BeninaClinic\BeninaClinic\obj\Debug\BeninaClinic.PL.Forms.FrmClinic.FrmDataPatient.resources
 E:\BeninaV2\BeninaClinic\BeninaClinic\obj\Debug\BeninaClinic.FrmConnectServer.resources
 E:\BeninaV2\BeninaClinic\BeninaClinic\obj\Debug\BeninaClinic.FrmStartApp.resources
-E:\BeninaV2\BeninaClinic\BeninaClinic\obj\Debug\BeninaClinic.csprojResolveAssemblyReference.cache

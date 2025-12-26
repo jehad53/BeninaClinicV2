@@ -333,8 +333,7 @@ namespace BeninaClinic.PL.Forms.FrmClinic
         {
             if(e.KeyCode == Keys.Escape)
             {
-                MessageBox.Show("تم تفعيل الازرار","تفعيل الازرار",MessageBoxButtons.OK);
-
+                this.Close();
             }
         }
 
@@ -344,5 +343,9 @@ namespace BeninaClinic.PL.Forms.FrmClinic
             txtPatientName.Text = PatientName;
         }
 
+        private void btnPrintAllApp_KeyDown(object sender, KeyEventArgs e)
+        {
+            
+        }
     }
 }

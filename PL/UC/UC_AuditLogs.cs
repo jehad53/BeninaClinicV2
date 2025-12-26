@@ -8,14 +8,16 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using BeninaClinic.BL.Clinic;
-using BeninaClinic.BL;
+using BeninaClinic.BL.GeneralFunction;
 
 namespace BeninaClinic.PL.UC
 {
     public partial class UC_AuditLogs : UserControl
     {
         AuditLogManagement _auditInfo = new AuditLogManagement();
-       
+        int CurrentPage = 1;
+        int PageSize = 20;
+        int TotalPages = 0;
         public UC_AuditLogs()
         {
             InitializeComponent();
@@ -23,7 +25,8 @@ namespace BeninaClinic.PL.UC
 
         private void UC_AuditLogs_Load(object sender, EventArgs e)
         {
-            LoadLogs();
+            TotalPages = MainFunction.GetTotalPagesGeneral("AuditLogs", PageSize);
+            LoadPage();
         }
 
         private void LoadLogs()
@@ -47,7 +50,7 @@ namespace BeninaClinic.PL.UC
                     actionType = cmbActionType.Text;
                 }
 
-                string tableName = string.IsNullOrWhiteSpace(txtTableName.Text) ? null : txtTableName.Text;
+               // string tableName = string.IsNullOrWhiteSpace(txtTableName.Text) ? null : txtTableName.Text;
                 dgvLogs.AutoGenerateColumns = true; 
                 dgvLogs.DataSource = _auditInfo.GetLogs(); 
                 
@@ -58,6 +61,22 @@ namespace BeninaClinic.PL.UC
             {
                  MessageBox.Show("خطأ في تحميل السجلات: " + ex.Message, "Audit Logs", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+
+        private void LoadPage()
+        {
+            MainFunction.LoadPagedDataGeneral(
+                dgvLogs,
+                "AuditLogs",
+                "LogId",
+                CurrentPage,
+                PageSize);
+
+            lblPage.Text = $"Page {CurrentPage} of {TotalPages}";
+
+            btnPrevious.Enabled = CurrentPage > 1;
+            btnNext.Enabled = CurrentPage < TotalPages;
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
@@ -78,6 +97,24 @@ namespace BeninaClinic.PL.UC
         private void guna2GroupBox1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnNext_Click(object sender, EventArgs e)
+        {
+            if (CurrentPage < TotalPages)
+            {
+                CurrentPage++;
+                LoadPage();
+            }
+        }
+
+        private void btnPrevious_Click(object sender, EventArgs e)
+        {
+            if (CurrentPage > 1)
+            {
+                CurrentPage--;
+                LoadPage();
+            }
         }
     }
 }

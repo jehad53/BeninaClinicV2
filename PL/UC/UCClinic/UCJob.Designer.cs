@@ -238,6 +238,7 @@
             this.txtJobName.Size = new System.Drawing.Size(269, 37);
             this.txtJobName.TabIndex = 50;
             this.txtJobName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtJobName.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtJobName_KeyDown);
             // 
             // label2
             // 
@@ -599,6 +600,7 @@
             this.cmbDepartment.Size = new System.Drawing.Size(270, 46);
             this.cmbDepartment.TabIndex = 71;
             this.cmbDepartment.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.cmbDepartment.KeyDown += new System.Windows.Forms.KeyEventHandler(this.cmbDepartment_KeyDown);
             // 
             // label13
             // 

@@ -35,6 +35,7 @@ namespace BeninaClinic.PL.UC.UCClinic
             btnAddDepartment.Enabled = true;
             btnEditDepartment.Enabled = false;
             btnDeleteDepartment.Enabled = false;
+            txtDepartmentName.Focus();
         }
 
         private void btnNew_Click(object sender, EventArgs e)
@@ -201,6 +202,26 @@ namespace BeninaClinic.PL.UC.UCClinic
             catch
             {
                 return;
+            }
+        }
+
+        private void txtDepartmentName_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                txtDepartmentManger.Focus();
+            }
+        }
+
+        private void txtDepartmentManger_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter && btnAddDepartment.Enabled)
+            {
+                btnAddDepartment.PerformClick();
+            }
+            else if (e.KeyCode == Keys.Enter && btnEditDepartment.Enabled)
+            {
+                btnEditDepartment.PerformClick();
             }
         }
     }

@@ -36,6 +36,7 @@ namespace BeninaClinic.PL.UC.UCClinic
             btnJob.Enabled = true;
             btnEditJob.Enabled = false;
             btnDeleteJob.Enabled = false;
+            txtJobName.Focus();
         }
 
         private void btnNew_Click(object sender, EventArgs e)
@@ -210,6 +211,26 @@ namespace BeninaClinic.PL.UC.UCClinic
             catch
             {
                 return;
+            }
+        }
+
+        private void txtJobName_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                cmbDepartment.Focus();
+            }
+        }
+
+        private void cmbDepartment_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter && btnJob.Enabled)
+            {
+                btnJob.PerformClick();
+            }
+            else if (e.KeyCode == Keys.Enter && btnEditJob.Enabled)
+            {
+                btnEditJob.PerformClick();
             }
         }
     }

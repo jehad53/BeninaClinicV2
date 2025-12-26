@@ -663,6 +663,30 @@
   <ItemGroup>
     <Content Include="Assets\Gifs\Alert.gif" />
     <Content Include="Assets\Gifs\Successful.gif" />
+    <None Include="Resources\networking.png" />
+    <None Include="Resources\examination1.png" />
+    <None Include="Resources\doctor1.png" />
+    <None Include="Resources\patient1.png" />
+    <None Include="Resources\examination.png" />
+    <None Include="Resources\clinic.png" />
+    <None Include="Resources\appointment.png" />
+    <None Include="Resources\doctor-consultation.png" />
+    <None Include="Resources\diagnosis.png" />
+    <None Include="Resources\chronic-dizziness.png" />
+    <None Include="Resources\report.png" />
+    <None Include="Resources\injection.png" />
+    <None Include="Resources\job.png" />
+    <None Include="Resources\employee.png" />
+    <None Include="Resources\settings.png" />
+    <None Include="Resources\programmer.png" />
+    <None Include="Resources\medicine.png" />
+    <None Include="Resources\syringe.png" />
+    <None Include="Resources\health-report.png" />
+    <None Include="Resources\pharmacy.png" />
+    <None Include="Resources\log-file.png" />
+    <None Include="Resources\login %281%29.png" />
+    <None Include="Resources\patient.png" />
+    <None Include="Resources\doctor.png" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.8">

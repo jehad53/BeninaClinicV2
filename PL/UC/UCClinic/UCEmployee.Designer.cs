@@ -30,11 +30,11 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UCEmployee));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle66 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle67 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle68 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle69 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle70 = new System.Windows.Forms.DataGridViewCellStyle();
             this.guna2GroupBox2 = new Guna.UI2.WinForms.Guna2GroupBox();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.label4 = new System.Windows.Forms.Label();
@@ -164,6 +164,7 @@
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
             this.flowLayoutPanel2.Size = new System.Drawing.Size(831, 252);
             this.flowLayoutPanel2.TabIndex = 22;
+            this.flowLayoutPanel2.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel2_Paint);
             // 
             // label4
             // 
@@ -244,6 +245,7 @@
             this.txtEmployeeName.Size = new System.Drawing.Size(260, 37);
             this.txtEmployeeName.TabIndex = 50;
             this.txtEmployeeName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtEmployeeName.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtEmployeeName_KeyDown);
             // 
             // label2
             // 
@@ -283,6 +285,7 @@
             this.txtEmployeeNatNum.Size = new System.Drawing.Size(217, 37);
             this.txtEmployeeNatNum.TabIndex = 52;
             this.txtEmployeeNatNum.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtEmployeeNatNum.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtEmployeeNatNum_KeyDown);
             // 
             // label3
             // 
@@ -322,6 +325,7 @@
             this.cmbEmployeeGender.Size = new System.Drawing.Size(82, 36);
             this.cmbEmployeeGender.TabIndex = 28;
             this.cmbEmployeeGender.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.cmbEmployeeGender.KeyDown += new System.Windows.Forms.KeyEventHandler(this.cmbEmployeeGender_KeyDown);
             // 
             // label5
             // 
@@ -361,6 +365,7 @@
             this.txtEmployeePhone.Size = new System.Drawing.Size(147, 37);
             this.txtEmployeePhone.TabIndex = 56;
             this.txtEmployeePhone.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtEmployeePhone.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtEmployeePhone_KeyDown);
             // 
             // label6
             // 
@@ -401,6 +406,7 @@
             this.txtEmployeeAddress.Size = new System.Drawing.Size(141, 37);
             this.txtEmployeeAddress.TabIndex = 58;
             this.txtEmployeeAddress.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtEmployeeAddress.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtEmployeeAddress_KeyDown);
             // 
             // label7
             // 
@@ -440,6 +446,7 @@
             this.cmbContractType.Size = new System.Drawing.Size(114, 36);
             this.cmbContractType.TabIndex = 70;
             this.cmbContractType.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.cmbContractType.KeyDown += new System.Windows.Forms.KeyEventHandler(this.cmbContractType_KeyDown);
             // 
             // label8
             // 
@@ -480,6 +487,7 @@
             this.cmbEmployeeSocial.Size = new System.Drawing.Size(148, 36);
             this.cmbEmployeeSocial.TabIndex = 71;
             this.cmbEmployeeSocial.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.cmbEmployeeSocial.KeyDown += new System.Windows.Forms.KeyEventHandler(this.cmbEmployeeSocial_KeyDown);
             // 
             // label10
             // 
@@ -516,6 +524,7 @@
             this.dtpEmpDateofBirth.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.dtpEmpDateofBirth.Value = new System.DateTime(2025, 11, 2, 17, 35, 45, 385);
             this.dtpEmpDateofBirth.ValueChanged += new System.EventHandler(this.dtpEmpDateofBirth_ValueChanged);
+            this.dtpEmpDateofBirth.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dtpEmpDateofBirth_KeyDown);
             // 
             // label14
             // 
@@ -556,6 +565,7 @@
             this.txtEmployeeSalary.Size = new System.Drawing.Size(124, 37);
             this.txtEmployeeSalary.TabIndex = 78;
             this.txtEmployeeSalary.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtEmployeeSalary.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtEmployeeSalary_KeyDown);
             // 
             // label15
             // 
@@ -592,6 +602,7 @@
             this.dtpEmpAppointment.TabIndex = 81;
             this.dtpEmpAppointment.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.dtpEmpAppointment.Value = new System.DateTime(2025, 11, 2, 17, 35, 45, 385);
+            this.dtpEmpAppointment.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dtpEmpAppointment_KeyDown);
             // 
             // label16
             // 
@@ -633,6 +644,7 @@
             this.cmbDepartments.Size = new System.Drawing.Size(198, 36);
             this.cmbDepartments.TabIndex = 80;
             this.cmbDepartments.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.cmbDepartments.KeyDown += new System.Windows.Forms.KeyEventHandler(this.cmbDepartments_KeyDown);
             // 
             // label17
             // 
@@ -675,6 +687,7 @@
             this.cmbJobs.TabIndex = 84;
             this.cmbJobs.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.cmbJobs.DropDown += new System.EventHandler(this.cmbJobs_DropDown);
+            this.cmbJobs.KeyDown += new System.Windows.Forms.KeyEventHandler(this.cmbJobs_KeyDown);
             // 
             // label18
             // 
@@ -716,6 +729,7 @@
             this.txtEmployeeNote.Size = new System.Drawing.Size(353, 37);
             this.txtEmployeeNote.TabIndex = 82;
             this.txtEmployeeNote.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtEmployeeNote.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtEmployeeNote_KeyDown);
             // 
             // pnlLine
             // 
@@ -780,24 +794,24 @@
             this.dgvEmployees.AllowUserToDeleteRows = false;
             this.dgvEmployees.AllowUserToResizeColumns = false;
             this.dgvEmployees.AllowUserToResizeRows = false;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.Lavender;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Cairo Medium", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.Blue;
-            this.dgvEmployees.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle66.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle66.BackColor = System.Drawing.Color.Lavender;
+            dataGridViewCellStyle66.Font = new System.Drawing.Font("Cairo Medium", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle66.SelectionBackColor = System.Drawing.Color.Blue;
+            this.dgvEmployees.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle66;
             this.dgvEmployees.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvEmployees.BackgroundColor = System.Drawing.Color.White;
             this.dgvEmployees.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.Lavender;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Cairo Medium", 12F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvEmployees.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle67.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle67.BackColor = System.Drawing.Color.Lavender;
+            dataGridViewCellStyle67.Font = new System.Drawing.Font("Cairo Medium", 12F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle67.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle67.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle67.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle67.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvEmployees.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle67;
             this.dgvEmployees.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvEmployees.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
@@ -814,33 +828,33 @@
             this.Column10,
             this.Column12,
             this.Column14});
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Cairo Medium", 12F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvEmployees.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle68.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle68.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle68.Font = new System.Drawing.Font("Cairo Medium", 12F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle68.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle68.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle68.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle68.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvEmployees.DefaultCellStyle = dataGridViewCellStyle68;
             this.dgvEmployees.EnableHeadersVisualStyles = false;
             this.dgvEmployees.Location = new System.Drawing.Point(3, 595);
             this.dgvEmployees.MultiSelect = false;
             this.dgvEmployees.Name = "dgvEmployees";
             this.dgvEmployees.ReadOnly = true;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.SpringGreen;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Cairo Medium", 12F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvEmployees.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle69.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle69.BackColor = System.Drawing.Color.SpringGreen;
+            dataGridViewCellStyle69.Font = new System.Drawing.Font("Cairo Medium", 12F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle69.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle69.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle69.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle69.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvEmployees.RowHeadersDefaultCellStyle = dataGridViewCellStyle69;
             this.dgvEmployees.RowHeadersVisible = false;
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Cairo Medium", 13.8F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.dgvEmployees.RowsDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle70.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle70.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle70.Font = new System.Drawing.Font("Cairo Medium", 13.8F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle70.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.dgvEmployees.RowsDefaultCellStyle = dataGridViewCellStyle70;
             this.dgvEmployees.RowTemplate.Height = 40;
             this.dgvEmployees.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvEmployees.Size = new System.Drawing.Size(837, 57);

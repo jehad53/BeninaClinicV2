@@ -39,5 +39,25 @@ namespace BeninaClinic.PL.Forms.FrmPharmacy
             FrmDispenseHistory frm = new FrmDispenseHistory();
             frm.ShowDialog();
         }
+
+        private void FrmPharmacyMain_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.F1)
+            {
+                btnInventory.PerformClick();
+            }
+            else if (e.KeyCode == Keys.F2)
+            {
+                btnDispense.PerformClick();
+            }
+            else if (e.KeyCode == Keys.F3)
+            {
+                btnDispenseHistory.PerformClick();
+            }
+            else if (e.KeyCode == Keys.F4)
+            {
+              //  زر الصرف العام
+            }
+        }
     }
 }

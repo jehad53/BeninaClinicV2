@@ -236,6 +236,7 @@
             this.txtDepartmentName.Size = new System.Drawing.Size(260, 37);
             this.txtDepartmentName.TabIndex = 50;
             this.txtDepartmentName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtDepartmentName.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtDepartmentName_KeyDown);
             // 
             // label2
             // 
@@ -597,6 +598,7 @@
             this.txtDepartmentManger.Size = new System.Drawing.Size(260, 37);
             this.txtDepartmentManger.TabIndex = 66;
             this.txtDepartmentManger.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtDepartmentManger.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtDepartmentManger_KeyDown);
             // 
             // label13
             // 

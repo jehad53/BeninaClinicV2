@@ -52,5 +52,91 @@ namespace BeninaClinic.BL.GeneralFunction
                 MessageBox.Show("حدث خطأ أثناء تعبئة القائمة: " + ex.Message);
             }
         }
+         // جلب عدد الصفوف 
+        public static int GetTotalPages(string storedProcedureName, int pageSize)
+        {
+            DataTable dt = new DataTable();
+            using (Db db = new Db())
+                {
+                 dt = db.ReadData(storedProcedureName, null);
+                }
+
+            int totalRows = Convert.ToInt32(dt.Rows[0]["TotalRows"]);
+
+            int totalPages = (int)Math.Ceiling((double)totalRows / pageSize);
+                
+            return totalPages;
+        }
+
+
+
+        // دالة حساب عدد الصفحات العامة
+        public static int GetTotalPagesGeneral(string tableName, int pageSize)
+        {
+            DataTable dt = new DataTable();
+
+            using (Db db = new Db())
+           {
+                SqlParameter[] param =
+             {
+            new SqlParameter("@TableName", tableName)
+             };
+            dt = db.ReadData("GetTotalCount", param);
+           } 
+
+            int totalRows = Convert.ToInt32(dt.Rows[0]["TotalRows"]);
+            return (int)Math.Ceiling((double)totalRows / pageSize);
+        }
+    
+
+
+
+    // دالة تحميل البيانات بالصفحات خاصة بجدول واحد(Pagination)
+    public static void LoadPagedData(
+            DataGridView dgv,
+            string storedProcedureName,
+            int pageNumber,
+            int pageSize)
+        {
+            DataTable dt = new DataTable();
+            using (Db db = new Db())
+            {
+                SqlParameter[] param = new SqlParameter[]
+            {
+            new SqlParameter("@PageNumber", pageNumber),
+            new SqlParameter("@PageSize", pageSize)
+            };
+
+                 dt = db.ReadData(storedProcedureName, param);
+            }
+            dgv.DataSource = dt;
+        }
+
+        // دالة تحميل البيانات بالصفحات خاصة بكل الجداول (Pagination)
+
+        public static void LoadPagedDataGeneral(
+       DataGridView dgv,
+       string tableName,
+       string orderByColumn,
+       int pageNumber,
+       int pageSize)
+        {
+            DataTable dt = new DataTable();
+            using (Db db = new Db())
+            {
+                SqlParameter[] param = {
+            new SqlParameter("@TableName", tableName),
+            new SqlParameter("@OrderByCol", orderByColumn),
+            new SqlParameter("@PageNumber", pageNumber),
+            new SqlParameter("@PageSize", pageSize),
+            };
+                dt = db.ReadData("GetPagedData", param);
+           }
+            
+            dgv.DataSource = dt;
+            }
+
+
+
+        }
     }
-}

@@ -18,6 +18,10 @@ namespace BeninaClinic.PL.UC.UCClinic
 {
     public partial class UCPatient : UserControl
     {
+        int CurrentPage = 1;
+        int PageSize = 20;
+        int TotalPages = 0;
+
         public UCPatient()
         {
             InitializeComponent();
@@ -26,14 +30,11 @@ namespace BeninaClinic.PL.UC.UCClinic
             btnAddPatient.Enabled = false;
             btnEditPatient.Enabled = false;
             btnDeletePatient.Enabled = false;
-            LoadData();
-
-
         }
 
 
 
-        public void LoadData()
+        public void LoadAllData()
         {
             try
             {
@@ -48,6 +49,20 @@ namespace BeninaClinic.PL.UC.UCClinic
             }
         }
 
+        // Load using Pagination 
+        private void LoadPage()
+        {
+           MainFunction.LoadPagedData(
+           dgvPatients,
+           "PagientPagedData",
+           CurrentPage,
+           PageSize);
+
+            lblPage.Text = $"Page {CurrentPage} of {TotalPages}";
+
+            btnPrevious.Enabled = CurrentPage > 1;
+            btnNext.Enabled = CurrentPage < TotalPages;
+        }
 
         private void btnNew_Click(object sender, EventArgs e)
         {
@@ -101,7 +116,7 @@ namespace BeninaClinic.PL.UC.UCClinic
                     patientmanagement.DeletePatient(Convert.ToInt32(dgvPatients.CurrentRow.Cells[0].Value));
                     FrmSuccesMessageBox frmsucces = new FrmSuccesMessageBox();
                     frmsucces.Show();
-                    LoadData();
+                    LoadAllData();
                 }
             }
             catch
@@ -112,7 +127,12 @@ namespace BeninaClinic.PL.UC.UCClinic
 
         private void UCPatient_Load(object sender, EventArgs e)
         {
+            TotalPages = MainFunction.GetTotalPages(
+          "Pagient_GetTotalCount",
+         PageSize);
 
+            //  LoadPage();
+            LoadPage();
         }
 
         private void dgvPatients_DoubleClick(object sender, EventArgs e)
@@ -134,7 +154,7 @@ namespace BeninaClinic.PL.UC.UCClinic
         {
             try
             {
-                LoadData();
+                LoadAllData();
             }
             catch
             {
@@ -209,6 +229,24 @@ namespace BeninaClinic.PL.UC.UCClinic
         {
             FrmDataPatient frmpatientdate = new FrmDataPatient();
             frmpatientdate.ShowDialog();
+        }
+
+        private void btnNext_Click(object sender, EventArgs e)
+        {
+            if (CurrentPage < TotalPages)
+            {
+                CurrentPage++;
+                LoadPage();
+            }
+        }
+
+        private void btnPrevious_Click(object sender, EventArgs e)
+        {
+            if (CurrentPage > 1)
+            {
+                CurrentPage--;
+                LoadPage();
+            }
         }
     }
 }

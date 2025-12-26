@@ -239,6 +239,7 @@
             this.txtDiagnoseName.Size = new System.Drawing.Size(269, 37);
             this.txtDiagnoseName.TabIndex = 50;
             this.txtDiagnoseName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtDiagnoseName.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtDiagnoseName_KeyDown);
             // 
             // label2
             // 
@@ -600,6 +601,7 @@
             this.txtDiagnoseNote.Size = new System.Drawing.Size(269, 37);
             this.txtDiagnoseNote.TabIndex = 54;
             this.txtDiagnoseNote.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtDiagnoseNote.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtDiagnoseNote_KeyDown);
             // 
             // label13
             // 

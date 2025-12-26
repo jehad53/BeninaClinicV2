@@ -28,18 +28,16 @@ namespace BeninaClinic.PL.UC
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.btnSearch = new Guna.UI2.WinForms.Guna2Button();
             this.btnRefresh = new Guna.UI2.WinForms.Guna2Button();
             this.btnPrint = new Guna.UI2.WinForms.Guna2Button();
             this.guna2GroupBoxFilter = new Guna.UI2.WinForms.Guna2GroupBox();
-            this.txtTableName = new Guna.UI2.WinForms.Guna2TextBox();
-            this.labelTable = new System.Windows.Forms.Label();
             this.cmbActionType = new Guna.UI2.WinForms.Guna2ComboBox();
             this.labelAction = new System.Windows.Forms.Label();
             this.txtUserId = new Guna.UI2.WinForms.Guna2TextBox();
@@ -50,6 +48,9 @@ namespace BeninaClinic.PL.UC
             this.labelFrom = new System.Windows.Forms.Label();
             this.guna2GroupBox2 = new Guna.UI2.WinForms.Guna2GroupBox();
             this.dgvLogs = new System.Windows.Forms.DataGridView();
+            this.btnNext = new Guna.UI2.WinForms.Guna2Button();
+            this.lblPage = new System.Windows.Forms.Label();
+            this.btnPrevious = new Guna.UI2.WinForms.Guna2Button();
             this.guna2GroupBox1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.guna2GroupBoxFilter.SuspendLayout();
@@ -67,7 +68,7 @@ namespace BeninaClinic.PL.UC
             this.guna2GroupBox1.Location = new System.Drawing.Point(3, 3);
             this.guna2GroupBox1.Name = "guna2GroupBox1";
             this.guna2GroupBox1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.guna2GroupBox1.Size = new System.Drawing.Size(1100, 72);
+            this.guna2GroupBox1.Size = new System.Drawing.Size(962, 72);
             this.guna2GroupBox1.TabIndex = 0;
             this.guna2GroupBox1.Text = "العمليات";
             this.guna2GroupBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -81,9 +82,9 @@ namespace BeninaClinic.PL.UC
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 40);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Padding = new System.Windows.Forms.Padding(10, 5, 10, 5);
+            this.flowLayoutPanel1.Padding = new System.Windows.Forms.Padding(9, 5, 9, 5);
             this.flowLayoutPanel1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(1100, 32);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(962, 32);
             this.flowLayoutPanel1.TabIndex = 0;
             // 
             // btnSearch
@@ -92,10 +93,10 @@ namespace BeninaClinic.PL.UC
             this.btnSearch.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(121)))), ((int)(((byte)(214)))));
             this.btnSearch.Font = new System.Drawing.Font("Cairo", 12F, System.Drawing.FontStyle.Bold);
             this.btnSearch.ForeColor = System.Drawing.Color.White;
-            this.btnSearch.Location = new System.Drawing.Point(955, 10);
-            this.btnSearch.Margin = new System.Windows.Forms.Padding(5);
+            this.btnSearch.Location = new System.Drawing.Point(835, 10);
+            this.btnSearch.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(120, 35);
+            this.btnSearch.Size = new System.Drawing.Size(105, 35);
             this.btnSearch.TabIndex = 0;
             this.btnSearch.Text = "بحث";
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
@@ -106,10 +107,10 @@ namespace BeninaClinic.PL.UC
             this.btnRefresh.FillColor = System.Drawing.Color.Gray;
             this.btnRefresh.Font = new System.Drawing.Font("Cairo", 12F, System.Drawing.FontStyle.Bold);
             this.btnRefresh.ForeColor = System.Drawing.Color.White;
-            this.btnRefresh.Location = new System.Drawing.Point(825, 10);
-            this.btnRefresh.Margin = new System.Windows.Forms.Padding(5);
+            this.btnRefresh.Location = new System.Drawing.Point(722, 10);
+            this.btnRefresh.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(120, 35);
+            this.btnRefresh.Size = new System.Drawing.Size(105, 35);
             this.btnRefresh.TabIndex = 1;
             this.btnRefresh.Text = "تحديث";
             this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
@@ -120,10 +121,10 @@ namespace BeninaClinic.PL.UC
             this.btnPrint.FillColor = System.Drawing.Color.Teal;
             this.btnPrint.Font = new System.Drawing.Font("Cairo", 12F, System.Drawing.FontStyle.Bold);
             this.btnPrint.ForeColor = System.Drawing.Color.White;
-            this.btnPrint.Location = new System.Drawing.Point(695, 10);
-            this.btnPrint.Margin = new System.Windows.Forms.Padding(5);
+            this.btnPrint.Location = new System.Drawing.Point(609, 10);
+            this.btnPrint.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnPrint.Name = "btnPrint";
-            this.btnPrint.Size = new System.Drawing.Size(120, 35);
+            this.btnPrint.Size = new System.Drawing.Size(105, 35);
             this.btnPrint.TabIndex = 2;
             this.btnPrint.Text = "طباعة";
             this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
@@ -132,8 +133,9 @@ namespace BeninaClinic.PL.UC
             // 
             this.guna2GroupBoxFilter.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.guna2GroupBoxFilter.Controls.Add(this.txtTableName);
-            this.guna2GroupBoxFilter.Controls.Add(this.labelTable);
+            this.guna2GroupBoxFilter.Controls.Add(this.btnNext);
+            this.guna2GroupBoxFilter.Controls.Add(this.lblPage);
+            this.guna2GroupBoxFilter.Controls.Add(this.btnPrevious);
             this.guna2GroupBoxFilter.Controls.Add(this.cmbActionType);
             this.guna2GroupBoxFilter.Controls.Add(this.labelAction);
             this.guna2GroupBoxFilter.Controls.Add(this.txtUserId);
@@ -147,34 +149,10 @@ namespace BeninaClinic.PL.UC
             this.guna2GroupBoxFilter.Location = new System.Drawing.Point(3, 81);
             this.guna2GroupBoxFilter.Name = "guna2GroupBoxFilter";
             this.guna2GroupBoxFilter.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.guna2GroupBoxFilter.Size = new System.Drawing.Size(1100, 78);
+            this.guna2GroupBoxFilter.Size = new System.Drawing.Size(962, 92);
             this.guna2GroupBoxFilter.TabIndex = 1;
             this.guna2GroupBoxFilter.Text = "خيارات البحث";
             this.guna2GroupBoxFilter.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // txtTableName
-            // 
-            this.txtTableName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtTableName.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtTableName.DefaultText = "";
-            this.txtTableName.Font = new System.Drawing.Font("Cairo", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTableName.Location = new System.Drawing.Point(3, 42);
-            this.txtTableName.Margin = new System.Windows.Forms.Padding(3, 0, 3, 6);
-            this.txtTableName.Name = "txtTableName";
-            this.txtTableName.PlaceholderText = "اسم الجدول";
-            this.txtTableName.SelectedText = "";
-            this.txtTableName.Size = new System.Drawing.Size(155, 28);
-            this.txtTableName.TabIndex = 0;
-            // 
-            // labelTable
-            // 
-            this.labelTable.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelTable.Location = new System.Drawing.Point(158, 42);
-            this.labelTable.Name = "labelTable";
-            this.labelTable.Size = new System.Drawing.Size(83, 28);
-            this.labelTable.TabIndex = 1;
-            this.labelTable.Text = "الجدول:";
-            this.labelTable.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // cmbActionType
             // 
@@ -192,10 +170,10 @@ namespace BeninaClinic.PL.UC
             "Update",
             "Delete",
             "Login"});
-            this.cmbActionType.Location = new System.Drawing.Point(247, 45);
+            this.cmbActionType.Location = new System.Drawing.Point(216, 45);
             this.cmbActionType.Margin = new System.Windows.Forms.Padding(3, 30, 3, 3);
             this.cmbActionType.Name = "cmbActionType";
-            this.cmbActionType.Size = new System.Drawing.Size(113, 36);
+            this.cmbActionType.Size = new System.Drawing.Size(99, 36);
             this.cmbActionType.StartIndex = 0;
             this.cmbActionType.TabIndex = 2;
             this.cmbActionType.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -203,9 +181,9 @@ namespace BeninaClinic.PL.UC
             // labelAction
             // 
             this.labelAction.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelAction.Location = new System.Drawing.Point(366, 42);
+            this.labelAction.Location = new System.Drawing.Point(320, 42);
             this.labelAction.Name = "labelAction";
-            this.labelAction.Size = new System.Drawing.Size(74, 28);
+            this.labelAction.Size = new System.Drawing.Size(65, 28);
             this.labelAction.TabIndex = 3;
             this.labelAction.Text = "الحدث:";
             this.labelAction.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -216,20 +194,20 @@ namespace BeninaClinic.PL.UC
             this.txtUserId.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtUserId.DefaultText = "";
             this.txtUserId.Font = new System.Drawing.Font("Cairo", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUserId.Location = new System.Drawing.Point(440, 43);
+            this.txtUserId.Location = new System.Drawing.Point(385, 43);
             this.txtUserId.Margin = new System.Windows.Forms.Padding(3, 0, 3, 6);
             this.txtUserId.Name = "txtUserId";
             this.txtUserId.PlaceholderText = "رقم المستخدم";
             this.txtUserId.SelectedText = "";
-            this.txtUserId.Size = new System.Drawing.Size(149, 27);
+            this.txtUserId.Size = new System.Drawing.Size(130, 27);
             this.txtUserId.TabIndex = 4;
             // 
             // labelUser
             // 
             this.labelUser.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelUser.Location = new System.Drawing.Point(589, 42);
+            this.labelUser.Location = new System.Drawing.Point(515, 42);
             this.labelUser.Name = "labelUser";
-            this.labelUser.Size = new System.Drawing.Size(98, 28);
+            this.labelUser.Size = new System.Drawing.Size(86, 28);
             this.labelUser.TabIndex = 5;
             this.labelUser.Text = "مستخدم:";
             this.labelUser.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -242,21 +220,21 @@ namespace BeninaClinic.PL.UC
             this.dtpTo.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.dtpTo.ForeColor = System.Drawing.Color.White;
             this.dtpTo.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpTo.Location = new System.Drawing.Point(687, 47);
+            this.dtpTo.Location = new System.Drawing.Point(601, 47);
             this.dtpTo.Margin = new System.Windows.Forms.Padding(3, 0, 3, 3);
             this.dtpTo.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.dtpTo.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.dtpTo.Name = "dtpTo";
-            this.dtpTo.Size = new System.Drawing.Size(150, 23);
+            this.dtpTo.Size = new System.Drawing.Size(131, 23);
             this.dtpTo.TabIndex = 6;
             this.dtpTo.Value = new System.DateTime(2025, 12, 12, 16, 46, 14, 108);
             // 
             // labelTo
             // 
             this.labelTo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelTo.Location = new System.Drawing.Point(837, 42);
+            this.labelTo.Location = new System.Drawing.Point(732, 42);
             this.labelTo.Name = "labelTo";
-            this.labelTo.Size = new System.Drawing.Size(50, 28);
+            this.labelTo.Size = new System.Drawing.Size(44, 28);
             this.labelTo.TabIndex = 7;
             this.labelTo.Text = "إلى:";
             this.labelTo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -269,21 +247,21 @@ namespace BeninaClinic.PL.UC
             this.dtpFrom.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.dtpFrom.ForeColor = System.Drawing.Color.White;
             this.dtpFrom.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFrom.Location = new System.Drawing.Point(887, 47);
+            this.dtpFrom.Location = new System.Drawing.Point(776, 47);
             this.dtpFrom.Margin = new System.Windows.Forms.Padding(3, 0, 3, 3);
             this.dtpFrom.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.dtpFrom.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.dtpFrom.Name = "dtpFrom";
-            this.dtpFrom.Size = new System.Drawing.Size(150, 23);
+            this.dtpFrom.Size = new System.Drawing.Size(131, 23);
             this.dtpFrom.TabIndex = 8;
             this.dtpFrom.Value = new System.DateTime(2025, 12, 12, 16, 46, 14, 141);
             // 
             // labelFrom
             // 
             this.labelFrom.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelFrom.Location = new System.Drawing.Point(1037, 42);
+            this.labelFrom.Location = new System.Drawing.Point(907, 42);
             this.labelFrom.Name = "labelFrom";
-            this.labelFrom.Size = new System.Drawing.Size(51, 28);
+            this.labelFrom.Size = new System.Drawing.Size(45, 28);
             this.labelFrom.TabIndex = 9;
             this.labelFrom.Text = "من:";
             this.labelFrom.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -296,10 +274,10 @@ namespace BeninaClinic.PL.UC
             this.guna2GroupBox2.Controls.Add(this.dgvLogs);
             this.guna2GroupBox2.Font = new System.Drawing.Font("Cairo", 12F, System.Drawing.FontStyle.Bold);
             this.guna2GroupBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.guna2GroupBox2.Location = new System.Drawing.Point(3, 167);
+            this.guna2GroupBox2.Location = new System.Drawing.Point(3, 179);
             this.guna2GroupBox2.Name = "guna2GroupBox2";
             this.guna2GroupBox2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.guna2GroupBox2.Size = new System.Drawing.Size(1100, 440);
+            this.guna2GroupBox2.Size = new System.Drawing.Size(962, 428);
             this.guna2GroupBox2.TabIndex = 0;
             this.guna2GroupBox2.Text = "السجلات";
             this.guna2GroupBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -310,51 +288,119 @@ namespace BeninaClinic.PL.UC
             this.dgvLogs.AllowUserToDeleteRows = false;
             this.dgvLogs.AllowUserToResizeColumns = false;
             this.dgvLogs.AllowUserToResizeRows = false;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dgvLogs.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dgvLogs.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle9;
             this.dgvLogs.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvLogs.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Cairo", 12F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvLogs.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Cairo", 12F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvLogs.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
             this.dgvLogs.ColumnHeadersHeight = 40;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Cairo", 12F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvLogs.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Cairo", 12F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvLogs.DefaultCellStyle = dataGridViewCellStyle11;
             this.dgvLogs.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvLogs.Location = new System.Drawing.Point(0, 40);
             this.dgvLogs.Name = "dgvLogs";
             this.dgvLogs.ReadOnly = true;
             this.dgvLogs.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Cairo", 12F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvLogs.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Cairo", 12F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvLogs.RowHeadersDefaultCellStyle = dataGridViewCellStyle12;
             this.dgvLogs.RowHeadersVisible = false;
             this.dgvLogs.RowHeadersWidth = 24;
             this.dgvLogs.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dgvLogs.RowTemplate.Height = 24;
             this.dgvLogs.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvLogs.Size = new System.Drawing.Size(1100, 400);
+            this.dgvLogs.Size = new System.Drawing.Size(962, 388);
             this.dgvLogs.TabIndex = 0;
+            // 
+            // btnNext
+            // 
+            this.btnNext.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnNext.Animated = true;
+            this.btnNext.AnimatedGIF = true;
+            this.btnNext.BorderRadius = 6;
+            this.btnNext.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnNext.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 5);
+            this.btnNext.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnNext.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnNext.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnNext.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnNext.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(121)))), ((int)(((byte)(214)))));
+            this.btnNext.Font = new System.Drawing.Font("Cairo", 10.2F, System.Drawing.FontStyle.Bold);
+            this.btnNext.ForeColor = System.Drawing.Color.White;
+            this.btnNext.HoverState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(121)))), ((int)(((byte)(214)))));
+            this.btnNext.HoverState.FillColor = System.Drawing.Color.White;
+            this.btnNext.HoverState.Font = new System.Drawing.Font("Cairo", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNext.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(121)))), ((int)(((byte)(214)))));
+            this.btnNext.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnNext.Location = new System.Drawing.Point(17, 45);
+            this.btnNext.Name = "btnNext";
+            this.btnNext.Size = new System.Drawing.Size(36, 25);
+            this.btnNext.TabIndex = 91;
+            this.btnNext.Text = ">";
+            this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
+            // 
+            // lblPage
+            // 
+            this.lblPage.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblPage.Font = new System.Drawing.Font("Cairo", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPage.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(121)))), ((int)(((byte)(214)))));
+            this.lblPage.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.lblPage.Location = new System.Drawing.Point(57, 45);
+            this.lblPage.Name = "lblPage";
+            this.lblPage.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.lblPage.Size = new System.Drawing.Size(111, 36);
+            this.lblPage.TabIndex = 90;
+            this.lblPage.Text = "الصفحة";
+            this.lblPage.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // btnPrevious
+            // 
+            this.btnPrevious.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnPrevious.Animated = true;
+            this.btnPrevious.AnimatedGIF = true;
+            this.btnPrevious.BorderRadius = 6;
+            this.btnPrevious.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnPrevious.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 5);
+            this.btnPrevious.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnPrevious.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnPrevious.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnPrevious.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnPrevious.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(121)))), ((int)(((byte)(214)))));
+            this.btnPrevious.Font = new System.Drawing.Font("Cairo", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPrevious.ForeColor = System.Drawing.Color.White;
+            this.btnPrevious.HoverState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(121)))), ((int)(((byte)(214)))));
+            this.btnPrevious.HoverState.FillColor = System.Drawing.Color.White;
+            this.btnPrevious.HoverState.Font = new System.Drawing.Font("Cairo", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPrevious.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(121)))), ((int)(((byte)(214)))));
+            this.btnPrevious.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnPrevious.Location = new System.Drawing.Point(172, 45);
+            this.btnPrevious.Name = "btnPrevious";
+            this.btnPrevious.Size = new System.Drawing.Size(36, 25);
+            this.btnPrevious.TabIndex = 89;
+            this.btnPrevious.Text = "<";
+            this.btnPrevious.Click += new System.EventHandler(this.btnPrevious_Click);
             // 
             // UC_AuditLogs
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.guna2GroupBox2);
@@ -362,7 +408,7 @@ namespace BeninaClinic.PL.UC
             this.Controls.Add(this.guna2GroupBox1);
             this.Name = "UC_AuditLogs";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.Size = new System.Drawing.Size(1110, 610);
+            this.Size = new System.Drawing.Size(971, 610);
             this.Load += new System.EventHandler(this.UC_AuditLogs_Load);
             this.guna2GroupBox1.ResumeLayout(false);
             this.flowLayoutPanel1.ResumeLayout(false);
@@ -391,7 +437,8 @@ namespace BeninaClinic.PL.UC
         private System.Windows.Forms.Label labelUser;
         private Guna.UI2.WinForms.Guna2ComboBox cmbActionType;
          private System.Windows.Forms.Label labelAction;
-         private Guna.UI2.WinForms.Guna2TextBox txtTableName;
-         private System.Windows.Forms.Label labelTable;
+        private Guna.UI2.WinForms.Guna2Button btnNext;
+        private System.Windows.Forms.Label lblPage;
+        private Guna.UI2.WinForms.Guna2Button btnPrevious;
     }
 }

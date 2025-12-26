@@ -272,6 +272,7 @@ namespace BeninaClinic
 
         private void btnPahrmacy_Click(object sender, EventArgs e)
         {
+            USHome();
             FrmPharmacyMain frm = new FrmPharmacyMain();
             frm.ShowDialog();
         }
@@ -282,6 +283,11 @@ namespace BeninaClinic
             UC_AuditLogs uc = new UC_AuditLogs();
             uc.Dock = DockStyle.Fill;
             pnlContainer.Controls.Add(uc);
+
+        }
+
+        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
 
         }
     }

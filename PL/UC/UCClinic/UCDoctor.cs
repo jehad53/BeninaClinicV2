@@ -302,5 +302,86 @@ namespace BeninaClinic.PL.UC.UCClinic
                 // MessageBox.Show("يرجى الـتـأكـد من تحديد الموظف ","تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation );
             }
         }
+
+        private void txtDoctorName_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                txtDoctorNatNum.Focus();
+            }
+        }
+
+        private void txtDoctorNatNum_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                cmbDoctorGender.Focus();
+            }
+        }
+
+        private void cmbDoctorGender_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                txtDoctorPhone.Focus();
+            }
+        }
+
+        private void txtDoctorPhone_MouseDown(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void txtDoctorPhone_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                txtDoctorAddress.Focus();
+            }
+        }
+
+        private void txtDoctorAddress_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                cmbContractType.Focus();
+            }
+        }
+
+        private void cmbContractType_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                cmbDoctorsSocial.Focus();
+            }
+        }
+
+        private void cmbDoctorsSocial_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                txtSpecialty.Focus();
+            }
+        }
+
+        private void cmbClinics_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter && btnAddDoctor.Enabled)
+            {
+                btnAddDoctor.PerformClick();
+            }
+            else if (e.KeyCode == Keys.Enter && btnEditDoctor.Enabled)
+            {
+                btnEditDoctor.PerformClick();
+            }
+        }
+
+        private void txtSpecialty_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                cmbClinics.Focus();
+            }
+        }
     }
 }

@@ -397,5 +397,118 @@ namespace BeninaClinic.PL.UC.UCClinic
             // conttacttype = "متعاون";
 
         }
+
+        private void flowLayoutPanel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void txtEmployeeName_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                txtEmployeeNatNum.Focus();
+            }
+        }
+
+        private void txtEmployeeNatNum_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                cmbEmployeeGender.Focus();
+            }
+        }
+
+        private void cmbEmployeeGender_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                txtEmployeePhone.Focus();
+            }
+        }
+
+        private void txtEmployeePhone_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                txtEmployeeAddress.Focus();
+            }
+        }
+
+        private void cmbContractType_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                cmbEmployeeSocial.Focus();
+            }
+        }
+
+        private void txtEmployeeAddress_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                cmbContractType.Focus();
+            }
+        }
+
+        private void cmbEmployeeSocial_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                dtpEmpDateofBirth.Focus();
+            }
+        }
+
+        private void dtpEmpDateofBirth_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                txtEmployeeSalary.Focus();
+            }
+        }
+
+        private void txtEmployeeSalary_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                dtpEmpAppointment.Focus();
+            }
+        }
+
+        private void dtpEmpAppointment_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                cmbDepartments.Focus();
+            }
+        }
+
+        private void cmbDepartments_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                cmbJobs.Focus();
+            }
+        }
+
+        private void cmbJobs_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                txtEmployeeNote.Focus();
+            }
+        }
+
+        private void txtEmployeeNote_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter && btnAddEmployee.Enabled)
+            {
+                btnAddEmployee.PerformClick();
+            }
+            else if (e.KeyCode == Keys.Enter && btnEditEmployee.Enabled)
+            {
+                btnEditEmployee.PerformClick();
+            }
+        }
     }
 }

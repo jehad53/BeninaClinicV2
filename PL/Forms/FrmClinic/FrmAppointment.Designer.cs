@@ -28,19 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmAppointment));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.guna2GroupBox2 = new Guna.UI2.WinForms.Guna2GroupBox();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.label4 = new System.Windows.Forms.Label();
             this.txtAppID = new Guna.UI2.WinForms.Guna2TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtPatientName = new Guna.UI2.WinForms.Guna2TextBox();
-            this.btnFrmListPatient = new Guna.UI2.WinForms.Guna2Button();
             this.label10 = new System.Windows.Forms.Label();
             this.dtpDateApp = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.label9 = new System.Windows.Forms.Label();
@@ -75,14 +74,15 @@
             this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.MessageDialog = new Guna.UI2.WinForms.Guna2MessageDialog();
+            this.txtSearchApp = new Guna.UI2.WinForms.Guna2TextBox();
             this.btnNew = new Guna.UI2.WinForms.Guna2Button();
             this.btnAddApp = new Guna.UI2.WinForms.Guna2Button();
             this.btnEditApp = new Guna.UI2.WinForms.Guna2Button();
             this.btnDeleteApp = new Guna.UI2.WinForms.Guna2Button();
             this.btnPrintApp = new Guna.UI2.WinForms.Guna2Button();
             this.btnPrintAllApp = new Guna.UI2.WinForms.Guna2Button();
-            this.txtSearchApp = new Guna.UI2.WinForms.Guna2TextBox();
-            this.MessageDialog = new Guna.UI2.WinForms.Guna2MessageDialog();
+            this.btnFrmListPatient = new Guna.UI2.WinForms.Guna2Button();
             this.guna2GroupBox2.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAppointments)).BeginInit();
@@ -223,36 +223,6 @@
             this.txtPatientName.Size = new System.Drawing.Size(331, 37);
             this.txtPatientName.TabIndex = 50;
             this.txtPatientName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // btnFrmListPatient
-            // 
-            this.btnFrmListPatient.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnFrmListPatient.Animated = true;
-            this.btnFrmListPatient.AnimatedGIF = true;
-            this.btnFrmListPatient.BorderRadius = 6;
-            this.btnFrmListPatient.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnFrmListPatient.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 5);
-            this.btnFrmListPatient.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnFrmListPatient.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnFrmListPatient.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnFrmListPatient.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnFrmListPatient.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(121)))), ((int)(((byte)(214)))));
-            this.btnFrmListPatient.Font = new System.Drawing.Font("Cairo SemiBold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFrmListPatient.ForeColor = System.Drawing.Color.White;
-            this.btnFrmListPatient.HoverState.BorderColor = System.Drawing.Color.Red;
-            this.btnFrmListPatient.HoverState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(121)))), ((int)(((byte)(214)))));
-            this.btnFrmListPatient.HoverState.FillColor = System.Drawing.Color.White;
-            this.btnFrmListPatient.HoverState.Font = new System.Drawing.Font("Cairo", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFrmListPatient.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(121)))), ((int)(((byte)(214)))));
-            this.btnFrmListPatient.Image = ((System.Drawing.Image)(resources.GetObject("btnFrmListPatient.Image")));
-            this.btnFrmListPatient.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnFrmListPatient.Location = new System.Drawing.Point(26, 6);
-            this.btnFrmListPatient.Margin = new System.Windows.Forms.Padding(6);
-            this.btnFrmListPatient.Name = "btnFrmListPatient";
-            this.btnFrmListPatient.Size = new System.Drawing.Size(341, 44);
-            this.btnFrmListPatient.TabIndex = 96;
-            this.btnFrmListPatient.Text = "اختيار مريض";
-            this.btnFrmListPatient.Click += new System.EventHandler(this.btnFrmListPatient_Click);
             // 
             // label10
             // 
@@ -761,24 +731,24 @@
             this.dgvAppointments.AllowUserToDeleteRows = false;
             this.dgvAppointments.AllowUserToResizeColumns = false;
             this.dgvAppointments.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Lavender;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Cairo Medium", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Blue;
-            this.dgvAppointments.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.Lavender;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Cairo Medium", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.Blue;
+            this.dgvAppointments.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle6;
             this.dgvAppointments.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvAppointments.BackgroundColor = System.Drawing.Color.White;
             this.dgvAppointments.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Lavender;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Cairo SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvAppointments.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.Lavender;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Cairo SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvAppointments.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.dgvAppointments.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvAppointments.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
@@ -792,34 +762,34 @@
             this.Column9,
             this.Column10});
             this.dgvAppointments.Cursor = System.Windows.Forms.Cursors.Hand;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Cairo SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvAppointments.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Cairo SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvAppointments.DefaultCellStyle = dataGridViewCellStyle8;
             this.dgvAppointments.EnableHeadersVisualStyles = false;
             this.dgvAppointments.Location = new System.Drawing.Point(9, 332);
             this.dgvAppointments.Margin = new System.Windows.Forms.Padding(4, 7, 4, 7);
             this.dgvAppointments.MultiSelect = false;
             this.dgvAppointments.Name = "dgvAppointments";
             this.dgvAppointments.ReadOnly = true;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.SpringGreen;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Cairo SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvAppointments.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.SpringGreen;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Cairo SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvAppointments.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
             this.dgvAppointments.RowHeadersVisible = false;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Cairo Medium", 13.8F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.dgvAppointments.RowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Cairo Medium", 13.8F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.dgvAppointments.RowsDefaultCellStyle = dataGridViewCellStyle10;
             this.dgvAppointments.RowTemplate.Height = 40;
             this.dgvAppointments.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvAppointments.Size = new System.Drawing.Size(1123, 251);
@@ -918,6 +888,42 @@
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(1144, 60);
             this.flowLayoutPanel1.TabIndex = 84;
+            // 
+            // MessageDialog
+            // 
+            this.MessageDialog.Buttons = Guna.UI2.WinForms.MessageDialogButtons.YesNo;
+            this.MessageDialog.Caption = "تنبيه";
+            this.MessageDialog.Icon = Guna.UI2.WinForms.MessageDialogIcon.Question;
+            this.MessageDialog.Parent = this;
+            this.MessageDialog.Style = Guna.UI2.WinForms.MessageDialogStyle.Dark;
+            this.MessageDialog.Text = "تمت العملية بنجاح";
+            // 
+            // txtSearchApp
+            // 
+            this.txtSearchApp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtSearchApp.BorderColor = System.Drawing.Color.Gainsboro;
+            this.txtSearchApp.BorderRadius = 6;
+            this.txtSearchApp.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtSearchApp.DefaultText = "";
+            this.txtSearchApp.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtSearchApp.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtSearchApp.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtSearchApp.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtSearchApp.FillColor = System.Drawing.Color.WhiteSmoke;
+            this.txtSearchApp.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtSearchApp.Font = new System.Drawing.Font("Cairo Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSearchApp.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtSearchApp.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtSearchApp.IconLeft = ((System.Drawing.Image)(resources.GetObject("txtSearchApp.IconLeft")));
+            this.txtSearchApp.Location = new System.Drawing.Point(378, 288);
+            this.txtSearchApp.Margin = new System.Windows.Forms.Padding(4, 9, 4, 9);
+            this.txtSearchApp.Name = "txtSearchApp";
+            this.txtSearchApp.PlaceholderText = "";
+            this.txtSearchApp.SelectedText = "";
+            this.txtSearchApp.Size = new System.Drawing.Size(397, 37);
+            this.txtSearchApp.TabIndex = 85;
+            this.txtSearchApp.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtSearchApp.TextChanged += new System.EventHandler(this.txtSearchApp_TextChanged);
             // 
             // btnNew
             // 
@@ -1092,42 +1098,37 @@
             this.btnPrintAllApp.TabIndex = 26;
             this.btnPrintAllApp.Text = "طباعة مواعيد اليوم";
             this.btnPrintAllApp.Click += new System.EventHandler(this.btnPrintAllApp_Click);
+            this.btnPrintAllApp.KeyDown += new System.Windows.Forms.KeyEventHandler(this.btnPrintAllApp_KeyDown);
             // 
-            // txtSearchApp
+            // btnFrmListPatient
             // 
-            this.txtSearchApp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtSearchApp.BorderColor = System.Drawing.Color.Gainsboro;
-            this.txtSearchApp.BorderRadius = 6;
-            this.txtSearchApp.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtSearchApp.DefaultText = "";
-            this.txtSearchApp.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtSearchApp.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtSearchApp.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtSearchApp.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtSearchApp.FillColor = System.Drawing.Color.WhiteSmoke;
-            this.txtSearchApp.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtSearchApp.Font = new System.Drawing.Font("Cairo Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSearchApp.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtSearchApp.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtSearchApp.IconLeft = ((System.Drawing.Image)(resources.GetObject("txtSearchApp.IconLeft")));
-            this.txtSearchApp.Location = new System.Drawing.Point(378, 288);
-            this.txtSearchApp.Margin = new System.Windows.Forms.Padding(4, 9, 4, 9);
-            this.txtSearchApp.Name = "txtSearchApp";
-            this.txtSearchApp.PlaceholderText = "";
-            this.txtSearchApp.SelectedText = "";
-            this.txtSearchApp.Size = new System.Drawing.Size(397, 37);
-            this.txtSearchApp.TabIndex = 85;
-            this.txtSearchApp.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtSearchApp.TextChanged += new System.EventHandler(this.txtSearchApp_TextChanged);
-            // 
-            // MessageDialog
-            // 
-            this.MessageDialog.Buttons = Guna.UI2.WinForms.MessageDialogButtons.YesNo;
-            this.MessageDialog.Caption = "تنبيه";
-            this.MessageDialog.Icon = Guna.UI2.WinForms.MessageDialogIcon.Question;
-            this.MessageDialog.Parent = this;
-            this.MessageDialog.Style = Guna.UI2.WinForms.MessageDialogStyle.Dark;
-            this.MessageDialog.Text = "تمت العملية بنجاح";
+            this.btnFrmListPatient.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnFrmListPatient.Animated = true;
+            this.btnFrmListPatient.AnimatedGIF = true;
+            this.btnFrmListPatient.BorderRadius = 6;
+            this.btnFrmListPatient.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnFrmListPatient.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 5);
+            this.btnFrmListPatient.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnFrmListPatient.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnFrmListPatient.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnFrmListPatient.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnFrmListPatient.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(121)))), ((int)(((byte)(214)))));
+            this.btnFrmListPatient.Font = new System.Drawing.Font("Cairo SemiBold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFrmListPatient.ForeColor = System.Drawing.Color.White;
+            this.btnFrmListPatient.HoverState.BorderColor = System.Drawing.Color.Red;
+            this.btnFrmListPatient.HoverState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(121)))), ((int)(((byte)(214)))));
+            this.btnFrmListPatient.HoverState.FillColor = System.Drawing.Color.White;
+            this.btnFrmListPatient.HoverState.Font = new System.Drawing.Font("Cairo", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFrmListPatient.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(121)))), ((int)(((byte)(214)))));
+            this.btnFrmListPatient.Image = ((System.Drawing.Image)(resources.GetObject("btnFrmListPatient.Image")));
+            this.btnFrmListPatient.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnFrmListPatient.Location = new System.Drawing.Point(26, 6);
+            this.btnFrmListPatient.Margin = new System.Windows.Forms.Padding(6);
+            this.btnFrmListPatient.Name = "btnFrmListPatient";
+            this.btnFrmListPatient.Size = new System.Drawing.Size(341, 44);
+            this.btnFrmListPatient.TabIndex = 96;
+            this.btnFrmListPatient.Text = "اختيار مريض";
+            this.btnFrmListPatient.Click += new System.EventHandler(this.btnFrmListPatient_Click);
             // 
             // FrmAppointment
             // 
@@ -1140,6 +1141,7 @@
             this.Controls.Add(this.dgvAppointments);
             this.Controls.Add(this.guna2GroupBox2);
             this.Font = new System.Drawing.Font("Cairo SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.KeyPreview = true;
             this.Margin = new System.Windows.Forms.Padding(4, 7, 4, 7);
             this.MaximizeBox = false;
             this.Name = "FrmAppointment";
